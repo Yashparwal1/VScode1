@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selector and more Designing</title>
+    <!-- Pseudo selector in css are those which are written after colon like "a:hover". So hover is the Pseudo selector-->
+    <style>
+        .container{
+            border: 5px solid purple;
+            text-align: justify;
+            padding: 7px;
+            margin-left: 250px;
+            margin-top: 50px;
+            width: 800px;
+            background-color: #aa95d8;
+
+        }
+        a{
+            text-decoration: none;       /* it will remove all the styles in <a> tag like underline on hypertext */
+        }
+        a:hover{
+            color: rgb(69, 196, 15);
+            background-color: gray;
+            border: 2px solid blueviolet;
+        }
+        a:visited{
+            color: rgb(72, 0, 240);
+        }
+        a:active{
+            color: cyan;
+        }
+        .btn{
+            font-weight: bolder;
+            color: chartreuse;
+            padding: 10px;
+            background-color: black;
+            margin: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 10px;
+        }
+        button:hover{
+            color: gold;
+            background-color: gray;
+            border: 2px solid blueviolet;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="first" class="container">
+        <h2>Psudo Selector and more Designing</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo labore corrupti soluta provident facere eveniet veritatis blanditiis aliquam facilis quos ipsum recusandae nihil culpa, minima perspiciatis? Incidunt distinctio fuga amet, tenetur ipsam voluptate? Vero, eligendi hic ullam repellat quasi culpa, provident mollitia sed quae tempore doloremque earum in temporibus eaque!</p>
+        <a href="https://getintocomputers.com" class="btn"> READ MORE </a>
+        <button class="btn"> Contact Us </button>
+    </div>
+</body>
+</html>

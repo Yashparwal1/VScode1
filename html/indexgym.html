@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Oswald&display=swap"
+        rel="stylesheet">
+    <style>
+        /*CSS reset*/
+        body {
+            color: honeydew;
+            padding: 0px;
+            margin-top: 0px;
+            background: url(gym.jpg);
+            background-size: 2800px;
+            background-repeat: no-repeat;
+            width: auto;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .left {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            display: inline-block;
+            /* border: 2px solid red */
+        }
+
+        .left img {
+            /* display: inline-block; */
+            width: 125px;
+            float: left;
+        }
+
+        .left div {
+            text-align: center;
+            padding: 0px;
+            font-size: 50px;
+
+        }
+
+        .mid {
+            display: block;
+            width: 36%;
+            margin: 20px 500px;
+            
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar li a:hover {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: rgb(148, 147, 147);
+        }
+
+        .navbar li a.active {
+            text-decoration: underline;
+        }
+
+        .right {
+            position: absolute;
+            right: 15px;
+            top: 35px;
+            display: inline-block;
+            width: 75px;
+            padding: 5px 15px;
+            
+        }
+
+        .btn1 {
+            display: inline-block;
+            margin-bottom: 15px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .btn1:hover {
+            background-color: rgb(148, 147, 147);
+        }
+
+        .btn2 {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .btn2:hover {
+            background-color: rgb(148, 147, 147);
+        }
+
+        .container {
+            display: inline-block;
+            width: 37%;
+            border: 2px solid gray;
+            margin-top: 116px;
+            margin-left: 80px;
+            padding: 38px;
+            border-radius: 27px;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 50px;
+        }
+
+        .form-group input {
+            text-align: center;
+            display: block;
+            width: 450px;
+            padding: 5px;
+            margin: 10px auto;
+            border: 2px solid gray;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(247, 240, 240);
+            font-size: 20px;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .form-group input:hover {
+            background-color: rgb(131, 127, 127);
+        }
+
+        ::placeholder {
+            color: rgb(37, 33, 33);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="gymlogo.png" alt="">
+            <div>Local Fitness</div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+        <!-- Right box for search -->
+        <div class="right">
+            <button class="btn1">Call Us</button>
+            <button class="btn2">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best <i><u><b>GYM</b></u></i> of Jaipur now !!!</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Phone No.">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Address">
+            </div>
+
+            <div>
+                <input class="btn1" type="submit" value="Submit">
+                <input class="btn2" type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

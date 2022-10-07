@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseodo selector</title>
+    <style>
+        /* 
+        ::before and ::after pseudo elements are used to insert some content before and after the content of current element respectively.
+        */
+        body{
+            margin: 0px;
+            padding: 0px;
+            color: chartreuse;
+        }
+        header::before{
+            content: "";
+            background: url('https://source.unsplash.com/user/erondu/1600x900') no-repeat center center/cover;
+            /* background-image: url("162884.jpg"); */
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.9;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+        }
+        .navigation{
+            border: 2px solid black;
+            border-radius: 3px;
+            background-color: gainsboro;
+            display: flex;
+            width: 400px;
+            padding: 10px;
+            margin: 20px 10px;
+            font-size: 20px;
+        }
+        li{
+            text-decoration: none;
+            list-style: none;
+            padding: 10px;
+            color: rgb(0, 0, 0);
+        }
+        a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        h1{
+            font-size: 4rem;    
+            color: cyan;
+        }
+        p{
+            text-align: center;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            margin: 12px 100px;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /* section::before{
+            content: "This is is content using before pseudo selector"
+        }
+        section::after{
+            content: "This is is content using after pseudo selector"
+        }         */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <a href="https://www.getintocomputers.gq/"><li class="item">Home </li></a>
+                <a href="https://www.google.com"><li class="item">Features</li></a> 
+                <a href="https://facebook.com/"><li class="item">About Us</li></a> 
+                <a href="https://www.instagram.com/"><li class="item">Contact Us</li></a> 
+            </ul>
+        </nav>
+    </header> 
+        <section>
+            <h1>Wencome to Coding World</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium facilis consectetur explicabo dolor
+                neque quasi, facere architecto ex esse unde ea fuga vel quis, ipsum tempore. Fugit ipsum debitis laborum
+                non, delectus maxime. Magni quibusdam inventore dolores dignissimos adipisci culpa cupiditate aut,
+                provident vel molestias, molestiae maxime. Officia, nihil voluptas!</p>
+        </section>
+        <hr>
+
+</body>
+
+</html>

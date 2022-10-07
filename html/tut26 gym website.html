@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>GYM</title>
+    <style>
+        /* CSS Reset */
+        body {
+            color: antiquewhite;
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            background-image: url(gymbg.jpg);
+            background-repeat: no-repeat;
+            background-size: 1600px;
+            font-family: 'Baloo 2', cursive;
+        }
+        header{
+            border: 2px solid red;
+            /* background-color: #b5acb5; */
+            background-color:rgba(99, 94, 100, 0.5);
+            margin-top: 5px;
+            padding: 10px;
+            position: sticky;
+            opacity: 0.6;
+        }
+        .left{
+            /* border: 2px solid blue; */
+            display: inline-block;
+            position: absolute;
+            left: 30px;
+            top: 2px;
+            width: 200px;
+        }
+        .left img{
+            /* border: 2px solid blue; */
+            display: inline-block;
+            width: 90px;
+            float: left;
+            top: 10px;
+            
+        }
+        .left h1{
+            /* border: 2px solid greenyellow; */
+            display: block;
+            color: black;
+            font-size: 40px;
+            font-weight: bolder;
+            right: 2px;
+            margin: auto;
+            line-height: 35px;
+        }
+        .mid{
+            border: 2px solid greenyellow;
+            background-color: #413d41;
+            display: block;
+            width: 550px;
+            margin: auto;
+            top: 10px;
+            font-weight: bold;
+        }
+        .right{
+            display: inline-block;
+            /* border: 2px solid purple; */
+            position: absolute;
+            right: 30px;
+            top: 2px;
+        }
+        .btn{
+            border: 2px solid black;
+            display: block;
+            width: 80px;
+            margin: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        
+        .btn:hover{
+            border-color: rgb(0, 0, 255);
+            transform: skew(-10deg);
+        }
+        .navbar{
+            display: inline-block;
+
+        }
+        .navbar li{
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        .navbar li a{
+            font-size: large;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+        .navbar li a:hover{
+            color: greenyellow;
+            border: 2px solid green;
+            border-radius: 5px;
+            background-color: black;
+            transform: skew(-10deg);
+        }
+        .container{
+            display: block;
+            width: 500px;
+            /* margin: 40px 80px; */
+            margin: 60px auto;
+            border: 2px solid red;
+            /* background-color: #b5acb5; */
+            background-color:rgba(99, 94, 98, 0.5);
+            /* opacity: 0.6; */
+            
+        }
+        .formheading{
+            color: black;
+            border: 2px solid red;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            font-weight: bolder;
+            
+        }
+        .gender{
+            display: block;
+            color: black;
+            border: 2px solid black;
+            border-radius: 4px;
+            background-color: white;
+            padding: 10px;
+            width: 300px;
+            margin: 10px auto;
+            text-align: center;
+            font-weight: bold;
+            opacity: 1;
+
+        }
+        .inpt{
+            border: 2px solid black;
+            border-radius: 4px;
+            display: block;
+            width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: center;
+        }
+        .inpt:hover{
+            background-color: gray;
+        }
+        .container button{
+            font-size: 17px;
+            display: block;
+            padding: 5px;
+            margin: 10px auto;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        .container button:hover{
+            transform: skew(-10deg);
+            border: 2px solid blue;
+        }
+        ::placeholder{
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="gymlogo.png" alt="">
+            <h1>Jaipur Gym</h1>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Equipments</a></li>
+                <li><a href="#">Diet Chart</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="btn">Call</button>
+            <button class="btn">Email</button>
+        </div>
+    </header>
+    <div class="container">
+        <form method="post" action="backend.php">
+            <h1 class="formheading">Join Now</h1>
+            <label for="name"></label>
+            <div>
+                <input type="text" name="myname" class="inpt" placeholder="Your Name">
+            </div>
+            <label for="age"></label>
+            <div>
+                <input type="number" name="myage" class="inpt" placeholder="Your Age">
+            </div>
+            <div class="gender">
+                Your Gender: 
+                Male<input type="radio" name="mygender" class="">
+                Female<input type="radio" name="mygender" class="">
+                Other<input type="radio" name="mygender" class="">
+            </div>
+            <label for="ph-no"></label>
+            <div>
+                <input type="number" name="mynumber" class="inpt" placeholder="Your Mob. Number">
+            </div>
+            <label for="address"></label>
+            <div>
+                <input type="text" name="myaddress" class="inpt" placeholder="Your Address">
+            </div>
+            <button type="submit" class="formbtn1">Submit</button>
+            <button type="reset" class="formbtn2">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trochut', cursive;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 60px;
+}
+
+body{
+    color: whitesmoke;
+}
+
+#navbar {
+    position: sticky;
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#logo{
+    /* border: 2px solid red; */
+    margin: 10px 10px;
+}
+
+#logo img {
+    /* border: 2px solid black; */
+    border-radius: 120px;
+    width: 50px;
+    height: 50px;
+}
+
+#navbar ul {
+    display: flex;
+    /* border: 2px solid blue; */
+    /* align-items: center;     */
+}
+
+#navbar ul li {
+    list-style: none;
+    margin: 15px;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    /* border: 2px solid greenyellow; */
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+    color: whitesmoke;
+}
+#navbar ul li a:hover{
+    background-color: black;
+    color: greenyellow;
+    border-radius: 10px;
+    text-decoration: underline;
+    
+}
+
+#home{
+    display: flex;
+    padding: 5px 200px;
+    /* border: 2px solid orange; */
+    height: 500px;
+    flex-direction: column;
+    line-height: 45px;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: url(codingbg.jpg) no-repeat center center/cover;
+    width: 100%;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+}
+.mine{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 2px solid red; */
+    /* height: 500px; */
+    margin-top: 200px;
+}
+#home h1{
+    /* border: 2px solid red; */
+    font-size: 2.4rem;
+    color: #00ff0f;
+}
+#home h3{
+    /* border: 2px solid red; */
+    font-size: 3.4rem;
+    margin-top: 0px;
+    color: #ff0000;
+}
+#home ul{
+    /* border: 2px solid red; */
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+#home ul li{
+    text-decoration: none;
+    list-style: none;
+    padding: 4px;
+    margin: 10px;
+    font-family: 'Merriweather', serif;
+}
+#home ul li a{
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+    color: whitesmoke;
+
+}
+#home ul li a:hover{
+    border: 2px solid pink;
+    border-radius: 4px;
+    background-color: black;
+    color: pink;
+    transform: skew(10deg);
+}
+
+

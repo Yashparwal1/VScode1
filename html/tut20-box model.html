@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .container{
+            background-color: purple;
+            border: 5px solid red;
+            /* we can set margin/padding for top, right, bottom and left together also like this */
+            /* padding-top: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            padding-left: 50px; */
+            
+            /* padding/margin = top right bottom left */
+            /* padding: 500px 46px 37px 0px;  */
+            
+            /* padding/margin = y(top/bottom) x(left/right) */
+            padding: 10px 100px;
+            margin: 20px 200px ;
+            border-radius: 20px; 
+            width: 533px;
+            /* if we not specify box-sizing, the width of the container will be changed with change in the padding BUT if we do not want so and we want to apply this width only then... */
+            box-sizing: border-box;  /* now width will not change if we change padding and margin and given width will be applied */ 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>this is a heading</h2>
+        <p id="firstpara">
+            lorem
+        </p>
+    </div>
+    
+    <div class="container">
+        <h2>this is a heading</h2>
+        <p id="secpara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit atque adipisci error officiis quod provident dicta nulla, necessitatibus asperiores minus eos tempora. Nisi culpa, corporis ullam eligendi quasi harum.
+        </p>
+   
+    </div><div class="container">
+        <h2>this is a heading</h2>
+        <p id="thirdpara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit atque adipisci error officiis quod provident dicta nulla, necessitatibus asperiores minus eos tempora. Nisi culpa, corporis ullam eligendi quasi harum.
+        </p>
+</body>
+</html> 

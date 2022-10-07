@@ -1,0 +1,17 @@
+{
+    "liveServer.settings.CustomBrowser": "chrome",
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "files.associations": {
+        "stdio.h": "c",
+        "conio.h": "c",
+        "math.h": "c",
+        "stdlib.h": "c",
+        "types.h": "c",
+        "ostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cmake.clearOutputBeforeBuild": false,
+    "code-runner.clearPreviousOutput": true,
+    "liveServer.settings.multiRootWorkspaceName": "VScode"
+}

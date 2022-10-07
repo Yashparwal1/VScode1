@@ -1,0 +1,23 @@
+Designed by Bjarne Stroustrup
+
+-> More control over system resources
+-> control over Memory management 
+-> High performance 
+
+-> # major update:
+    1. C++11 -- came inn 2011
+    2. C++14 -- came inn 2014
+    3. C++17 -- came inn 2017
+
+#include<iostream>
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    // std::cout << "hello world";
+    cout << "hello world";
+    return 0;
+}
+
+<< -- this is called insertion operator

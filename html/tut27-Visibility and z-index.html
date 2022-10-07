@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & z-index</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+        }
+        #box1{
+            position: relative;
+            top: 50px;
+            z-index: 13px;
+            background-color: red;
+        }
+        /* z-index will only work with position relative, absolute, fixed or sticky. It iwll not work with default position that is static  */
+        /* whichever element has more z-index, that will be displayed in front than all other*/
+        #box2{
+            position: relative;
+            top: -90px;
+            left: 10px;
+            z-index: 40px;
+            background-color: yellow;
+        }
+        #box3{
+            /* display: none; */
+            /*this property will hide the box3 and box's place will also removed  */
+            /* visibility: hidden;         */
+            /*this property will hide the box3 but box's place will still be reserved */
+            background-color: green;
+        }
+        #box4{
+            background-color: blue;
+        }
+    </style>
+</head>     
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

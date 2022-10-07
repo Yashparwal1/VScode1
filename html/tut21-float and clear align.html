@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allignment</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .container {
+            width: 900px;
+            border: 3px solid grey;
+            margin: 50px auto; 
+            /*auto means equal margin from left and right at x-axis AND 50px at y-axix*/
+            background-color: #a2909b5e;
+        }
+
+        .item {
+            border: 5px solid red;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background-color: lavenderblush;
+        }
+        #fruits{
+            float: left;
+            width: 48%;
+        }
+        #vegetables{
+            float: right;
+            width: 48%;
+        }
+        #computers{
+            /* float: left; */
+            width: 100%;
+            /* clear: left;  /* it will not allow any fload:left; to overlap itself */ 
+            clear: both;
+        }
+        /* clear: left -- means koi bhi left me float hue elements mujhpr na aaye(no overlapp on me) */
+        /* clear: right -- means koi bhi right me float hue elements mujhpr na aaye(no overlapp on me) */
+        p{
+            text-align: justify;
+        }
+        h1{
+            margin: auto;
+            width: 400px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my webpage</h1>
+            <div id="fruits" class="item">
+                <centre>
+                    <h2>Fruits content</h2>
+                </centre>
+                <p id="fruitspara" class="tpara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis et
+                    mollitia velit itaque ratione eum suscipit corporis quisquam, sit, provident unde sapiente labore
+                    quibusdam dolores ad placeat nulla aut quo minima minus vitae dicta reprehenderit? Rem eaque iusto
+                    quaerat quam vero laudantium, accusantium sunt, at quasi ut tenetur. Consequatur, tempora.</p>
+            </div>
+            <div id="vegetables" class="item">
+                <h2>vegetables content</h2>
+                <p id="vegipara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis et
+                    mollitia velit itaque ratione eum suscipit corporis quisquam, sit, provident unde sapiente labore
+                    quibusdam dolores ad placeat nulla aut quo minima minus vitae dicta reprehenderit? Rem eaque iusto
+                    quaerat quam vero laudantium, accusantium sunt, at quasi ut tenetur. Consequatur, tempora.</p>
+            </div>
+            <div id="computers" class="item">
+                <h2>computer content</h2>
+                <p id="comppara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis et
+                    mollitia velit itaque ratione eum suscipit corporis quisquam, sit, provident unde sapiente labore
+                    quibusdam dolores ad placeat nulla aut quo minima minus vitae dicta reprehenderit? Rem eaque iusto
+                    quaerat quam vero laudantium, accusantium sunt, at quasi ut tenetur. Consequatur, tempora.</p>
+            </div>
+        </div>
+</body>
+
+</html>

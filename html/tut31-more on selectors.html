@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        h1 {
+            background-color: blue;
+            border: 2px solid red;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        /* div p{
+            color: yellow;
+            font-weight: bold;
+            background-color: aqua;
+            text-align: right;
+        } */
+
+        /*here > sign means only that paragraph will be affected who is direct child of div*/
+        /* div > p {
+            color: yellow;
+            font-weight: bold;
+            background-color: aqua;
+            text-align: right;
+        } */
+
+        /* Thsi means only those paragraph will be affected who are there just after </div> */
+        /* jiska phichla sibling div hoga vo hi affect hoga */
+        /* for example para "This is outer most paragraph have 2 siblings i.e. h1 and div but div is just before this paragraph so this paragraph will be affected" */
+        div + p{
+            color: black;
+            background-color: chartreuse;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>This tutorial is about more on Selectors</h1>
+    <div class="contaner">
+        <div class="row">
+            <ul>
+                <li>
+                    <p>this is another paragraph in li </p>
+                </li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>this is another paragraph</p>
+        <ul>
+            <li>
+                <P>This is para in second ul</P>
+            </li>
+        </ul>
+    </div>
+    <p>this is outermost paragraph</p>
+</body>
+
+</html>

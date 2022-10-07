@@ -1,0 +1,117 @@
+<!-- 
+    Flexbox is a 1-d layout method for layout items in rows and coloumns.
+    Its a better way to allign items in a container.
+    Flexbox = flexible + box
+
+    2 axis are there.. x-axis is main axis and y-axis is cross axis
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            /* height: 100%; */
+            /* width: 100%; */
+            border: 2px solid red;
+            /* intialise the contaner as Flexbox using display: property*/
+            display: flex;
+        
+            /* Flex properties for a flex container  */
+
+            /*default (boxes will align themselves rowwise)*/
+            /* flex-direction: row;  */
+            
+            /*boxes will align themselves coloumnwise)*/
+            /* flex-direction: column;  */
+            
+            /* boxws will align in row but start from right side */
+            /* flex-direction: row-reverse; */
+            
+            /* boxws will align in coloumn but start from bottom */
+            /* flex-direction: column-reverse; */
+
+            /*Default is flex-wrap; nowrap;*/
+            flex-wrap: wrap;    
+
+            /*start wrapping from bottom*/
+            /* flex-wrap: wrap-reverse;     */
+            
+            /* we can specify both direction as wll as flex-wrap properties together */
+            /* flex-flow: row-reverse wrap; */
+
+            /* Justify-content will justify the content in horizontal direction*/
+            justify-content: center;    
+
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+            
+            /* Allign-item will justify the content in vertical direction*/
+            /* vertically center */
+            align-items: center;
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: stretch; */
+        }   
+
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 5px;
+            padding: 5px;
+            flex-grow: 2;
+            
+        }
+            /* Flex properties for a flex item  */
+        #box1{
+            /* the box which will have max order value that will be placed in last rest all boxes will remain same.... means higher the order, lates it shows up in the container   */
+            /* order: 2; */
+
+            /* it wll grow the size of  box1 with increase in the size of window */
+            /* flex-grow: 1;   */
+
+            /* it will shrink the size of box with decrease in the size of window */
+            /* It is opposite to flex-gow */
+            /* flex-shrink: 3; */
+
+            /* when flex-direction is set to row, flex basis will control width */
+            /* when flex-direction is set to column, flex basis will control height */
+            /* flex-basis: 300px; */
+
+            /* V.V.V.V. Imp!!!! */
+            /* together flex-grow, flex shrink and flex-basis in the respective format */
+            /* flex: 3 3 320px; */
+
+            /* align-self: flex-start; */
+            /* align-self: flex-end; */
+            /* align-self: center; */
+
+            /* NOTE: Kisi particular item to aline krna ho to use align-self and align-itms is always used in container  */
+        
+        }
+        #box2{}
+        #box3{}
+         
+
+    </style>
+</head>
+<body>
+    <h1>This is a Flexbox tutorial</h1>
+    <div class="container">
+        <div class="item" id="box1">First Box</div>
+        <div class="item" id="box2">Second Box</div>
+        <div class="item" id="box3">Thid Box</div>
+        <div class="item" id="box4">Fourth Box</div>
+        <div class="item" id="box5">Fifth Box</div>
+        <div class="item" id="box6">Sixth Box</div>
+    </div>
+
+</body>
+</html>

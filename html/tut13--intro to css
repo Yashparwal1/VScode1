@@ -1,0 +1,11 @@
+p{color:blue;}
+
+p - selector
+color - property
+blue - value
+
+*{
+
+}
+
+* -- it is known as universal selector

@@ -1,0 +1,62 @@
+<!-- Responsive design is a way for a web developer to make his website adapt to all devices and resolutions 
+=> various way to achieve responsive design
+    1. setting up the viewpoet
+    2. using max-width and max-height
+    3. using CSS media queries
+    4. using rem, vh, vw units over pixels
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size units</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+        
+        .container {
+            font-size: 10px;
+            border: 2px solid green;
+            /* width: 500px; */
+            width: 100vw;
+            /* view port height */
+            /* height: 300px; */
+            height: 100vh;
+            /* view port width */
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #first {
+            /* em: it is the x time more than its parent size */
+            /* font-size: 3em; */ 
+            /* 3x10=30 size*/
+            
+            /* padding: 3em; */
+            /* 3x30=90 padding */
+        }
+        
+        #second {
+            /* rem: it is the x time more than whole size (default size of browser) of html */
+            /* font-size: 3rem; */
+            /* padding: 3em;  */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="first">This is a first heading</h1>
+        <h1 id="second">This is a second heading</h1>
+        <h1 id="third">This is a third heading</h1>
+    </div>
+</body>
+
+</html>

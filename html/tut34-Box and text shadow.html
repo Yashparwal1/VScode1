@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card{
+            border: 2px solid black;
+            padding: 10px 20px;
+            margin: 10px 20px;
+            background-color: bisque;
+        }
+
+        /* box-shadow: feOffset-x feOffset-y color;
+        box-shadow: feOffset-x feOffset-y blur-radious spread-radious color; */
+
+        #card-1{
+            box-shadow: 10px 10px green, 20px 20px red;
+            /* lower shadow i.e. 10right 10down */
+        }
+        #card-2{
+            box-shadow: -10px -10px green;
+            /* upper shadow i.e. -10left -10up */
+        }
+        #card-3{
+            box-shadow: 10px 10px 20px green ; 
+            /* 30px is the blur radious of box shadow */
+        }
+        #card-4{
+            box-shadow: 1px 1px 17px 10px green ; 
+            /* 17px is the blur radious of box shadow */
+            /* 10px means spread shadow in all direction  */
+        }
+        .container2{
+            display: flex;
+        }
+        #card-5{
+            box-shadow: inset 10px 10px blue;
+            /* inset apply shadow insite the item */
+        }
+        #card-6{
+            box-shadow: inset 10px 10px blue, inset 30px 20px red;
+        }
+        #card-7{
+            box-shadow: inset 10px 10px blue;
+            /* inset apply shadow insite the item */
+        }
+        #card-8{
+            box-shadow: inset 10px 10px blue;
+            /* inset apply shadow insite the item */
+        }
+
+        /* TEXT Shadow  */
+
+        .card h1{
+            text-shadow: 2px 2px gold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Outset shadow</h1>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h1>This is HTMl Course</h1>
+            <p>I have started learning HTML from Code with Harry Youtube Channel.
+                officiis ipsam libero incidunt obcaecati quae blanditiis necessitatibus mollitia ad similique quis,
+                possimus ex dicta atque ipsum, amet dolor distinctio vero?</p>
+            </div>
+            <div class="card" id="card-2">
+            <h1>This is card 2</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vitae tempora, fugiat amet iusto, perspiciatis tenetur aliquam iure ipsam facilis eius vero possimus quaerat totam sequi, tempore pariatur quidem. Perferendis?</p>
+        </div>
+        <div class="card" id="card-3">
+            <h1>This is card 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae amet! Optio ipsam tempore nisi! Placeat neque fugiat sint vitae veniam impedit, molestias minus dolore provident tenetur repudiandae eius incidunt.</p>
+        </div>
+        <div class="card" id="card-4">
+            <h1>This is card 4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae amet! Optio ipsam tempore nisi! Placeat neque fugiat sint vitae veniam impedit, molestias minus dolore provident tenetur repudiandae eius incidunt.</p>
+        </div>
+    </div>
+    <h1>Inset shadow</h1>
+    <div class="container2">
+        <div class="card" id="card-5">
+            <h1>This is card 1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repudiandae quidem cum voluptatibus
+                officiis ipsam libero incidunt obcaecati quae blanditiis necessitatibus mollitia ad similique quis,
+                possimus ex dicta atque ipsum, amet dolor distinctio vero?</p>
+        </div>
+        <div class="card" id="card-6">
+            <h1>This is card 2</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus vitae tempora, fugiat amet iusto, perspiciatis tenetur aliquam iure ipsam facilis eius vero possimus quaerat totam sequi, tempore pariatur quidem. Perferendis?</p>
+        </div>
+        <div class="card" id="card-7">
+            <h1>This is card 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae amet! Optio ipsam tempore nisi! Placeat neque fugiat sint vitae veniam impedit, molestias minus dolore provident tenetur repudiandae eius incidunt.</p>
+        </div>
+        <div class="card" id="card-8">
+            <h1>This is card 4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, repudiandae amet! Optio ipsam tempore nisi! Placeat neque fugiat sint vitae veniam impedit, molestias minus dolore provident tenetur repudiandae eius incidunt.</p>
+        </div>
+    </div>
+</body>
+
+</html>

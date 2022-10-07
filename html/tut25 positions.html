@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position properties</title>
+    <!-- CSS Positions: Static (default), Absolute, relative, fxed and sticky-->
+    <style>
+      
+        .container{
+            border: 2px solid blue;
+            background-color: burlywood;
+            height: 2000px; 
+        }
+        .box {
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 5px;
+            display: inline-block;
+        }
+      
+
+        #box3 {
+            /*Realtive: means relative to its original/normal place and will leave a gap at its normal position (apne normal position ke hisab se move hoga jitna hum left, top, in sabme values denge or purani position pe ek gap aa jayega)
+            means box3 will move from its original place 
+            In relative, we can use top, left, bottom, right
+            */
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+        #box4{
+            /*Absolute: means relative to its first parent element/place that is container
+            means box4 will move from its first parent's place that is blue border box */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .btn{
+            /*Fixed: means the element will we fixed at its assigned place even when scrolling up or down 
+            in this case chat box in the bottom right*/
+            position: fixed;
+            right: 10px;
+            bottom: 5px;
+        }
+        #box6{
+            
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5</div>
+        <button class="btn" id="btn1">Chat With Us</button>
+        <div class="box" id="box6">This is sticky box</div>
+    </div>>
+</body>
+
+</html>

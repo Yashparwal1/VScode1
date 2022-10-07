@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Variables & Custom Properties</title>
+    <style>
+        :root{
+            /* if we want to declare global variable, we have to eclare that here in root */
+            --box-color: aqua;
+            --danger-color: red;
+            --maxw: 700px;
+        }
+
+        .container{
+            display: flex;
+            /* --box-color variable will not work here.. because its scope is in .box only.
+            We have to write that here also in order to use that in .container too  */
+            background-color: var(--danger-color);
+            align-items: center;
+            justify-content: center;
+            max-width: var(--maxw);
+            margin: auto;
+            /* we have setted width, so we have to do margin:auto to center */
+
+        }
+        .box{
+            /* use of variables */
+            /* --box-color: aqua; */
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            background-color: var(--box-color);
+            margin: 20px 12px;
+            box-shadow: 5px 5px 8px var(--box-color);
+            /* using variables, we can make changes at more than one place by changing the values in variable only.. Like here if we want to change background color and shadow color whcih are same, we can change the variable which will automaticall reflect at required place. */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

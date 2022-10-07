@@ -1,0 +1,209 @@
+.vimg {
+    margin-top: 220px
+}
+
+.govbodyimg {
+    width: 80% !important;
+    margin: 0 auto
+}
+
+.imgdiv {
+    text-align: center
+}
+
+.exeimg {
+    margin-top: 100px
+}
+
+.dgimg {
+    margin-top: 160px
+}
+
+.advimg {
+    margin-top: 100px
+}
+
+.madimg {
+    width: 70%
+}
+
+.fimg1,
+.fimg2,
+.fimg3,
+.fimg4 {
+    width: 100%;
+    box-shadow: 0 0 3px 3px #ddd
+}
+
+.fimg1 {
+    margin-top: 70px
+}
+
+.fimg2 {
+    margin-top: 45px
+}
+
+.fimg3 {
+    margin-top: 70px
+}
+
+.fimg4 {
+    margin-top: 55px
+}
+
+.gulimg {
+    margin-top: 60px
+}
+
+.faimg {
+    width: 100%;
+    height: 263px
+}
+
+.faHead {
+    width: 100%;
+    box-shadow: 0 0 2px 2px #1e4281
+}
+
+.jdiv {
+    margin-top: 150px
+}
+
+.feetblbba {
+    margin-top: 50px
+}
+
+.feetblmba {
+    margin-top: 115px
+}
+
+.feetblpgdm {
+    margin-top: 60px
+}
+
+.feetblmca {
+    margin-top: 80px
+}
+
+@media (max-width:768px) {
+    .vimg {
+        margin-top: 20px
+    }
+
+    .govbodyimg {
+        width: 100% !important
+    }
+
+    .imgdiv {
+        text-align: center
+    }
+
+    .exeimg {
+        margin-top: 0
+    }
+
+    .dgimg {
+        margin-top: 0
+    }
+
+    .advimg {
+        margin-top: 0
+    }
+
+    .madimg {
+        width: 100%
+    }
+
+    .fimg1,
+    .fimg2,
+    .fimg3,
+    .fimg4,
+    .gulimg {
+        margin-top: 20px
+    }
+
+    .jdiv {
+        margin-top: 20px
+    }
+
+    .feetblbba {
+        margin-top: 20px
+    }
+
+    .feetblmba {
+        margin-top: 20px
+    }
+
+    .feetblpgdm {
+        margin-top: 20px
+    }
+
+    .feetblmca {
+        margin-top: 20px
+    }
+}
+
+.faculty1 {
+    background: url(../img/carousel/fac1.jpg) no-repeat center
+}
+
+.faculty2 {
+    background: url(../img/carousel/fac2.jpg) no-repeat center
+}
+
+.faculty3 {
+    background: url(../img/carousel/fac3.jpg) no-repeat center
+}
+
+.faculty4 {
+    background: url(../img/carousel/fac4.jpg) no-repeat center
+}
+
+.club0 {
+    width: 100%;
+    height: 209px
+}
+
+.cour3 {
+    padding-right: 5px
+}
+
+.box1 {
+    color: #b71c1c;
+    display: inline-block;
+    height: 300px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: inherit
+}
+
+.quotecss1 {
+    overflow: hidden;
+    background-color: #002366;
+    text-align: center;
+    width: 1170px
+}
+
+.quotecss1>p {
+    color: #fff;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600
+}
+
+.tpsec1 {
+    text-align: center
+}
+
+.tpsec1>h4 {
+    padding-top: 20px
+}
+
+.marks {
+    padding: 5px
+}

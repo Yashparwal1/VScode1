@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and Keyframes</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: greenyellow;
+            text-align: center;
+            margin: 10px 4px;
+        }  
+        .box{
+            border: 2px solid red;
+            background-color: aqua;
+            width: 250px;
+            height: 50px;
+            position: relative;
+        }
+        #box1{
+            animation-name: yp1;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s; /*delay in starting the animation */
+        }
+        #box2{
+            animation-name: yp2;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            /* animation-fill-mode: alternate; */
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s; /*delay in starting the animation */
+            /* animation short-hand */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        @keyframes yp1{
+            from{
+                width: 0%;
+            }
+            to{
+                width: 100%;
+            }
+        }
+        @keyframes yp2{
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            50%{
+                top: 250px;
+                left: 250px;
+            }
+            75%{
+                top: 0px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <p>This is loader 1</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" id="box2">
+            <p>This is loader 2</p>
+        </div>
+    </div>
+</body>
+</html>

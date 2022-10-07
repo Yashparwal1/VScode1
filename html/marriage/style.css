@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+
+p {
+    font-size: 25pt;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    top: 100%;
+    display: none;
+}
+
+img{
+    width: 100%;
+    padding-top: 20px;
+}
+
+#par{
+    padding-top: 20px;
+}

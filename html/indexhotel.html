@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1024">
+    <title>CC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Oswald&display=swap"
+        rel="stylesheet">
+    <style>
+        /*CSS reset*/
+        body {
+            color: black;
+            padding: 0px;
+            margin-top: 0px;
+            background: url(cafe.jpg);
+            backdrop-filter: blur(5px);
+            background-size: 2800px;
+            background-repeat: no-repeat;
+            width: auto;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .header {
+            border: 2px solid black;
+            backdrop-filter: blur(5px);
+            background: rgba(255,255,255,0.4);
+            /* z-index: 1000; */
+            /* height: 10em; */
+            /* white-space: nowrap; */
+        }
+
+        .logotext {
+            font-size: 35px;
+            padding-left: 50px;
+            float: left;
+        }
+
+        .left {
+            display: inline;
+            /* position: absolute; */
+            /* left: 15px; */
+            /* top: 15px; */
+            /* margin-left: 15px;
+            margin-top: 15px; */
+        }
+
+        .left img {
+            display: inline;
+            width: 100px;
+            float: left;
+        }
+
+        .mid {
+            display: inline;
+            width: 50%;
+            margin: 200px 500px;
+
+        }
+
+        .navbar {
+            display: block;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .navbar li a:hover {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: rgb(148, 147, 147);
+        }
+
+        .navbar li a.active {
+            text-decoration: underline;
+        }
+
+        .right {
+            display: inline;
+            position: absolute;
+            float: right;
+            right: 15px;
+            top: 15px;
+            width: 75px;
+            padding: 5px 15px;
+
+        }
+
+        .btn1 {
+            display: inline;
+            margin-bottom: 15px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .btn1:hover {
+            background-color: rgb(148, 147, 147);
+        }
+
+        .btn2 {
+            display: inline;
+            margin-top: 15px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .btn2:hover {
+            background-color: rgb(148, 147, 147);
+        }
+
+        .container {
+            display: block;
+            width: 50%;
+            border: 2px solid gray;
+            margin: auto;
+            margin-top: 110px;
+            padding: 38px;
+            border-radius: 27px;
+            text-align: center;
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+        }
+
+        .container h1 {
+            font-size: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+
+        .form-group {
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+        }
+
+        .form-group input {
+            text-align: center;
+            display: block;
+            width: 450px;
+            padding: 5px;
+            margin: 10px auto;
+            border: 2px solid gray;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(247, 240, 240);
+            font-size: 20px;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        .form-group input:hover {
+            background-color: rgb(131, 127, 127);
+        }
+
+        .form-group label {
+            text-align: right;
+            background-color: rgb(247, 240, 240);
+        }
+
+        ::placeholder {
+            color: rgb(163, 30, 30);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="donut.png" alt="">
+            <span class="logotext">Cartoon<br>Cafe</span>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Cafe Menu</a></li>
+                <li><a href="#">Online Order</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+        <!-- Right box for search -->
+        <div class="right">
+            <button class="btn1"> Call Us</button>
+            <button class="btn2">Email Us</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Book your seat in the best <i><u><b>Cafe</b></u></i> of Jaipur now !!!</h1>
+        <form action="book.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="No. of members">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Your Phone No.">
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Booking: </label>
+                <input type="date" name="" placeholder="Date">
+            </div>
+            <div>
+                <input class="btn1" type="submit" value="Submit">
+                <input class="btn2" type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

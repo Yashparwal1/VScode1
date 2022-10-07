@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        
+        
+        #mynav{
+            float: right;
+        }
+        #mysearch{
+            float: right;
+        }
+
+        .navbar{
+            margin: 13px;
+            background-color: black;
+            border: 5px solid red;
+            border-radius: 10px;
+        }
+        .navbar li{
+            float: left;   /* by using float, it is overflowed from parent and auto red background colour will not be displayed */
+            list-style: none;
+            margin: 10px;
+        }
+        .navbar ul{
+            overflow: auto; /* by this background colour will be displayed which was overflowed */
+            margin: 2px;
+        }
+        .navbar a{
+            padding: 2px;
+            color: rgb(7, 248, 7);
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            color: blue;
+        }
+        #searchbox{
+            border-radius: 5px;
+            float: right;
+            padding: 12px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id= "mynav" class = "navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a> </li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Ethical Hacking</a></li>
+                <li><a href="#">Cyber Security</a></li>
+                <div id="mysearch" class="search">   
+                    <input type="text" name="search" id="searchbox" placeholder="seach here">
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

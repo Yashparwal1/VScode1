@@ -1,0 +1,48 @@
+<!-- CSS selectors are used to find the element whise property will be set -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        p{border: 10px solid chartreuse;}
+
+/* this is an example of CLASS SELECTOR */
+        .REDELEMENT{color: red;}
+        .BLUEELEMENT{background-color: blue;}                         
+/* this is an example of ID SELECTOR  */
+        /* #redelement{color: red;} */
+/* this is an example of ELEMENT SELECTOR  */
+        /* p{color: red;} */
+/* this is an example of GROUPING SELECTOR */
+        footer, span{color: blue;
+            background-color: pink;
+        }
+        /* img{
+            padding-left: 5em;
+            padding-top: 5em; 
+        }*/
+        #myimg{
+            margin-top: 50px;
+            margin-left: 50px;
+            border: 5px solid;
+            border-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>CSS selectors</h2>
+    <p id="redelement" class="REDELEMENT BLUEELEMENT" >this is a simple paragraph to learn CSS Selectors</p>
+    <p>this is another simple paragraph</p>
+    <div>
+        <p>this a paragraph</p>
+        <span>this is a span</span>
+    </div>
+    
+    <footer>this is footer</footer>
+    
+    <img id="myimg" src="css selectors.png" height="500px" width="800px">
+</body>
+</html>

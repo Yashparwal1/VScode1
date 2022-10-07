@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            margin: auto;
+            width: 1000px;
+            border: blue solid 5px;
+            }
+            /* header is a block element */
+            /* display block means it will take complete width.. one complete block AND inline means it will take only that much space which is required */
+
+            /* we should not have any block element inside while we want to use display:inline */
+            
+            /* inline-block means the container is block type but it is inline type also at the same time.. now with this we can set width of inline elements also.*/
+        img{
+            margin: auto;
+            height: 100px;
+            display: block;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0px;
+        }
+        .box{
+            border: rgb(255, 81, 0) 2px solid;
+            background-color: thistle;
+            margin: 10px 0px;
+            padding: 20px;
+            width: 33%;
+            display: inline-block;
+            
+        }
+        .container{
+            margin: auto;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <img src="logo.png" alt="">
+        <h2>Welcome to Get Into Computers</h2>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="headng">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum doloremque quasi quia laudantium consequatur! Praesentium dolorem explicabo aut corporis facere rerum, nam ipsam vero excepturi repudiandae culpa officia fuga commodi quibusdam ipsa quae dolor necessitatibus voluptates harum error nostrum placeat! Corrupti accusamus magnam repudiandae molestias cum autem quae debitis.
+            </h4>
+        </div>
+        <div class="box">
+            <h4 class="headng">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum doloremque quasi quia laudantium consequatur! Praesentium dolorem explicabo aut corporis facere rerum, nam ipsam vero excepturi repudiandae culpa officia fuga commodi quibusdam ipsa quae dolor necessitatibus voluptates harum error nostrum placeat! Corrupti accusamus magnam repudiandae molestias cum autem quae debitis.
+            </h4>
+        </div>
+        <div class="box">
+            <h4 class="headng">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illum doloremque quasi quia laudantium consequatur! Praesentium dolorem explicabo aut corporis facere rerum, nam ipsam vero excepturi repudiandae culpa officia fuga commodi quibusdam ipsa quae dolor necessitatibus voluptates harum error nostrum placeat! Corrupti accusamus magnam repudiandae molestias cum autem quae debitis.
+            </h4>
+        </div>
+    </div>
+</body>
+</html>
