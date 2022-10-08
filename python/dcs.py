@@ -1,4 +1,99 @@
- 
+# name = 'yash'
+# # ageS = '19' #if this is number then it'll not be added to string
+# ageN = 19 # this is integer
+# # print(name + ageN) #str+int=error 
+# print(name,ageN) #we can join like this but cannot add using + operator 
+
+# # print("hello",end="") #end="" is hidden due to which new print function executes from next line
+
+# first = 'yash'
+# last = 'parwal'
+# age = 19
+# print(f"my name is {first} {last} and I am {age} years old")
+
+# name = "yashparwal"
+# print(name)
+# print(name[2]) #char at index 2
+# print(name[1:3]) #start:stop index (stop index is not included)
+# print(name[:3]) #0 to 3 but 3 is not included
+
+# # Negative indexing -- index starts from last (reverse)
+# print(name[0:-1]) # -1=last , -2=last-1
+
+# TYPECASTING
+# Implicit ==> done by interpreter like 9//3.0=3.0 ==> 9 will be converted into 9.0
+# Explicit ==> done by programmer like int to str ==> str(var_name)
+# first = 'yash'
+# last = 'parwal'
+# age = 19
+# # print(first + last + age) #error
+# print(first + last + str(age)) #typecasting
+
+# int = 40.1
+# # print(str(int)) #correct,, int varirable it typecasted into string
+# '''
+# print(int(int)) 
+# error,, because here int is not int anymore, main work of int is replaced with 40.1 so interpreter will see it like this: print(40.1(40.1)) and this is not a correct syntax
+# '''
+# str = None
+# print(str(int)) #NULL type variable is not callable
+
+# no = input("Enter no: ") #bydefault input is of string type in python, so have to do some typecasting here like this...
+# no = int(input(f"Enter number: "))
+# print(f"number is {no}")
+# print(type(no)) 
+# print(round(no/3)) #will give round off value
+# print(round(no/3,2)) #will give value upto 2 decimal places
+
+# a = 3
+# b = 4
+# if a<b:
+#     print("Yes")
+# elif a==b:
+#     print("Equal")
+# else:
+#     print("No")
+
+# if "yash"=="yaSh": #false
+#     print("true") 
+# if 4=="4": #false
+#     print("true") 
+
+# THRUTHNESS
+    # in binary: 1 -> True and 0 -> False
+    ### False: 0, Empty Objects, Empty String, None 
+# if 0:
+#     print("true")
+# else:
+#     print("false")
+
+#TO FIND EXACT HOW OLD A PERSON IS.
+# dday = int(input("Enter Birth date : "))
+# dmonth = int(input("Enter Birth month : "))
+# dyear = int(input("Enter Birth year : "))
+
+# cd,cm,cy = 8,10,2022
+
+# if cy>year:
+#     if cm>month:
+#         age = cy-dyear
+#         print(age)
+#     elif cm==dmonth:
+#         if cd>=dday:
+#             age = cy-dyear
+#             print(age)
+#         else:
+#             age = cy-dyear-1
+#             print(age)
+#     else:
+#         age = cy-dyear-1
+#         print(age)
+# else:
+#     print("You have entered something wrong")
+
+
+'''__________________________________________________________________________________''' 
+
 # for i in range(1,5):
 #     print(i)
 # for i in range(1,5):
@@ -124,3 +219,140 @@ note: any type of data can be entered in list
 #     print(addr)
 #     result = os.popen(f"ping -n 1 {addr}")
 
+'''_____________________________________________________________________________________'''
+
+# STRING FUNCTIONS (Note: these func do not modify the original string)
+from base64 import *
+from multiprocessing.sharedctypes import Value
+from pickle import TUPLE
+
+'''
+# PYTHON STRING METHODS https://www.w3schools.com/python/python_ref_string.asp
+
+name = "yash parwal"
+
+# 1. capitalise -- capital the first letter of string
+name.capitalize()
+
+# 2. count -- coubt the no of letters in a string
+name.count("a")
+
+# 3. endswith -- S.endswith(suffix[, start[, end]]) -> bool
+# Return True if S ends with the specified suffix, False otherwise.
+name.endswith("l")
+
+# 4. find -- print the first ouucurance of the provided letter in string 
+name.find("h")
+# if not there, it will return -1
+
+# 5. index -- print the first ouucurance of the provided letter in string 
+name.find("h")
+# if not there, it will give error due to which further program execution will stop
+
+# 6. Replace -- replace all occurance of 1st item with second item
+name.replace("a","b")
+
+# 7. upper and lower
+name.upper()
+name.lower()
+
+# 8. strip -- Return a copy of the string with leading and trailing whitespace removed.
+name.strip() 
+
+# 9. exit
+
+# 10. encode & decode -- Encode the string using the codec registered for encoding.
+# Convert the string into byte/binary from
+name.encode()
+name.decode()
+'''
+
+# DICTIONARIES constis of keys and value pairs
+
+test = {
+    "name":"yash",
+    "age":19,
+    # IsMale:True
+    2:25
+}
+
+# or 
+
+# data = dict(name="Yash", age=15)
+
+# print(data["name"])
+# print(data["age"])
+
+# for key,value in test.items(): 
+#     print(key,value)
+# for key in test.keys():
+#     print(key)
+# for value in test.values():
+#     print(value)
+
+# print("name" in test) #true ; search in keys
+# print("yash" in test) #false ; search in keys
+# print("yash" in test.values()) #true ; search in values
+
+# test.clear()
+# print(test)
+
+# test2 = test.copy()
+# print(test2)
+
+# di = {}
+# {}.fromkeys(["name","age","anything"],1)
+# print(di)
+
+
+# print(test.get("name")) 
+# print(test["name"])
+
+# print(test.pop("name")) #pop from begning
+# print(test)
+# print(test.popitem()) #pop from end
+# print(test)
+
+# data={"name":"ayush",
+#       "IsMale":True,
+#       2:44
+#       }
+# new={"name":"kid",
+#      "gender":"male"
+#      }
+
+# # data.update(new)
+# # print(data)
+
+# data["gender"]="MALE"
+# #this will also update the dict like .update() but this is shortcut as in .update we have to create new dict but here we can directly give key:value
+# print(data)
+
+#DICTIONARY COMPREHENSION
+
+# data = {"a":10, "b":20}
+
+# new = {x for x in data} #this will create set not dict
+# print(new)
+# new = {key:value for key,value in data.items()} #this will create dict
+# print(new)
+
+# new={key+" done":value/5 for key,value in data.items()}
+# print(new)
+
+# new={key+" done":value/5 for key,value in data.items() if value==20}
+# print(new)
+
+# new={key+" done":(value/5 if value==20 else value*5) for key,value in data.items()}
+# print(new)
+
+# TUPLE -- collection of item
+# * Tuple is immutable i.e cannot be modified once created
+# * Tuple is faster than list
+# * used when we want the data to be constant always like date of acc. created, months in year 
+name = ("yash", 1,2, True)
+# we can create tuple like this also
+name = tuple([1,2,3,4])
+
+# * We can use tuple as the key of a dictionary but cannot use list for the same 
+# * Slicing and nesting is same like we did in list

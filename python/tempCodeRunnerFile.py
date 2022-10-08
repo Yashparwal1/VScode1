@@ -1,5 +1,2 @@
-.join(reversed(i))
-# if n==rev:
-#     print("Palindrome")
-# else:
-#     prin
+ done":(value/5 if value==20 else value*5) for key,value in data.items()}
+# print(new)
