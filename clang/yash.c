@@ -3,6 +3,7 @@
 #include <math.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 /*int main()
 {
     float r,area,cir;
@@ -1099,16 +1100,30 @@ int main()
 
 // int main()
 // {
-//     int n,final,rem,sum=0;
+//     int n,final,rem,sum=0,num,len=0,dig;
+//     char arr[33];
 //     printf("Enter any number: ");
 //     scanf("%d",&n);
 
-//     final=n;
-//     while(final!=0)
+    // final=n;
+    // while(final!=0)
+    // {
+    //     rem=final%10;
+    //     sum=sum+(rem*rem*rem);
+    //     final=final/10;
+    // }
+
+    //first convert into string, then iterate over each digit as a character of string, converting them back into digits to calculate their cube and adding them together. then equating the sum to original number taken from user as integer. 
+//     sprintf(arr,"%d",n); //to convert int to str
+//     // printf("%s\n",arr);
+//     for (int i = 0; arr[i] != '\0'; i++)
 //     {
-//         rem=final%10;
-//         sum=sum+(rem*rem*rem);
-//         final=final/10;
+//         if (isdigit(arr[i]))
+//         {
+//             dig = arr[i] - '0';
+//             // printf("%d\n",dig);
+//             sum = sum + pow(dig,3);
+//         }
 //     }
 //     if (n==sum)
 //     {

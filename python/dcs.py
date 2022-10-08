@@ -45,6 +45,14 @@
 # print(round(no/3)) #will give round off value
 # print(round(no/3,2)) #will give value upto 2 decimal places
 
+# Conditional Statements
+
+# If condition:
+# 	Statements
+# Else:
+# 	Statements
+
+
 # a = 3
 # b = 4
 # if a<b:
@@ -91,60 +99,148 @@
 # else:
 #     print("You have entered something wrong")
 
-
 '''__________________________________________________________________________________''' 
 
+'''|__1/10/22__|'''
+
+# String multiplication
+# print("*"*5)  
+# print("yash"*5)
+
+'''
+# is keyword  
+a=1  
+b=1
+if a is b: #true
+    print("yes")
+else: #true
+    print("no")
+c = [1.2]
+d = [1.2]
+
+if c is d:          #this checks this- if(id(c) == id(d))
+    print("right")
+else:
+    print("Wrong") #this will execute
+
+if c == d:
+    print("right") #this will execute
+else:
+    print("Wrong") 
+
+c=d
+# we can see their memor location by 
+# print(id(c)) #same 
+# print(id(d)) #same
+if c is d: #this 
+    print("right") #NOW this will execute
+else:
+    print("Wrong") 
+
+# SO WHAT IS THE DIFFERENCE BETWEEN IS AND ==
+# == (checks for equality) compares the values, if they are equal or not WHILE is (checks identity) compares the memory location in terms of being the same object in the memory.
+
+'''
+'''
+#LOOPS IN PYTHON
+For Loop:
+syntax
+	For item in iterable_object:
+		#code
+
+Item: hold current value 
+Iterable_object: collection of values 
+
+While loop:
+Syntax 
+	While booleam_expression:
+    #code
+'''
 # for i in range(1,5):
 #     print(i)
 # for i in range(1,5):
 #     print("yash")
 
+#range(start,stop,step)
 # for i in range(1,10,2):   #print 1 to 10 with gap of 2
 #     print(i)
 # for i in range(5):   #print 0 to 4, it will take
 #     print(i)
 
 # no = 153
+# n = no
 # sum=0
-
-# for i in range(len(str(no))):
-#     rem = no%10
+# while n!=0:
+#     rem = n%10
 #     sum = sum + (rem*rem*rem)
-#     no = no//10
+#     n = n//10
 
 # if(no==sum):
 #     print("Armstrong no.")
 # else:
 #     print("Not an armstrong no.")
+# OR 
+# no = str(no)
+# for i in str(no):
+#     sum = sum + int(i)**3
+# if(no==sum):
+#     print("Armstrong no.")
+# else:
+#     print("NOT an armstrong no.")
+
 
 # for i in range(4):
 #     for j in range(i+1):
 #         print("* ",end="")
 #     print("\n")
 
-""" for i in range(1,6):
-    print(" "*(5-i) + ("*"*i))
- """
-"""  
-new = 0
-for i in range(1,5):
-    print(" "*(5-i) + "*"*new)
-    new = new+2
- """
+# for i in range(5):
+#     print("* "*i)
 
-""" new = 0
-for i in range(0,7,2):
-    print(" "*(i-new) + "*"*(7-i))
-    new = new+1
-"""
+# for i in range(1,6):
+#     print(" "*(5-i) + ("*"*i))
+
+# j=1
+# for i in range (1,6):
+#     if i==5:
+#         print(" "*(5-i) + "|"+"*"*j+"|" + " "*(5-i))
+#     else:
+#         print(" "*(5-i) + "/"+"*"*j+"\\" + " "*(5-i))
+#     j=j+2
+# for i in range(1,5):
+#     print(" "*4 + "|*|")
+
+# new = 0
+# for i in range(1,5):
+#     print(" "*(5-i) + "*"*new)
+#     new = new+2
+
+
+# new = 0
+# for i in range(0,7,2):
+#     print(" "*(i-new) + "*"*(7-i))
+#     new = new+1
+# these 👇 and ☝ both are same  
+# star = 7
+# for i in range(5):
+#     print(" "*i + "*"*star)
+#     star -= 2
+
+# a = 5
+# while a>1:
+#     print(a)
+#     a=a-1
+
+# JUMP STATEMENT 
+# 1. break statement -- exit from the loop
+# 2. continue statement -- ignore the further execution and go over next iteration
 
 # for x in range(1,10):
 #     if(x/3==2):
-#         # break
+#         # break 
 #         # continue
-#         # pass
+#         # pass #pass is not a jump statement
 #         print(x)
-# #code
 
 # for i in range(1,101):
 #     if(i%2 == 0):
@@ -269,12 +365,12 @@ name.decode()
 
 # DICTIONARIES constis of keys and value pairs
 
-test = {
-    "name":"yash",
-    "age":19,
-    # IsMale:True
-    2:25
-}
+# test = {
+#     "name":"yash",
+#     "age":19,
+#     # IsMale:True
+#     2:25
+# }
 
 # or 
 
@@ -350,9 +446,9 @@ test = {
 # * Tuple is immutable i.e cannot be modified once created
 # * Tuple is faster than list
 # * used when we want the data to be constant always like date of acc. created, months in year 
-name = ("yash", 1,2, True)
+# name = ("yash", 1,2, True)
 # we can create tuple like this also
-name = tuple([1,2,3,4])
+# name = tuple([1,2,3,4])
 
 # * We can use tuple as the key of a dictionary but cannot use list for the same 
 # * Slicing and nesting is same like we did in list
