@@ -452,3 +452,41 @@ name.decode()
 
 # * We can use tuple as the key of a dictionary but cannot use list for the same 
 # * Slicing and nesting is same like we did in list
+
+
+# SETS - collection of distinct objects
+# Sets have no order 
+# Sets cannot be accesed by index no.
+# Sets objects can be iterated 
+# A = {1,2,True,"1"}
+# print(A)
+# B = set({}) #we can create set like this also
+a = {1,2,3}
+# a.add(4)
+# a.remove(1)
+# a.remove(6) #error becz, 6 element is not there
+# a.discard(6) #NO error, even if 6 is not there. it wll still not give error like that happened in .remove 
+# b = a.copy()
+# print(b) 
+# a.clear()
+
+# OPERATION ON STES 
+# 1. union a|b 
+# 2. intersection a&b
+
+# c = {3,4,5}
+# print(a|c) #union
+# print(a.union(c))
+# print(a&c) #intersection
+# print(a.intersection(c))
+
+# FILE HANDLING
+
+# file = open("file_name", "mode")
+
+file = open("dcs.txt","r")
+data = file.read() #read complete data
+data = file.read(4) #read 
+data = file.readline() #read one line only 
+data = file.readlines() # gives a list with each line a an object of list
+print(data)
