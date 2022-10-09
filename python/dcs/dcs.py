@@ -461,7 +461,7 @@ name.decode()
 # A = {1,2,True,"1"}
 # print(A)
 # B = set({}) #we can create set like this also
-a = {1,2,3}
+# a = {1,2,3}
 # a.add(4)
 # a.remove(1)
 # a.remove(6) #error becz, 6 element is not there
@@ -484,9 +484,54 @@ a = {1,2,3}
 
 # file = open("file_name", "mode")
 
-file = open("dcs.txt","r")
-data = file.read() #read complete data
-data = file.read(4) #read 
-data = file.readline() #read one line only 
-data = file.readlines() # gives a list with each line a an object of list
-print(data)
+# file = open("dcs.txt","r")
+# data = file.read() #read complete data
+# data = file.read(4) #read 
+# data = file.readline() #read one line only 
+# data = file.readlines() # gives a list with each line a an object of list
+# print(data)
+
+# FUNCTION ==> 
+# - A part of code that does some specific task each time it is called 
+# - It can accept and return data upon calling
+# - Doesn't gets executed unless called
+# *- If you don't use return at the end of the function, python will auto return None
+# *- Once a return statement is executed, no other code after that statement (within the function) will execute 
+
+# def name_of_function(parameters):
+#	# some_code
+
+# def hello():
+#     print("hello")
+# hello()
+
+# def hello():
+#     return "hello"
+# a = hello()
+# print(a)
+
+# def name(n,a,b): #these are parameters
+#     print(n,a,b)
+# name("yash",2,1) #these are arguments
+
+# def add(a,b):
+#     return a+b
+# print(add(1,2))
+
+# def add(a,b):
+#     return a+b
+# print(add(a=2,b=1)) #keyword arguments
+
+# def add(a=4,b=5): #defaule parameters but these will overwrite if arg. are provided othervise not
+#     return a+b
+# print(add(2,1)) #arguments
+
+def do(func,a): #function can have other functiona as parameter
+    func(a)
+def hello(n):
+    print(n)
+
+do(hello,1) #we can pass functions also as argument
+
+
+

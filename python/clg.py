@@ -62,7 +62,7 @@ Variable - identifier
 '''QUESTION: 
 1. WAP to find whether the year is leap year or not
 year should be divisible by 4 and not by 100 or year should be divisible by 400 
-agar 4 se nhi ho rha to obviously nhi h, but 4 se ho rha h to 100 se nhi hona chahiye tab vo leap yr h agar phir bhi ho 100 se ho rha h to phir 400 se bhi hona chahiye 
+agar 4 se nhi ho rha to obviously nhi h, but 4 se ho rha h to 100 se nhi hona chahiye tab vo leap yr h agar phir bhi 100 se ho rha h to phir 400 se bhi hona chahiye 
 
 OR
 
@@ -116,10 +116,10 @@ n = 121
 
 #using reversed function
 # rev = reversed(n) #int object is not reversible
-i = str(n) #convert int into str
-rev = ''.join(reversed(i)) #join is a function of string just like concatination in C
-if i==rev:
-    print("Palindrome")
-else:
-    print("Not Palindrome")
+# i = str(n) #convert int into str
+# rev = ''.join(reversed(i)) #join is a function of string just like concatination in C
+# if i==rev:
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
 
