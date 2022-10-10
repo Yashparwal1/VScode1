@@ -255,10 +255,12 @@ Syntax
 # 2/10/22
 # ___________________________________________________________________________________________________________
 
+# ======================================LISTS===============================================
 """
-List: collection of items
+List: collection of diff. items of diff. datatypes
 grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
-note: any type of data can be entered in list
+* any type of data can be entered in list
+* List is mutable
 """
 # x = list(range(1,5))
 # x = list()
@@ -317,6 +319,7 @@ note: any type of data can be entered in list
 
 '''_____________________________________________________________________________________'''
 
+# ====================================STRING==============================================
 # STRING FUNCTIONS (Note: these func do not modify the original string)
 from base64 import *
 from multiprocessing.sharedctypes import Value
@@ -341,8 +344,9 @@ name.endswith("l")
 name.find("h")
 # if not there, it will return -1
 
-# 5. index -- print the first ouucurance of the provided letter in string 
-name.find("h")
+# 5. index -- 	Searches the string for a specified value and returns the position of where it was found
+
+
 # if not there, it will give error due to which further program execution will stop
 
 # 6. Replace -- replace all occurance of 1st item with second item
@@ -363,6 +367,7 @@ name.encode()
 name.decode()
 '''
 
+# =======================================DICTIONARIES=======================================
 # DICTIONARIES constis of keys and value pairs
 
 # test = {

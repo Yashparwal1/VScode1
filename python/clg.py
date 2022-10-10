@@ -125,3 +125,45 @@ if(y%100==0 && y%400==0 || y%100!=0 && y%4==0)
 # else:
 #     print("Not Palindrome")
 
+# print("===============XYZ University Examination Form===============")
+# name = input("Enter your name: ")
+# roll = int(input("Enter your Roll No.: "))
+# clgname = input("Enter your College name: ")
+# aid = int(input("Enter your Aadhar Card No.: "))
+# fee = 4000
+# print("\n===============Student Details===============")
+# print(f"Name: {name}")
+# print(f"Roll No.: {roll}")
+# print(f"College Name: {clgname}")
+# print(f"Examination Fees: {fee}")
+# print(f"Aadhar No.: {aid}")
+
+
+""" 
+Hospital Name and address
+Patient name, age, phone no., sex, date, blood group, disease, recommended doctor name according to disease
+"""
+
+# =========================================LISTS===========================================
+""" 
+Collection of diff. datatypes
+List is Mutablle
+"""
+
+# l = [1,2,3,4,5]
+# m = [10,11,12,13]
+# l.append(9) #can add one element at one time at the end
+# l.extend(m) #add two list
+
+# print(l.index(3))
+# print(l)
+
+name = 'This is my python class'
+# print(name[::-1]) 
+for i  in name[::-1]:
+    print(i,end="")
+
+li = [1,2,3,4,5]
+
+# for i in li[-1]:
+print(li[-1])
