@@ -12,6 +12,8 @@
 # # Method 4 - using single quotes
 # print('My name is Yash\nand I am studying in GNIOT')
 
+# name = input("Enter Your Name: ")
+
 """ 
 Variable - identifier
 - first letter cannot be any digit
@@ -93,7 +95,7 @@ if(y%100==0 && y%400==0 || y%100!=0 && y%4==0)
 
 
 
-n = 121
+# n = 121
 # using string slicing(convert the no. into sting format)
 
 # rev = str(n)[::-1] #start:stop:step
