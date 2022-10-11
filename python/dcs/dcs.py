@@ -447,6 +447,7 @@ name.decode()
 # new={key+" done":(value/5 if value==20 else value*5) for key,value in data.items()}
 # print(new)
 
+# =========================================TUPLE==============================================
 # TUPLE -- collection of item
 # * Tuple is immutable i.e cannot be modified once created
 # * Tuple is faster than list
@@ -458,7 +459,7 @@ name.decode()
 # * We can use tuple as the key of a dictionary but cannot use list for the same 
 # * Slicing and nesting is same like we did in list
 
-
+# =========================================SETS==============================================
 # SETS - collection of distinct objects
 # Sets have no order 
 # Sets cannot be accesed by index no.

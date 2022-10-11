@@ -143,6 +143,41 @@ if(y%100==0 && y%400==0 || y%100!=0 && y%4==0)
 Hospital Name and address
 Patient name, age, phone no., sex, date, blood group, disease, recommended doctor name according to disease
 """
+# print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-Surya Kids Hospital+-+-+-+-+-+-+-+-+-+-+-+-+-+-")
+# print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+Jaipir Rajasthan+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-")
+# print("_"*75)
+# print("+-+-+-+-+-+-+-+-+-+-+-+-+Parient Information Form+-+-+-+-+-+-+-+-+-+-+-+-+-\n")
+# print("x-----------------xx-----------------xx-----------------xx-----------------x")
+# print("GENERAL INFORMATION")
+# fname = input("[ + ]- Patient's First Name: ")
+# lname = input("[ + ]- Patient's Last Name: ")
+# dob = input("[ + ]- Patient's Date of Birth (DD/MM/YY): ")
+# age = int(input("[ + ]- Patient's Age: "))
+# name = input("[ + ]- Patient's Sex: ")
+# name = input("[ + ]- Patient's Address: ")
+# name = input("[ + ]- Patient's Mob. No.: ")
+# print("SYMPTOMS OR DISEASES")
+# print('''
+#         [ Press 1 ]- For Common Cold, Cough, Throat Infection, Ear problem
+#         [ Press 2 ]- For Stomachace, Liver Problem, Intestine Problem 
+#         [ Press 3 ]- For Heart problem, Respiratory System Problem 
+# ''')
+# ch = int(input("Enter Choice according to your symptoms: "))
+# if ch == 1:
+#     print("[\*/] Your Symptoms/Diseases are (related to): Common Cold, Cough, Throat Infection, Ear problem\n")
+#     print("[\*/] Doctor Recommendation: Dr. Rajeev Singh (Cabin No. 14)")
+# elif ch == 2:
+#     print("[\*/] Your Symptoms/Diseases are (related to): Stomachace, Liver Problem, Intestine Problem\n")
+#     print("[\*/] Doctor Recommendation: Dr. Natwar Parwal (Cabin No. 41)")
+# elif ch == 3:
+#     print("[\*/] Your Symptoms/Diseases are (related to): Heart problem, Respiratory System Problem\n")
+#     print("[\*/] Doctor Recommendation: Dr. Shubham Sharma (Cabin No. 45)")
+# else:
+#     print("-----------Please Enter Correct Choice (choose from 1 to 3)------------")
+
+# again = input('''Do you want to choose Symptoms option again?
+# Press[y] for Yes and [N] for No
+# ''')
 
 # =========================================LISTS===========================================
 """ 
@@ -150,20 +185,28 @@ Collection of diff. datatypes
 List is Mutablle
 """
 
-# l = [1,2,3,4,5]
-# m = [10,11,12,13]
+l = [1,2,3,4,5,6,7]
+m = [10,11,12,13]
 # l.append(9) #can add one element at one time at the end
-# l.extend(m) #add two list
+# l.extend(m) #extend list a and add list m in list l
 
-# print(l.index(3))
+
+# name = 'This is my python class'
+# # print(name[::-1]) 
+# for i  in name[::-1]:
+#     print(i,end="")
+
+# m = l.copy() #copy list l into m
+# l.count(4) #count the occurance of 4
+
+# print(l.index(3)) #find out the index no. ==>the item '3' is on which index ==> like its on 2nd index
+
+# l.insert(1,222) #insert 222 at index one
+# l.pop() #remove the last element
+# l.remove(1,222) #remove the
 # print(l)
-
-name = 'This is my python class'
-# print(name[::-1]) 
-for i  in name[::-1]:
-    print(i,end="")
-
-li = [1,2,3,4,5]
-
-# for i in li[-1]:
-print(li[-1])
+# l.reverse() #reverse the whole string
+# t = [1,2,3,1,True,'a','l','b']
+# t = [1,2,3,1]
+# t.sort() #sort the whole list in assending order
+# print(t)
