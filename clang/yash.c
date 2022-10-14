@@ -663,7 +663,7 @@ int main()
 //     //     }
 //     //     else
 //     //     {
-//     //         //divisible by 4 but not 100, then no need to check for 400, direct come to this else 
+//     //         //divisible by 4 but not 100, then no need to check for 400, direct come to this else
 //     //         printf("The year %d is a leap year",year);
 //     //     }
 //     // }
@@ -1105,15 +1105,15 @@ int main()
 //     printf("Enter any number: ");
 //     scanf("%d",&n);
 
-    // final=n;
-    // while(final!=0)
-    // {
-    //     rem=final%10;
-    //     sum=sum+(rem*rem*rem);
-    //     final=final/10;
-    // }
+// final=n;
+// while(final!=0)
+// {
+//     rem=final%10;
+//     sum=sum+(rem*rem*rem);
+//     final=final/10;
+// }
 
-    //first convert into string, then iterate over each digit as a character of string, converting them back into digits to calculate their cube and adding them together. then equating the sum to original number taken from user as integer. 
+// first convert into string, then iterate over each digit as a character of string, converting them back into digits to calculate their cube and adding them together. then equating the sum to original number taken from user as integer.
 //     sprintf(arr,"%d",n); //to convert int to str
 //     // printf("%s\n",arr);
 //     for (int i = 0; arr[i] != '\0'; i++)
@@ -1992,32 +1992,32 @@ int main()
 //     printf("Enter the string in array: \n");
 
 //***********************************************************************************************
-//     // gets(arr);          
-    //    not able to use gets after scanf, it takes "enter" of scanf as input and skips the gets function
-    //    scanf() reads an integer and leaves a newline character in the buffer. So gets() only reads newline and the string in gets() is ignored by the program.
-    
-    // ------------------------------------------------------------------------------------------
-    
-    // when scanf() is used in loop
-    // because every scanf() leaves a newline character in a buffer that is read by the next scanf.
+//     // gets(arr);
+//    not able to use gets after scanf, it takes "\n" of scanf as input and skips the gets function
+//    scanf() reads an input and leaves a newline character in the buffer. So gets() only reads newline and the string in gets() is ignored by the program.
 
-    // ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
-    // How to Solve the Above Problem?  
-    /* 
-    We can make scanf() to read a new line by using an extra \n, i.e., scanf(“%d\n”, &x) . In fact scanf(“%d “, &x) also works (Note the extra space).
-    We can add a getchar() after scanf() to read an extra newline.
+// when scanf() is used in loop
+// because every scanf() leaves a newline character in a buffer that is read by the next scanf.
 
-    LINKS:-
-    1. https://www.quora.com/Why-is-the-gets-function-not-used-after-scanf
-    2. https://stackoverflow.com/questions/2366509/input-in-c-scanf-before-gets-problem#comment54196331_2366509
-    3. https://www.geeksforgeeks.org/problem-with-using-fgets-gets-scanf-after-scanf-in-c/
-    */ 
+// ------------------------------------------------------------------------------------------
 
-    // ------------------------------------------------------------------------------------------
-    /* 
-    gets(3): "The gets() function cannot be used securely. Because of its lack of bounds checking, and the inability for the calling program to reliably determine the length of the next incoming line, the use of this function enables malicious users to arbitrarily change a running program's func- tionality through a buffer overflow attack. It is strongly suggested that the fgets() function be used in all cases. (See the FSA.)" Don't use it.
-     */
+// How to Solve the Above Problem?
+/*
+We can make scanf() to read a new line by using an extra \n, i.e., scanf(“%d\n”, &x) . In fact scanf(“%d “, &x) also works (Note the extra space).
+We can add a getchar() after scanf() to read an extra newline.
+
+LINKS:-
+1. https://www.quora.com/Why-is-the-gets-function-not-used-after-scanf
+2. https://stackoverflow.com/questions/2366509/input-in-c-scanf-before-gets-problem#comment54196331_2366509
+3. https://www.geeksforgeeks.org/problem-with-using-fgets-gets-scanf-after-scanf-in-c/
+*/
+
+// ------------------------------------------------------------------------------------------
+/*
+gets(3): "The gets() function cannot be used securely. Because of its lack of bounds checking, and the inability for the calling program to reliably determine the length of the next incoming line, the use of this function enables malicious users to arbitrarily change a running program's func-tionality through a buffer overflow attack. It is strongly suggested that the fgets() function be used in all cases. (See the FSA.)" Don't use it.
+ */
 
 //**********************************************************************************************
 
@@ -2832,7 +2832,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //     }
 // }
 
-// 40. prrogram to store employee's info as entered by user from console. 
+// 40. prrogram to store employee's info as entered by user from console.
 // struct employee
 // {
 //     int id;
@@ -2862,7 +2862,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         printf("Name: %s\n",emp[i].name);
 //         printf("Salary: %d\n",emp[i].salary);
 //     }
-    
+
 //     return 0;
 // }
 
@@ -2885,7 +2885,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         printf("Enter Book Id: ");
 //         scanf("%d%*c",&b[i].id);
 //         /*
-//         The %*c term causes scanf to read in one character (the newline) but the asterisk causes the value to be discarded. This will make scanf eat the newline without requiring a separate function call. 
+//         The %*c term causes scanf to read in one character (the newline) but the asterisk causes the value to be discarded. This will make scanf eat the newline without requiring a separate function call.
 //         LINK:- https://stackoverflow.com/questions/2366509/input-in-c-scanf-before-gets-problem#comment54196331_2366509
 //         OR use fflush() function to eat the newline character stored in buffer by scanf
 //         */
@@ -2903,7 +2903,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         printf("ID: %d\n",b[i].id);
 //         printf("Name: %s\n",b[i].name);
 //         printf("Salary: %d\n",b[i].shelfno);
-//     }   
+//     }
 //     return 0;
 // }
 
@@ -2946,10 +2946,10 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         // puts((ptr+i)->name);
 //         printf("Seat no.: %d\n",(ptr+i)->seat);
 //     }
-//     return 0;   
+//     return 0;
 // }
 
-// 43. Program to demonstrate the working of unions 
+// 43. Program to demonstrate the working of unions
 // union students
 // {
 //     int a;
@@ -2969,7 +2969,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 // }
 
 // 44. Program to demonstrate working of nested structure
-// struct train    
+// struct train
 // {
 //     int PNR;
 //     int trainNO;
@@ -3010,5 +3010,156 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //     printf("Passenger Seat No.: %d\n",t.pass.seat);
 // }
 
+// 45 & 46 -- Program to demonstrate functions fputc() and fputc()
+// void main() {
+//     FILE *fp;
+//     char ch;
 
+//  //write a character to a file
+//     fp = fopen("file.c", "w");
+//     fputc('Y', fp);
+//     fclose(fp);
 
+//  //read a character from a file
+//     fp = fopen("file.c", "r");
+//     while((ch = fgetc(fp)) != EOF) {
+//         printf("%c", ch);
+//     }
+//     fclose(fp);
+//     printf("\n");
+// }
+
+// 47 -- Program to demonstrate functions fputs() and fgets()
+// int main()
+// {
+//     FILE *fptr = fopen("file.txt","w");
+//     fputs("Yash Parwal\nAge - 19",fptr);
+//     // fputs("JavaProgramming",fptr);
+//     fclose(fptr);
+
+//     fptr = fopen("file.txt","r");
+//     char ch[20];
+//     while(fgets(ch,20,fptr)!=NULL)
+//     {
+//         printf("%s",ch);
+//     }
+
+//     fclose(fptr);
+
+//     return 0;
+// }
+
+// 48 -- Program to demonstrate fseek()
+// int main()
+// {
+//     FILE *fp;
+//     int c;
+//     fp = fopen("file.txt", "w+");
+//     fputs("Visit to my website https://www.fake.com", fp);
+//     fseek(fp, 20, SEEK_SET);                       // put the cursor at 7th index
+//     fputs("https://www.getintocomputers.com", fp); // from 7th index the pre written statement will get overwritten
+//     fclose(fp);
+
+//     //    to see the contents of file, lets open it...
+//     fp = fopen("file.txt", "r");
+//     while (1)
+//     {
+//         c = fgetc(fp);
+//         if (feof(fp))
+//         {
+//             break;
+//         }
+//         printf("%c", c);
+//     }
+//     fclose(fp);
+//     return (0);
+// }
+
+// 49 -- program to read the first line from a file
+// int main()
+// {
+//     char arr[50], ch;
+//     int i = 0;
+//     FILE *fp;
+//     fp = fopen("file.txt", "w");
+//     fputs("This is the first line of file\nThis is the second line of the file.", fp);
+//     fclose(fp);
+
+//     fp = fopen("file.txt", "r");
+//     if ((fp = fopen("file.txt", "r")) != NULL)
+//     {
+//         fscanf(fp, "%[^\n]", arr);
+//         printf("%s", arr);
+//     }
+//     fclose(fp);
+//     return 0;
+// }
+
+// 50 -- Program to display its own source code 
+// int main()
+// {
+//     FILE *fp;
+//     char c;
+//     fp = fopen(__FILE__,"r");
+    
+//     while (c != EOF)
+//     {
+//         c = getc(fp);
+//         printf("%c",c);
+//     }
+    
+//     fclose(fp);
+//     return 0;
+// }
+
+// // 51 -- Program to open the file in write mode 
+// int main()
+// {
+//     char arr[33],c;
+//     FILE *fp;
+//     fp = fopen("file.txt","w");
+//     if (fp == NULL)
+//     {
+//         printf("ERROR: Can't open the file");
+//         return (-1);
+//     }
+//     printf("file.txt is opened in write mode.\nYou can give any input.\n");
+//     gets(arr);
+//     fputs(arr, fp);
+//     fclose(fp);
+//     printf("Data successfully written into file.txt\nLets open the file.txt and see the content...\n");
+//     fp = fopen("file.txt","r");
+//     while (c != EOF)
+//     {
+//         c = getc(fp);
+//         printf("%c",c);
+//     }
+//     fclose(fp);
+// }
+// 52 -- Program to demonstrate the working of fopen and fclose
+// int main()
+// {
+//     char arr[33],c;
+//     FILE *fp;
+//     fp = fopen("file.txt","w+");
+//     if (fp == NULL)
+//     {
+//         printf("ERROR: Can't open the file");
+//         return (-1);
+//     }
+//     printf("file.txt is opened in write mode.\nYou can give any input.\n");
+//     gets(arr);
+//     fputs(arr, fp);
+//     fclose(fp);
+//     printf("file.txt is closed\nWe now cannot give any input... \nBUT lets try to give any input and see if it is stored in file.txt or not\n");
+//     gets(arr);
+//     fputs(arr, fp);
+//     printf("Data successfully written into file.txt\nLets open the file.txt and see the content...\n");
+//     fp = fopen("file.txt","r");
+//     while (c != EOF)
+//     {
+//         c = getc(fp);
+//         printf("%c",c);
+//     }
+//     fclose(fp);
+// }

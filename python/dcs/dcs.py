@@ -471,7 +471,13 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # ==> 4. clear
 # data.clear() #do empty the list
 
-data = [1,2,3,"Hello",True]
+
+data = [1,2,3,"Hello",True,2,2]
+
+for i in data:
+	data.remove(i)
+	data.insert(0,i)
+print(data)
 
 # ==> 5. pop()
 # print(data.pop()) #remove the last item of the list and gives that item
@@ -487,7 +493,7 @@ data = [1,2,3,"Hello",True]
 # data.remove('gg') #'gg' is not in the list, so it will give ValueError
 # print(data)
 
-# test = [1,2,3,2]
+# test = [3,2,1,2,5]
 # test.remove(2) #removes only the first occurance
 # print(test)
 
@@ -495,9 +501,18 @@ data = [1,2,3,"Hello",True]
 # print(data.index(3)) #three is on which index? (returns th index nummber)
 # print(data.index(10)) #will return ValueError that 10 is not in the list.
 # index(what_to_find , start_index , end_index)
-print(data.index(3,1,4)) #find 3 between one and four index.
+# print(data.index(3,1,4)) #find 3 between one and four index.
 
+# ==> 8. count(2) element 2 is how many times. That is 3 times.
+# print(data.count(2))
+# print(data.count(9)) #will give '0' as output
 
+# ----------------------to remove duplicates of a particular item.---------------------------  
+# for i in range(data.count(2) - 1):
+# 	data.remove(2)
+# print(data)
+
+# ==> 
 # for i in data[::-1]:
 #     print(i)
 
