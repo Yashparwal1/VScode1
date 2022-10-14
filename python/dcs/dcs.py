@@ -1,3 +1,135 @@
+"""
+What is Python?
+Python is an interpreted, high level and object oriented programming language which is also used as a scripting language to connect existing components together.
+
+Some key Differences
+	1. High/Low level languages
+		High level lang are more programmer friendly while low level languages are more machine friendly
+	2. Interpreted and compiled languages 
+		A. In compiled language, 
+			• The machine directly translates the code in compiled version.
+			• Compiler is used as a mediator to translate source code to machine code
+			• Compiler compile the whole code in one go and then gives error(if any).
+		B. In interpreted language, 
+			• the code is read and interpreted in real time.
+			• Interpreter is used as a mediator to translate source code to machine code
+			• Interpreter executes the code line by line and gives error (if any) and stop further execution 
+	3. Programming and Scripting language
+		Scripting language do not require an explicit compilation step. So all scripting languages are programming languages but all programming languages are not scripting languages.
+	4. Platform Dependent/Independent language
+		Those languages in which program is written on one platform (OS) can be run on any other platform (OS) with the same output are Platform Independent Languages. While the languages in which program is written for some specific platform (OS) and cannot be run on other platforms are Platform dependent Languages. 
+
+Implementation of Python
+The interpreter of python was officially written in C lang known as CPython. But there are several more implementation of python like Jpython which was written in Java, IronPython which was written in C# and PyPy which was written in Python itself.
+
+** This info will be helpful when we use different interpreters in some special situations like many burp extensions want us to provide them Jpython interpreter 
+
+Compilation Process
+Source code (.py) ==> [internally] ==> byte code (.pyc) ==> [internally] ==> machine code (0,1)
+
+2**3 -- exponential
+10%2 -- modulo  
+Division
+10/3 = 3.3 -> this is floating point division
+10//3 = 3 -> this is integer division
+9.0//2.0 = 4.0 -> this is integer division but since the operands are in float, it'll give result in float
+
+
+
+Like BODMAS, python follows PEMDAS
+P - parenthesis ()
+E - exponents **
+MD - Multiplication and Division (solve left to right)
+A - addition
+S - subtraction
+
+Comments
+	Comments are the nothing but code itself which is ignored by the interpreter. Generally comments are used to gives some notes or additional info to other user within the actual source code.
+	
+	1. Single line comment #this is ex of single line comment
+	2. Multiline comment 
+	''' developer : ayush
+	age:40 
+	gender: male 
+	'''
+	
+Variable
+	• Variables are the containers which stores some data.
+	• Variables can be assigned to other variables.
+	>>> ayush=5
+	>>> aman = ayush
+	>>> ayush = 7
+	>>> ayush
+	7
+	>>>
+	a,b = 3,4
+	• Variables can be reassigned with another datatype
+			A = 5
+			A = 5.2
+			A = "yash"
+		**This is known as dynamic typing.
+			
+	• Rules of declaring variables:
+		1. Var. name must start with letter or underscore
+		2. Var. name other than 1st character must contain only letters, numbers or underscore.
+		3. Var. name cannot have any space.
+
+	• Generally programmers define variables like this-
+	Is_Male = 1
+	IsMale = 1
+	__password__ = 1
+	
+	Datatype
+		1. Int (integer values) 
+		2. Float (decimal values)
+		3. Bool (true or false / yes or no)
+			isMale = false
+			isMale = false -- wrong(first letter of true and false must be capital)
+		4. Complex
+			X = 3e+5j
+		5. None (same as NULL)
+			isPremium=None
+			
+	String: sequence of unicode characters
+		a. Single line string: can be declared with single or double quotes
+			'hello'
+			"hello"
+		b. Multi line string: declared with triple single quotes
+			Name = '''yash
+					Parwal
+					'''
+			Print(Name)
+	
+	NOTE: string can be multiplied by integer but cannot perform addition.
+	
+	Escape sequence chars.
+		\char ==> char has some meaning
+		\n ==> n means new line
+		\\ ==> \ means backslash
+		\t ==> t means tab
+
+
+Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
+
+'Ayush"Pathak' 
+'Ayush"Pathak' 
+
+"Ayush'Pathak" 
+"Ayush'Pathak" 
+
+'''Ayush pathak" ''' 
+'Ayush pathak" ' 
+
+''' Ayush ' pathak ''' 
+" Ayush ' pathak " 
+
+"Ayush \" Pathak" 
+'Ayush " Pathak' 
+
+'Ayush \' Pathak' 
+"Ayush ' Pathak"
+
+"""
 # name = 'yash'
 # # ageS = '19' #if this is number then it'll not be added to string
 # ageN = 19 # this is integer
@@ -20,7 +152,7 @@
 # # Negative indexing -- index starts from last (reverse)
 # print(name[0:-1]) # -1=last , -2=last-1
 
-# TYPECASTING
+#==================================TYPECASTING=============================================
 # Implicit ==> done by interpreter like 9//3.0=3.0 ==> 9 will be converted into 9.0
 # Explicit ==> done by programmer like int to str ==> str(var_name)
 # first = 'yash'
@@ -45,13 +177,12 @@
 # print(round(no/3)) #will give round off value
 # print(round(no/3,2)) #will give value upto 2 decimal places
 
-# Conditional Statements
+#================================Conditional Statements=====================================
 
 # If condition:
 # 	Statements
 # Else:
 # 	Statements
-
 
 # a = 3
 # b = 4
@@ -67,7 +198,7 @@
 # if 4=="4": #false
 #     print("true") 
 
-# THRUTHNESS
+#-----------------------------------THRUTHNESS----------------------------------------------
     # in binary: 1 -> True and 0 -> False
     ### False: 0, Empty Objects, Empty String, None 
 # if 0:
@@ -75,6 +206,21 @@
 # else:
 #     print("false")
 
+# If both conditions are true, it will give the last value 
+ 
+# 10 and 10 -- 10 (True)
+# 10 and 20 -- 20 (True)
+# 20 and 10 -- 10 (True)
+# True and True -- True
+# True and False -- False
+# False and True -- False
+
+# if(10 and 20):
+# 	print("yes")
+
+
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TASK >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+'''
 #TO FIND EXACT HOW OLD A PERSON IS.
 # dday = int(input("Enter Birth date : "))
 # dmonth = int(input("Enter Birth month : "))
@@ -98,51 +244,57 @@
 #         print(age)
 # else:
 #     print("You have entered something wrong")
+'''
 
-'''__________________________________________________________________________________''' 
+#___________________________________________________________________________________________ 
 
-'''|__1/10/22__|'''
+# =======================================|__1/10/22__|======================================
 
 # String multiplication
 # print("*"*5)  
 # print("yash"*5)
 
-'''
-# is keyword  
-a=1  
-b=1
-if a is b: #true
-    print("yes")
-else: #true
-    print("no")
-c = [1.2]
-d = [1.2]
 
-if c is d:          #this checks this- if(id(c) == id(d))
-    print("right")
-else:
-    print("Wrong") #this will execute
+#---------------------------------------is keyword---------------------------------------------  
+# a=234.1
+# b=234.1
+# if a is b: #this will execute becoz a and b both are referencing to same location of 234.1 
+#     print("yes")
+# else:
+#     print("no")
+# c = [1,2]
+# d = [1,2]
 
-if c == d:
-    print("right") #this will execute
-else:
-    print("Wrong") 
+# if c is d: #this checks this- if(id(c) == id(d)), list will have diff. locations
+#     print("right")
+# else:
+#     print("Wrong") #this will execute
 
-c=d
+# if c == d:
+#     print("right") #this will execute
+# else:
+#     print("Wrong") 
+
+# c=d
 # we can see their memor location by 
 # print(id(c)) #same 
 # print(id(d)) #same
-if c is d: #this 
-    print("right") #NOW this will execute
-else:
-    print("Wrong") 
+# if c is d: #this 
+#     print("right") #NOW this will execute becoz now we assigned d into c, so these both will have same location 
+# else:
+#     print("Wrong") 
 
 # SO WHAT IS THE DIFFERENCE BETWEEN IS AND ==
 # == (checks for equality) compares the values, if they are equal or not WHILE is (checks identity) compares the memory location in terms of being the same object in the memory.
 
+
+# a = 'yash'
+# b = 'yash'
+
+
+
+#====================================LOOPS IN PYTHON===========================================
 '''
-'''
-#LOOPS IN PYTHON
 For Loop:
 syntax
 	For item in iterable_object:
@@ -161,12 +313,14 @@ Syntax
 # for i in range(1,5):
 #     print("yash")
 
+#------------------------------------range()------------------------------------------------
 #range(start,stop,step)
 # for i in range(1,10,2):   #print 1 to 10 with gap of 2
 #     print(i)
 # for i in range(5):   #print 0 to 4, it will take
 #     print(i)
 
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ARMSTRONG NO. >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # no = 153
 # n = no
 # sum=0
@@ -188,7 +342,7 @@ Syntax
 # else:
 #     print("NOT an armstrong no.")
 
-
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< STAR PATTERNS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # for i in range(4):
 #     for j in range(i+1):
 #         print("* ",end="")
@@ -231,7 +385,7 @@ Syntax
 #     print(a)
 #     a=a-1
 
-# JUMP STATEMENT 
+#=====================================JUMP STATEMENT========================================== 
 # 1. break statement -- exit from the loop
 # 2. continue statement -- ignore the further execution and go over next iteration
 
@@ -251,11 +405,18 @@ Syntax
 # if not 5>3:
 #     print("done")
 
-#############################################################################################################
-# 2/10/22
 # ___________________________________________________________________________________________________________
 
-# ======================================LISTS===============================================
+# 2/10/22
+
+# ----------------------------------------------- NOT ------------------------------------------------
+# if not 5>3:
+#     print("Done")
+
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TASK (in dcstask.py) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+# ===============================================LISTS================================================
 """
 List: collection of diff. items of diff. datatypes
 grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
@@ -267,29 +428,75 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # if [""]:  #empty list means false
 #     print("x")
 
+
 # data = [1,2,3,"Hello",True]
+# print(len(data))
+# print(len(143)) #integer has no length
+
 # print(data[0])
 # print(data[2])
+# print(data[9]) #error, index out of range
 # print(data[-1]) #negative indexing
+
+# if 2 in data:
+#     print("yes") # '2' is present in data or not
 # for i in data:
 #     print(i)
+# ------------------------------------ LIST FUNCTIONS ------------------------------------
+# ==> 1. append()
 
 # data.append(4) #add the data as a single item at last of the list
 # print(data)
 # data.append([4,5]) #we can provide list within a list
 # print(data)
+# print(data[-1]) # will give oblect at index(-1) of list that is [4,5]
+# print(data[-1][0]) # will give index0 object of index(-1) object if the index(-1) object is a list othervise it'll give error 
+# item of a list within a list 
 
-# print(data[-1]) # will give [4,5]
-# print(data[-1][0]) # will give 4
-
-# data.extend([4,5]) #add the data as diff. items
+# ==> 2. extend()
+# a = [10,11,12,13]
+# data.extend(a) #add list a into data with elements of list 'a' as individual items
+# data.extend([4,5]) #add list [4,5] to the data as individual items like 4, 5 
 # print(data)
 
+# ==> 3. index(index_number,object_to_add)
 # data.insert(3,"hlo") #hlo will be inserted at 3rd index
 # print(data) 
-#NOTE: in negative indexing, first it it converted into equivalent positive index and then data is inserted
 
-# data=[1,2,3, "hello", True,]
+# ------------------------------- PROBLEM WITH NEGATIVE INDEXING ------------------------------
+#NOTE: in negative indexing, first it it converted into equivalent positive index and then data is inserted
+# temp = [1,2,3]
+# temp.insert(-1,4) #4 should be added at last ==> [1,2,3,4] but NO....
+# ---------------------------------------------------------------------------------------------
+# ==> 4. clear
+# data.clear() #do empty the list
+
+data = [1,2,3,"Hello",True]
+
+# ==> 5. pop()
+# print(data.pop()) #remove the last item of the list and gives that item
+# this means that it not just remove but also store the poped item in memory (or if we give any var, so in var)
+
+# data.pop(3) #pop the element from index three
+# data.pop(10) #IndexError: pop index out of range
+# print(data)
+
+# ==> 6. remove()
+# print(data)
+# data.remove(3) #will remove the defined element like here '3' will be removed
+# data.remove('gg') #'gg' is not in the list, so it will give ValueError
+# print(data)
+
+# test = [1,2,3,2]
+# test.remove(2) #removes only the first occurance
+# print(test)
+
+# ==> 7. index()
+# print(data.index(3)) #three is on which index? (returns th index nummber)
+# print(data.index(10)) #will return ValueError that 10 is not in the list.
+# index(what_to_find , start_index , end_index)
+print(data.index(3,1,4)) #find 3 between one and four index.
+
 
 # for i in data[::-1]:
 #     print(i)
@@ -321,9 +528,6 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 
 # ====================================STRING==============================================
 # STRING FUNCTIONS (Note: these func do not modify the original string)
-from base64 import *
-from multiprocessing.sharedctypes import Value
-from pickle import TUPLE
 
 '''
 # PYTHON STRING METHODS https://www.w3schools.com/python/python_ref_string.asp
@@ -532,12 +736,12 @@ name.decode()
 #     return a+b
 # print(add(2,1)) #arguments
 
-def do(func,a): #function can have other functiona as parameter
-    func(a)
-def hello(n):
-    print(n)
+# def do(func,a): #function can have other functiona as parameter
+#     func(a)
+# def hello(n):
+#     print(n)
 
-do(hello,1) #we can pass functions also as argument
+# do(hello,1) #we can pass functions also as argument
 
 
 

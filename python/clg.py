@@ -210,3 +210,19 @@ m = [10,11,12,13]
 # t = [1,2,3,1]
 # t.sort() #sort the whole list in assending order
 # print(t)
+
+# f_name = input("Enter your First name: ")
+# m_name = input("Enter your Middle name: ")
+# l_name = input("Enter your Last name: ")
+
+# print(f"My name is {f_name} {m_name} {l_name}")
+
+# a = 10
+# b = 2
+# print(f"The addition of a and b is {a+b}")
+# print(f"Subtraction of a and b is is {a-b}")
+# print(f"Product of a and b is {a*b}")
+# print(f"Division of a and b is {a/b}")
+# print(f"Floor division of a and b is = {a//b}")
+# print(f"Modulo of a and b is {a%b}")
+

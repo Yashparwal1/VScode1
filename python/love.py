@@ -4,7 +4,7 @@ from turtle import *
 from typing import ForwardRef
 color('red')
 begin_fill()
-pensize()
+pensize(2)
 left(50)
 forward(133)
 circle(50,200)
