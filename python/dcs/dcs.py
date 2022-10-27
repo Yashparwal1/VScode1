@@ -75,9 +75,9 @@ Variable
 		3. Var. name cannot have any space.
 
 	• Generally programmers define variables like this-
-	Is_Male = 1
-	IsMale = 1
-	__password__ = 1
+		Is_Male = 1
+		IsMale = 1
+		__password__ = 1
 	
 	Datatype
 		1. Int (integer values) 
@@ -138,10 +138,11 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 
 # # print("hello",end="") #end="" is hidden due to which new print function executes from next line
 
+# ===================================================== PYTHON - 2 (25 sept) =========================================================
 # first = 'yash'
 # last = 'parwal'
 # age = 19
-# print(f"my name is {first} {last} and I am {age} years old")
+# print(f"my name is {first} {last} and I am {age} years old") #docstring
 
 # name = "yashparwal"
 # print(name)
@@ -153,6 +154,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # print(name[0:-1]) # -1=last , -2=last-1
 
 #==================================TYPECASTING=============================================
+
 # Implicit ==> done by interpreter like 9//3.0=3.0 ==> 9 will be converted into 9.0
 # Explicit ==> done by programmer like int to str ==> str(var_name)
 # first = 'yash'
@@ -472,12 +474,12 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # data.clear() #do empty the list
 
 
-data = [1,2,3,"Hello",True,2,2]
+# data = [1,2,3,"Hello",True,2,2]
 
-for i in data:
-	data.remove(i)
-	data.insert(0,i)
-print(data)
+# for i in data:
+# 	data.remove(i)
+# 	data.insert(0,i)
+# print(data)
 
 # ==> 5. pop()
 # print(data.pop()) #remove the last item of the list and gives that item
@@ -620,7 +622,10 @@ name.decode()
 # test2 = test.copy()
 # print(test2)
 
-# di = {}
+# di = {"name":"yash",
+#     "age":19,
+#     # IsMale:True
+#     2:25}
 # {}.fromkeys(["name","age","anything"],1)
 # print(di)
 
@@ -629,6 +634,7 @@ name.decode()
 # print(test["name"])
 
 # print(test.pop("name")) #pop from begning
+# print(test.pop("xyz")) #keyvalue error becoz xyz is not in dictionary.
 # print(test)
 # print(test.popitem()) #pop from end
 # print(test)
@@ -679,7 +685,7 @@ name.decode()
 # * Slicing and nesting is same like we did in list
 
 # =========================================SETS==============================================
-# SETS - collection of distinct objects
+# SETS - well defined collection of distinct objects
 # Sets have no order 
 # Sets cannot be accesed by index no.
 # Sets objects can be iterated 
@@ -716,7 +722,7 @@ name.decode()
 # data = file.readlines() # gives a list with each line a an object of list
 # print(data)
 
-# FUNCTION ==> 
+# ======================================= FUNCTION =============================================== 
 # - A part of code that does some specific task each time it is called 
 # - It can accept and return data upon calling
 # - Doesn't gets executed unless called
@@ -758,5 +764,112 @@ name.decode()
 
 # do(hello,1) #we can pass functions also as argument
 
+# =================================== 15/10/22 =============================================
 
+# ----------------------------------VAriablle SCOPE -------------------------------------
+
+# * Each variable has its own scope.
+# * Global Variable -- variablles defined outside the main functions 
+# * Local Variable -- variablles defined within the main functions 
+
+# global keyword: global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.
+# We can actually access global variables inside any function but we can't manipulate them, that's why global keyword is important.
+
+# x,y = 7,4
+# def add():
+# 	x,y = 5,3
+# 	print(x+y)
+# add()
+
+# def add():
+# 	x,y = 1,2
+# 	print(x+y)
+# 	def again():
+# 		print(x+y)
+# 	again()
+# add()
+
+# x,y=6,7
+# def add():
+#     x,y=1,2
+#     print(x+y)
+#     def again():
+#         nonlocal x,y
+#         print(x+y)
+#     again()
+# add()
+
+# ----------------------------- Function Documentation ---------------------------------------
+
+# def sum(x,y):
+# 	""" This functio is used to add 2 values"""
+# 	return (x+y)
+# sum(10,20)
+# print(sum.__doc__) #will show the documentation of sum func.
+
+# print(print.__doc__) #will show the documentation of print func.
+
+# -------------------------------- Special Parameters ----------------------------------------
+# ------------------------------- * and ** as parameters -------------------------------------
+
+# *args (arguments) -- creates a tuple
+# **kwargs (keyword arguments) -- creates a dictionary
+
+# def mul(x,y,*args,**kwargs): #normal parameters,*args,**kwargs
+# 	print(x,y,args,kwargs)
+
+# mul(1,2,3,4,5,6,a=10,b=11,c=12,d=13) #normal parameters,*args,**kwargs
+
+
+# ============================= Lambda Func. (Anonymous Functions) ==========================
+
+
+# def add(x,y):
+# 	return (x+y)
+
+
+# add = lambda x,y:x+y #one liner function
+# print(add(1,2)) 
+
+# def do(x,y,func):
+# 	ans = func(x,y)
+# 	print(ans)
+# do(1,2,lambda x,y:x+y)
+
+# =========================== Some Important Built Func. ================================
+
+# a = [1,2,3,4,5]
+
+# for i in range(5):
+# 	a[i] = a[i] +2
+# print(a)
+
+# 1. map() --  executes a function for each in an itrable/collection. 
+# Make an iterator that computes the function using arguments from each of the iterables. Stops when the shortest iterable is exhausted.
+
+# a = map(lambda x:x+2,a)
+# print(list(a))
+
+
+# 2. filter() -- elements are based on certain condition. and returns those elements for which function/condition is true
+# a = filter(lambda x:x%2==0,a) 
+# print(list(a))
+
+# name = ["Ayush","Aman","Srishti","Harsh"]
+
+# new = filter(lambda x:len(x)>4,name)
+# # print(list(new)) #it will reset 
+# new = list(new)
+# new = map(lambda x:"Your instructor is "+x,new)
+# print(list(new))
+
+# 3. any() -- if any one item of list is true, it will return true othervise false
+# 4. all() -- all the elements of list should be true, then only it will return true otherwise false
+
+# a = [4,2,6,7,1,2]
+# print(sorted(a))
+# print(sorted(a,reverse=True))
+# print(max(1,7,44,24,56,7))
+# print(max('a','b'))
+# print(min('a','b'))
 

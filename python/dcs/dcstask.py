@@ -198,3 +198,24 @@ agar 4 se nhi ho rha to obviously nhi h, but 4 se ho rha h to 100 se nhi hona ch
 
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
+""" 
+*******
+|*****|
+||***||
+|||*|||
+|||*|||
+||***||
+|*****|
+*******
+"""
+
+# star=7
+# pipe=3
+# for i in range (0,4):
+#     print("|"*i + "*"*star + "|"*i)
+#     star = star-2
+# star=1
+# for i in range (1,5):
+#     print("|"*pipe + "*"*star + "|"*pipe)
+#     pipe = pipe-1
+#     star = star+2

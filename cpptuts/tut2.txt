@@ -22,3 +22,6 @@ int main()
 }
 
 << -- this is called insertion operator
+
+1. Automatic 
+2. Typecasting
