@@ -219,3 +219,20 @@ agar 4 se nhi ho rha to obviously nhi h, but 4 se ho rha h to 100 se nhi hona ch
 #     print("|"*pipe + "*"*star + "|"*pipe)
 #     pipe = pipe-1
 #     star = star+2
+
+
+# space = 5
+# for i in range (1,12,2):
+#     print(" "*space + "*"*i)
+#     space -= 1
+
+# space = 1
+# for i in range (9,0,-2):
+#     print(" "*space + "*"*i)
+#     space += 1
+
+# TASK ==> Write a program to input a filename, read the file then calculate the total no. of alphabets in it. (not numbers, spaces or special characters). Remove all those alphabets and leave the file with rest of the characters.
+
+# chars = input(" ")
+with open("dcs.txt", "w") as file:
+    file.write("Heloksadkjljssssssssss")

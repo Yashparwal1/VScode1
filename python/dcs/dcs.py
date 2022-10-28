@@ -138,7 +138,8 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 
 # # print("hello",end="") #end="" is hidden due to which new print function executes from next line
 
-# ===================================================== PYTHON - 2 (25 sept) =========================================================
+# \__________________________________ PYTHON - 2 (25 sept) __________________________________/
+
 # first = 'yash'
 # last = 'parwal'
 # age = 19
@@ -155,6 +156,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 
 #==================================TYPECASTING=============================================
 
+# ==> Converting one datatype into another
 # Implicit ==> done by interpreter like 9//3.0=3.0 ==> 9 will be converted into 9.0
 # Explicit ==> done by programmer like int to str ==> str(var_name)
 # first = 'yash'
@@ -201,27 +203,45 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 #     print("true") 
 
 #-----------------------------------THRUTHNESS----------------------------------------------
+
     # in binary: 1 -> True and 0 -> False
-    ### False: 0, Empty Objects, Empty String, None 
+    ### False items are: 0, Empty Objects, Empty String, None 
+
 # if 0:
 #     print("true")
 # else:
 #     print("false")
 
-# If both conditions are true, it will give the last value 
- 
+# ====================================== Logical Operators =====================================
+# Three logical operators are "and", "or" and "not".
+# l = 5
+# m = 10
+# n = 15
+# if l<m and m<n: #both conditions should be true for true output
+# 	print("Alright")
+	
+# if l<m or m>n: #either of the condition is true, the output will be true
+# 	print("Yeeees!! Alright!")
+
+# if not True:
+# 	print("Condition is now acting as false i.e this statement will not be printed !!!")
+# if not l>m:
+# 	print("l>m is false but still this will be printed becoz 'not' is making this true by telling that yesss this is true that l is not greater than m ")
+
 # 10 and 10 -- 10 (True)
 # 10 and 20 -- 20 (True)
 # 20 and 10 -- 10 (True)
 # True and True -- True
 # True and False -- False
 # False and True -- False
+'''If both conditions are true, it will give the last value in case of "and" and first value in case of "or".''' 
 
 # if(10 and 20):
 # 	print("yes")
 
 
-# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TASK >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TASK >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 '''
 #TO FIND EXACT HOW OLD A PERSON IS.
 # dday = int(input("Enter Birth date : "))
@@ -246,16 +266,15 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 #         print(age)
 # else:
 #     print("You have entered something wrong")
-'''
+''' 
 
-#___________________________________________________________________________________________ 
 
-# =======================================|__1/10/22__|======================================
+# \__________________________________Python - 3 (2nd oct.)_____________________________________/ 
+
 
 # String multiplication
 # print("*"*5)  
 # print("yash"*5)
-
 
 #---------------------------------------is keyword---------------------------------------------  
 # a=234.1
@@ -264,15 +283,16 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 #     print("yes")
 # else:
 #     print("no")
+
 # c = [1,2]
 # d = [1,2]
 
-# if c is d: #this checks this- if(id(c) == id(d)), list will have diff. locations
+# if c is d: #this checks this- if(id(c) == id(d)), and list always have diff. memory locations
 #     print("right")
 # else:
 #     print("Wrong") #this will execute
 
-# if c == d:
+# if c == d: # == checks the values 
 #     print("right") #this will execute
 # else:
 #     print("Wrong") 
@@ -286,7 +306,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # else:
 #     print("Wrong") 
 
-# SO WHAT IS THE DIFFERENCE BETWEEN IS AND ==
+# SO WHAT IS THE DIFFERENCE BETWEEN "IS" & "=="
 # == (checks for equality) compares the values, if they are equal or not WHILE is (checks identity) compares the memory location in terms of being the same object in the memory.
 
 
@@ -297,16 +317,16 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 
 #====================================LOOPS IN PYTHON===========================================
 '''
-For Loop:
-syntax
+==> For Loop:
+syntax - 
 	For item in iterable_object:
 		#code
 
 Item: hold current value 
 Iterable_object: collection of values 
 
-While loop:
-Syntax 
+==> While loop:
+Syntax - 
 	While booleam_expression:
     #code
 '''
@@ -335,11 +355,13 @@ Syntax
 #     print("Armstrong no.")
 # else:
 #     print("Not an armstrong no.")
+
 # OR 
+
 # no = str(no)
-# for i in str(no):
+# for i in no:
 #     sum = sum + int(i)**3
-# if(no==sum):
+# if(sum == int(no)):
 #     print("Armstrong no.")
 # else:
 #     print("NOT an armstrong no.")
@@ -407,18 +429,18 @@ Syntax
 # if not 5>3:
 #     print("done")
 
-# ___________________________________________________________________________________________________________
+# _______________________________________________________________________________________________
 
 # 2/10/22
 
-# ----------------------------------------------- NOT ------------------------------------------------
+# ----------------------------------------------- NOT -------------------------------------------
 # if not 5>3:
 #     print("Done")
 
-# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TASK (in dcstask.py) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TASK (in dcstask.py) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-# ===============================================LISTS================================================
+# ===============================================LISTS===========================================
 """
 List: collection of diff. items of diff. datatypes
 grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
@@ -444,7 +466,7 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 #     print("yes") # '2' is present in data or not
 # for i in data:
 #     print(i)
-# ------------------------------------ LIST FUNCTIONS ------------------------------------
+# ------------------------------------ LIST FUNCTIONS ----------------------------------------
 # ==> 1. append()
 
 # data.append(4) #add the data as a single item at last of the list
