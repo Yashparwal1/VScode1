@@ -2758,7 +2758,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         printf("Enter element #%d: ",(i+1));
 //         scanf("%d",&ptr[i]);
 //     }
-//     printf("The values are stored in *ptr using calloc() function: \n");
+//     printf("The values are stored in *ptr using recalloc() function: \n");
 //     for (int i = 0; i < 8; i++)
 //     {
 //         printf("%5d",ptr[i]);
@@ -2837,7 +2837,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 // {
 //     int id;
 //     char name[33];
-//     int salary;
+//     int salary; 
 // };
 // int main()
 // {
@@ -2889,9 +2889,9 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         LINK:- https://stackoverflow.com/questions/2366509/input-in-c-scanf-before-gets-problem#comment54196331_2366509
 //         OR use fflush() function to eat the newline character stored in buffer by scanf
 //         */
-
 //         // scanf("%d",&b[i].id);
 //         // fflush(stdin); //because scanf leaves a newline character in the buffer that is read by next scanf of gets or or any other input function and skips it
+
 //         printf("Enter Book Name: ");
 //         gets(b[i].name);
 //         printf("Enter Book Shelf No.: ");
@@ -2902,7 +2902,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         printf("\n--------INFO. OF BOOK #%d STORED---------\n",(i+1));
 //         printf("ID: %d\n",b[i].id);
 //         printf("Name: %s\n",b[i].name);
-//         printf("Salary: %d\n",b[i].shelfno);
+//         printf("Shelf No.: %d\n",b[i].shelfno);
 //     }
 //     return 0;
 // }
@@ -2929,10 +2929,9 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //         gets((ptr+i)->name);
 //         // fgets((ptr+i)->name,n,stdin); //only takes first character of any string
 //         // scanf("%s",&(ptr+i)->name); //only takes first string till a white space chracter
-//         fflush(stdin);
+//         // fflush(stdin);
 //         printf("Enter Id: ");
 //         scanf("%d",&(ptr+i)->id);
-//         fflush(stdin);
 //         printf("Enter Seat no.: ");
 //         scanf("%d",&(ptr+i)->seat);
 //         fflush(stdin);
@@ -3010,7 +3009,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //     printf("Passenger Seat No.: %d\n",t.pass.seat);
 // }
 
-// 45 & 46 -- Program to demonstrate functions fputc() and fputc()
+// 45 & 46 -- Program to demonstrate functions fputc() and fgetc()
 // void main() {
 //     FILE *fp;
 //     char ch;
@@ -3034,7 +3033,6 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 // {
 //     FILE *fptr = fopen("file.txt","w");
 //     fputs("Yash Parwal\nAge - 19",fptr);
-//     // fputs("JavaProgramming",fptr);
 //     fclose(fptr);
 
 //     fptr = fopen("file.txt","r");

@@ -233,6 +233,43 @@ agar 4 se nhi ho rha to obviously nhi h, but 4 se ho rha h to 100 se nhi hona ch
 
 # TASK ==> Write a program to input a filename, read the file then calculate the total no. of alphabets in it. (not numbers, spaces or special characters). Remove all those alphabets and leave the file with rest of the characters.
 
-# chars = input(" ")
+""" 
+alpha = 0
 with open("dcs.txt", "w") as file:
-    file.write("Heloksadkjljssssssssss")
+    file.write(input("Enter some lines: "))
+file.close()
+
+file = open("dcs.txt", "r")
+data = file.read()
+print(data)
+
+for i in data:
+    if i >= 'a' and i <= 'z' or i >= 'A' and i <= 'Z':
+        alpha += 1
+print(f"Total no. of alphabets in the stentence are: {alpha}")
+for i in data:
+    if i >= 'a' and i <= 'z' or i >= 'A' and i <= 'Z':
+        data = data.replace(i,'')
+print(f"after removing all the alphabest, remaining chars are: {data}")
+"""
+
+class Rectangle:
+    # l,b = 5,6
+    def __init__(self,l,b):
+        self.l = l
+        self.b = b
+    def peri(self):
+        pr = 2*(self.l+self.b)
+        print(pr)
+    def area(self):
+        ar = (self.l*self.b)
+        print(ar)
+    def display(self):
+        print(self.l)
+        print(self.b)
+        self.peri()
+        self.area()
+l = int(input("Enter the length: "))
+b = int(input("Enter the breadth: "))
+obj = Rectangle(l,b)
+obj.display()

@@ -78,6 +78,7 @@ Variable
 		Is_Male = 1
 		IsMale = 1
 		__password__ = 1
+		__name__ = 1 -- ye find karne me help karta hai ki jo script run ho rahi hai wo direct ho rahi hai ya dusre file se import hokar
 	
 	Datatype
 		1. Int (integer values) 
@@ -895,3 +896,92 @@ name.decode()
 # print(max('a','b'))
 # print(min('a','b'))
 
+#\_____________________________________PYTHON-9 29oct.___________________________________________/ 
+
+# ========================================== OOP ================================================
+
+# Models some process or thing in the world as class or object
+
+# Blueprint for object that can contain methods(funcrions) and attributes(variables)
+# When a function is associated with a class, then it it knows as method and when variables are associated with class, then these are known as attributes.
+ 
+# ------------------------------------------ INSTANCE ------------------------------------------
+# * These are nothing but objects thet are constructed from class blueprint that contain their class properties.
+# * Any no. of objects or instances can be created of a class.
+# * All objects are independent of each other.
+
+# ---------------------------------------- PROPERTIES ------------------------------------------     
+# 1. Encapsulation -- Grouping of public/private methods and attributes in a programmiatic class making abstraction possible.(wrapping data and the methods that work on data within one unit.)
+
+# 2. Abstraction -- Exposing only revelent data to outside and hiding the private attributes and methods's inner workings from users. 
+
+# class Users:
+# 	def func():
+# 		print("hello")
+
+
+#\_____________________________________PYTHON-10 30oct.___________________________________________/
+
+# 3. Inheritance -- OOP ability to define a class which inherits from another class (base or parent class)
+
+# class User:
+# 	def tell(self):
+# 		print("I am a user")
+
+# class Admin(User):
+# 	print("I am also an Admin")
+
+# obj = Admin()
+# obj.tell()
+
+# If we use super() method while multi inheritance python follows MRO(Method resolution) to find and eecute method from parent class
+
+# 4. Polimorphism -- An object can take-on many(poly) forms(morph)
+
+# Special or Magic methods 
+
+# class Test:
+#     def __init__(self,first):
+#         self.first=first
+#     def __repr__(self):
+#         pass
+#     def __len__(self):
+#         return 5
+#     def __add__(self,x):
+#         return Test(self.first+x.first+y.first)
+# obj=Test(2)
+# obj2=Test(4)
+# obj3=Test(5)
+# final = obj+obj2+obj3
+# print(final.first)
+
+# Iterator -- 
+# Iterablle -- An object which will return an itertor when iter() method is called on it.
+
+# generators ==> subsets of iterators
+# Every genertor is iterator but not vice versa
+# generatores takes much less space and time.
+# Generators are created with:
+# 1. generttor functions ("yield" keyword)
+# 2. generator expression
+
+# def count(max):
+# 	count = 1
+# 	while count <= max:
+# 		print(count)
+# 		count+=1
+# 	return count
+# count(5
+
+# Decorators -- These are functions that wrap other functions and enhance their behaviour 
+
+def do(func,x,y):
+    func(x,y)
+    def final():
+        print("done")
+    return final
+
+def add(x,y):
+    print(x+y)
+	
+do(add,2,3)()
