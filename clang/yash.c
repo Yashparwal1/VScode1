@@ -2090,13 +2090,10 @@ gets(3): "The gets() function cannot be used securely. Because of its lack of bo
 //     {
 //         for (int j = 0; j < 3; j++)
 //         {
+            
 //             printf("%5d",A[i][j]);
 //         }
 //     }
-//     // while (A[i][j] != A[1][2])
-//     // {
-//     //     printf("%5d",A[i][j]);
-//     // }
 //     return 0;
 // }
 
