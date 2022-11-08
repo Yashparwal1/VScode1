@@ -73,25 +73,9 @@ int main()
 
     // ------------------------------CONTROL STRUCTURE-------------------------------------------
 
-    int n,i=1;
-    cout << "Enter a positive no.: " <<endl;
+    int n;
+    cout << "Enter : ";
     cin >> n;
-    long sum = 0;
-    // while (i<=n)
-    // {
-    //     sum += i++;
-    //     // i++;
-    // }
-    // do
-    // {
-    //     sum += i;
-    //     i++;
-    // } while (i<=n);
-    cout << "Sum of first "<<n<<" integers is "<<sum<<endl;
-    
-
-
-
-
+    cout << n <<endl;
 }   
 

@@ -220,131 +220,191 @@
 
 // ============================ IMPLEMENTATION OF CIRCULAR QUEUE ==============================
 
-#define size 7
-// #define limit 6
-int queue[size];
-int front = -1;
-int rear = -1;
-int insert();
-int delete();
-int display();
-int main()
-{
-    int choice;
-    printf("Enter the elements in Quesue: ");
-    for (int i = 0; i < 6; i++)
-    {
-        scanf("%d",&queue[i]);
-        front = 0;
-        rear++;
-    }
-    while (1)
-    {            
-        printf("[ 1 ] For Inserting the element: ");
-        printf("[ 2 ] For Deleting the element: ");
-        printf("[ 3 ] For Displaying the elements: ");
-        printf("[ 0 ] To Exit: ");
+// #define size 7
+// // #define limit 6
+// int queue[size];
+// int front = -1;
+// int rear = -1;
+// int insert();
+// int delete();
+// int display();
+// int main()
+// {
+//     int choice;
+//     printf("Enter the elements in Quesue: ");
+//     for (int i = 0; i < 6; i++)
+//     {
+//         scanf("%d",&queue[i]);
+//         front = 0;
+//         rear++;
+//     }
+//     while (1)
+//     {            
+//         printf("[ 1 ] For Inserting the element: ");
+//         printf("[ 2 ] For Deleting the element: ");
+//         printf("[ 3 ] For Displaying the elements: ");
+//         printf("[ 0 ] To Exit: ");
     
-        scanf("%d",&choice);
+//         scanf("%d",&choice);
 
-        switch (choice)
-        {
-        case 1:
-            insert();
-            break;
-        case 2:
-            delete();
-            break;
-        case 3:
-            display();
-            break;
-        case 0:
-            exit(0);
-        default:
-            printf("Please choose correct option...");
-            break;
-        }
+//         switch (choice)
+//         {
+//         case 1:
+//             insert();
+//             break;
+//         case 2:
+//             delete();
+//             break;
+//         case 3:
+//             display();
+//             break;
+//         case 0:
+//             exit(0);
+//         default:
+//             printf("Please choose correct option...");
+//             break;
+//         }
+//     }
+//     return 0;
+// }
+
+//     int insert()
+//     {
+//         int m;
+//         if (front==0 && rear==(size-1))
+//         {
+//             printf("Queue Overflow !!");
+//         }
+//         else
+//         {
+//             if (front==-1 && rear==-1)
+//             {
+//                 printf("Enter the element to insert: ");
+//                 scanf("%d",&m);
+//                 front = 0;
+//                 rear = 0;
+//                 queue[rear] = m;
+//             }
+//             else if (rear==(size-1) && front != 0)
+//             {
+//                 printf("Enter the element to insert: ");
+//                 scanf("%d",&m);
+//                 rear = 0;
+//                 queue[rear] = m;
+//             }
+//             else
+//             {
+//                 printf("Enter the element to insert: ");
+//                 scanf("%d",&m);
+//                 rear++;
+//                 queue[rear] = m;
+//             }
+//         }
+//         return 0;
+//     }    
+
+//     int delete()
+//     {
+//         int m;
+//         if (front==-1 && rear==-1)
+//         {
+//             printf("Quesue Underflow !!!");
+//         }
+//         else if (front == (size-1))
+//         {
+//             printf("Deleted element is %d",queue[front]);
+//             front = 0;
+//             rear = 0;    
+//         }
+//         else
+//         {
+//             printf("Deleted element is %d",queue[front]);
+//             front++;
+//         }
+//         return 0;
+//     }
+//     int display()
+//     {
+//         // if (front <= rear)
+//         // {
+//         //     for (int i = front; i<=rear; i++)
+//         //     {
+//         //         printf("%d",queue[i]);
+//         //     }
+//         // }
+//         int i=front;
+//         while (i<=rear)
+//         {
+//             printf("%d",queue[i]);
+//             i++;
+//         }
+//         if (front > rear)
+//         {
+//             for (int i = front; i >= rear; i--)
+//             {
+//                 printf("%d",queue[i]);
+//             }
+//         }
+//         return 0;
+//     }
+
+// ============================ Linked List ========================================
+
+struct node 
+{
+    int data;
+    struct node *next;
+};
+void append(int);
+struct node *p=NULL;
+void display();
+void main()
+{
+    append(10);
+    append(20);
+    append(30);
+    append(40);
+    display();
+}
+void append(int n)
+{
+    struct node *temp;
+    // printf("first time value of p: %p\n",p); //(just to test the address of p)
+    if (p == NULL){
+        temp = (struct node*)malloc(sizeof(struct node));
+        temp->data = n;
+        temp->next = NULL;
+        p = temp;
+        // printf("temp in if: %p\n",temp); //(just to test the address )
+        // printf("p in if: %p\n",p); //(just to test the address)
     }
-    return 0;
+    else
+    {
+        struct node *temp2;
+        // printf("in else part: %p\n",p); //(just to test the address)
+        temp = p;
+        // printf("in while loop: %p\n",temp->next); 
+        //temp->next is already NULL here (in case of 2nd node only), this while loop will not execute
+        // here while loop is upgrading the node; if not used then the next node will always connect to 1st node and only 1st and last node will be printed and inbetween nodes will get overwritten by the next followinf nodes each time.  
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp2 = (struct node*)malloc(sizeof(struct node));
+        temp2->data = n;
+        temp2->next = NULL;
+        temp->next = temp2;
+    }
 }
 
-    int insert()
+void display()
+{
+    struct node *temp;
+    temp = p;
+    // printf("in display: %p\n",temp); //(just to test the address)
+    while (temp != NULL)
     {
-        int m;
-        if (front==0 && rear==(size-1))
-        {
-            printf("Queue Overflow !!");
-        }
-        else
-        {
-            if (front==-1 && rear==-1)
-            {
-                printf("Enter the element to insert: ");
-                scanf("%d",&m);
-                front = 0;
-                rear = 0;
-                queue[rear] = m;
-            }
-            else if (rear==(size-1) && front != 0)
-            {
-                printf("Enter the element to insert: ");
-                scanf("%d",&m);
-                rear = 0;
-                queue[rear] = m;
-            }
-            else
-            {
-                printf("Enter the element to insert: ");
-                scanf("%d",&m);
-                rear++;
-                queue[rear] = m;
-            }
-        }
-        return 0;
-    }    
-
-    int delete()
-    {
-        int m;
-        if (front==-1 && rear==-1)
-        {
-            printf("Quesue Underflow !!!");
-        }
-        else if (front == (size-1))
-        {
-            printf("Deleted element is %d",queue[front]);
-            front = 0;
-            rear = 0;    
-        }
-        else
-        {
-            printf("Deleted element is %d",queue[front]);
-            front++;
-        }
-        return 0;
+        printf("%d\n",temp->data);
+        temp = temp->next;
     }
-    int display()
-    {
-        // if (front <= rear)
-        // {
-        //     for (int i = front; i<=rear; i++)
-        //     {
-        //         printf("%d",queue[i]);
-        //     }
-        // }
-        int i=front;
-        while (i<=rear)
-        {
-            printf("%d",queue[i]);
-            i++;
-        }
-        if (front > rear)
-        {
-            for (int i = front; i >= rear; i--)
-            {
-                printf("%d",queue[i]);
-            }
-        }
-        return 0;
-    }
-
+}
