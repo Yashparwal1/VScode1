@@ -71,11 +71,16 @@ int main()
 //         break;
 //     }
 
-    // ------------------------------CONTROL STRUCTURE-------------------------------------------
-
-    int n;
-    cout << "Enter : ";
-    cin >> n;
-    cout << n <<endl;
+    int n=2;
+    while (n<=10)
+    {
+        cout << "==> Table of "<<n<< ":" <<endl;
+        for (int i = 1; i <= 10; i++)
+        {
+            cout << n<<"x"<<i<<"="<<n*i<<endl;
+        }
+        n++;
+    }
+    
 }   
 
