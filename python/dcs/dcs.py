@@ -695,6 +695,11 @@ name.decode()
 # new={key+" done":(value/5 if value==20 else value*5) for key,value in data.items()}
 # print(new)
 
+# items = {"pen":10,"book":90,"copy":50,"Bag":200}
+# for key,value in items.items():
+# 	print(f"{key} : {value}")
+
+
 # =========================================TUPLE==============================================
 # TUPLE -- collection of item
 # * Tuple is immutable i.e cannot be modified once created
@@ -975,13 +980,14 @@ name.decode()
 
 # Decorators -- These are functions that wrap other functions and enhance their behaviour 
 
-def do(func,x,y):
-    func(x,y)
-    def final():
-        print("done")
-    return final
+# def do(func,x,y):
+#     func(x,y)
+#     def final():
+#         print("done")
+#     return final
 
-def add(x,y):
-    print(x+y)
+# def add(x,y):
+#     print(x+y)
 	
-do(add,2,3)()
+# do(add,2,3)()
+

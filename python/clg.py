@@ -185,8 +185,8 @@ Collection of diff. datatypes
 List is Mutablle
 """
 
-l = [1,2,3,4,5,6,7]
-m = [10,11,12,13]
+# l = [1,2,3,4,5,6,7]
+# m = [10,11,12,13]
 # l.append(9) #can add one element at one time at the end
 # l.extend(m) #extend list a and add list m in list l
 
@@ -226,3 +226,96 @@ m = [10,11,12,13]
 # print(f"Floor division of a and b is = {a//b}")
 # print(f"Modulo of a and b is {a%b}")
 
+# ========================================================================================
+
+#supermarket form.
+
+stockPen = 10
+stockBook = 10
+stockCopy = 10
+stockGbox = 10
+stockBag = 10
+price = 0
+totalprice = 0
+shoppingList = []
+itemList = []
+qtyList = []
+priceList = []
+print("=====List of available items=====")
+print('''
+1. Pen   Rs.10/each
+2. Book  Rs.90/each
+3. Copy  Rs.50/each
+4. Gbox  Rs.25/each
+5. Bag   Rs.200/each
+''')
+
+# items = {1:10,2:90,3:50,4:25,5:200}
+items = {"pen":10,"book":90,"copy":50,"gbox":25,"bag":200}
+
+for i in range(len(items)):
+    shopping = int(input("Press 1 to Buy\nPress 2 to Generate Bill\n"))
+    if shopping == 2:
+        break
+    elif shopping == 1:
+        # product = int(input("Enter item no.: "))
+        item = input("Enter item name from above list: ")
+        if item in items:
+            qty = int(input("Enter quantity: "))
+            for item in items.keys():
+                # price = qty * items.values() #values are in string so, int*str not possible
+                price = qty * (items[item])
+                shoppingList.append((item,qty,items,price)) 
+                totalprice = totalprice+price
+                itemList.append(item)
+                qtyList.append(qty)
+                priceList.append(price)
+        else:
+            print("Item is not available")
+    else:
+        print("Worong choice, Choose again")
+        continue
+
+print("==================================================")
+print("                     BILL                         ")
+print("==================================================")
+print(len(shoppingList))
+for i in range(len(shoppingList)):
+    print(itemList,qtyList,priceList)       
+
+# valid = False
+# while (valid == False):
+#     print("Which product(s) you want to order: ")
+#     print("1. Pen [10/-]\n2. Book [90/-]\n3. Copy [50/-]\n4. Gbox [25/-]\n5. Bag [200/-]\n0. Generate Bill")
+#     ch = int(input("Choose between 1 to 5: "))
+#     if (ch == 1):
+#         qtyPen = int(input("Specify quantity of Pens: "))
+#         pricePen = 10*qtyPen
+#         stockPen = stockPen-qtyPen
+#     elif (ch == 2):
+#         qtyBook = int(input("Specify quantity of Books: "))
+#         priceBook = 90*qtyBook
+#         stockBook = stockBook-qtyBook
+#     elif (ch == 3):
+#         qtyCopy = int(input("Specify quantity of Copy: "))
+#         priceCopy = 90*qtyCopy
+#         stockCopy = stockCopy-qtyCopy
+#     elif (ch == 4):
+#         qtyGbox = int(input("Specify quantity of Geomatry box: "))
+#         priceGbox = 90*qtyGbox
+#         stockGbox = stockGbox-qtyGbox
+#     elif (ch == 5):
+#         qtyBag = int(input("Specify quantity of Books: "))
+#         priceBag = 90*qtyBag
+#         stockBag = stockBag-qtyBag
+#     elif (ch == 0):
+#         valid = True
+#         print("Generating Bill........")
+#     else:
+#         print("Worng choice !!!, Please choose again")
+
+# print("==================================================")
+# print("                     BILL                         ")
+# print("==================================================")
+# print("Your product list")
+# print(f"{}")
