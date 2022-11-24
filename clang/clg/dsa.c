@@ -1,9 +1,9 @@
-// program to evaluate postfix arithmatic expression
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 
-// ========================================================================================
+// program to evaluate postfix arithmatic expression
+
 // #define exp_size 33
 // #define stack_size 33
 // int top = -1;
@@ -53,7 +53,7 @@
 //             {
 //                 a = pop(); // pop the top value from stack and put it in a
 //                 b = pop(); // pop the next top value fro stack and put it in b
-//                 printf("%d%d",a,b);
+//                 // printf("a and b are: %d and %d espectively\n",a,b);
 //                 switch (ch)
 //                 {
 //                 case '+':
@@ -71,9 +71,10 @@
 //                 }
 //                 push(value);
 //             }
+//         // printf("a + b: %d\n",pop());  
 //         }
 //     }
-//     printf("%d",pop());
+//     printf("Result of given expression is: %d",pop());
 //     // display();
 // }
 
@@ -106,15 +107,106 @@
 //     //we have returned the final above already, tf execution is not coming to this printf
 //     // printf("%d",final); //WE CANNOT DO THIS here, we have to return the final
 // }
-// //we have got the end result in final, so there's no need of display func.
+//we have got the end result in final, so there's no need of display func.
 // int display()
 // {
 //     for (int i = top; i >= 0; i--)
 //     {
-//         printf("%c", stack[i]);
+//         printf("\n%c", stack[i]);
 //         // return(stack[i]);
 //     }
+//     return 0;
 // }
+
+// ========================================================================================
+
+// program to sort array in assending order 
+// int main()
+// {
+//     int arr[] = {6,7,1,3,4,0,9,10};
+//     printf("\nArray before sorting:\n");
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ",arr[i]);
+//     }
+//     for (int i = 0; i < size; i++)
+//     {
+//         for (int j = i+1; j < size; j++)
+//         {
+//             if (arr[i]>arr[j])
+//             {
+//                 int temp;
+//                 temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+            
+//         }
+        
+//     }
+//     printf("\nArray after sorting:\n");
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ",arr[i]);
+//     }
+//     return 0;
+    
+// }
+
+// ========================================================================================
+// prohram ot traversing the elements of an array
+
+// int main()
+// {
+//     int arr[] = {6,7,1,3,4,0,9,10};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     printf("Array is: \n");
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("%d ",arr[i]);
+//     }
+//     printf("\nTraversing each elements of an array....\n");
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("element traversed -- %d\n",arr[i]);
+//     }
+    
+// }
+// ========================================================================================
+// program to find whetehr a matrix is sparce matirix or not.
+
+// int main()
+// {
+//     int arr[3][3] = {1,2,3,0,0,0,0,0,9}, count = 0;
+//     printf("Matrix is: \n");
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             printf("%d",arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+            
+//             if (arr[i][j] == 0)
+//                 count++;
+//             else
+//                 continue;
+//         }
+//     }
+//     if (count >= (9/2)+1) //OR (m*n/2)+1
+//         printf("The matrix is a Sparse matrix");
+//     else
+//         printf("The matrix is NOT a Sparse matrix");
+//     return 0;
+// }
+// ========================================================================================
+// program to .......................
 
 // ============================ IMPLEMENTATION OF QUEUE ======================================
 
@@ -350,61 +442,227 @@
 
 // ============================ Linked List ========================================
 
-struct node 
+// struct Node 
+// {
+//     int data;
+//     struct Node *next;
+// };
+// void Create_node(int);
+// struct Node *head=NULL;
+// struct Node InsertEnd(struct Node*, int);
+// void display();
+
+// void main()
+// {
+//     Create_node(10);
+//     Create_node(20);
+//     Create_node(30);
+//     Create_node(40);
+//     // InsertEnd(100);
+//     display();
+// }
+// void Create_node(int n)
+// {
+//     struct Node *temp;
+//     // printf("first time value of p: %p\n",p); //(just to test the address of p)
+//     if (head == NULL){
+//         temp = (struct Node*)malloc(sizeof(struct Node));
+//         temp->data = n;
+//         temp->next = NULL;
+//         head = temp;
+//         // printf("temp in if: %p\n",temp); //(just to test the address )
+//         // printf("p in if: %p\n",p); //(just to test the address)
+//     }
+//     else
+//     {
+//         struct Node *temp2;
+//         // printf("in else part: %p\n",p); //(just to test the address)
+//         temp = head;
+//         // printf("in while loop: %p\n",temp->next); 
+//         //temp->next is already NULL here (in case of 2nd node only), this while loop will not execute
+//         // here while loop is upgrading the node; if not used then the next node will always connect to 1st node and only 1st and last node will be printed and inbetween nodes will get overwritten by the next followinf nodes each time.  
+//         while (temp->next != NULL)
+//         {
+//             temp = temp->next;
+//         }
+//         temp2 = (struct Node*)malloc(sizeof(struct Node));
+//         temp2->data = n;
+//         temp2->next = NULL;
+//         temp->next = temp2;
+//     }
+//     return temp2;
+// }
+
+// void display()
+// {
+//     struct Node *temp;
+//     temp = head;
+//     // printf("in display: %p\n",temp); //(just to test the address)
+//     while (temp->next != NULL)
+//     {
+//         // if (temp->next != NULL)
+//         // {
+//         //     printf("%d->",temp->data);
+//         // }
+//         printf("%d->",temp->data);
+//         temp = temp->next;
+//     }
+//     printf("%d ",temp->data);
+
+// }
+
+
+// --------------------------------INSERTION AT BEGINING----------------------------------
+
+// struct Node* InsertBeg(struct Node* head, int data)
+// {
+//     struct Node* new;
+//     new = (struct Node*)malloc(sizeof(struct Node));
+//     new->data = data;
+//     new->next = head;
+//     head = new;
+//     return head;
+// };
+
+// --------------------------------INSERTION AT END----------------------------------
+
+// struct Node* InsertEnd(struct Node* head, int data)
+// {
+//     struct Node* new;
+//     struct Node* temp;
+//     new = (struct Node*)malloc(sizeof(struct Node));
+//     new->data = data;
+//     new->next = NULL;
+//     temp = head;
+//     while (temp->next != NULL)
+//     {
+//         temp = temp->next;
+//     }
+//     temp->next = new;
+//     return temp;
+// };
+// ==========================INSERT AT MID===============================================
+
+// struct Node* InsertMid(strut Node* head, int data, int index)
+// {
+//     struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
+//     new->data = data;
+//     struct Node* temp = head;
+//     int i = 0;
+//     while (i != index-1)
+//     {
+//         temp = temp->next;
+//         i++;
+//     }
+// }
+
+// ============================== DELETION AT BEG================================
+// struct Node* DeleteBeg(struct Node* head)
+// {
+//     struct Node* temp = head;
+//     head = head->next;
+//     free (temp);
+//     return head;
+// }
+// ============================== DELETION AT END ================================
+// struct Node* DeleteEnd(struct Node* head)
+// {
+//     struct Node* temp = head;
+//     struct Node* temp2 = head->next;
+//     while (temp2->next != NULL)
+//     {
+//         temp = temp->next;
+//         temp2 = temp2->next;
+//     }
+//     temp->next = NULL;
+//     free (temp2);
+//     return head;
+// }
+
+// --------------------------------------------------------------------------------------
+
+struct Node 
 {
     int data;
-    struct node *next;
+    struct Node *next;
 };
-void append(int);
-struct node *p=NULL;
+struct Node Create_node(int);
+struct Node *head=NULL;
+void InsertEnd( int);
 void display();
+
 void main()
 {
-    append(10);
-    append(20);
-    append(30);
-    append(40);
+    Create_node(10);
+    InsertEnd(20);
+    InsertEnd(30);
+    InsertEnd(40);
+    // InsertEnd(100);
     display();
 }
-void append(int n)
+struct Node* Create_node(int n)
 {
-    struct node *temp;
-    // printf("first time value of p: %p\n",p); //(just to test the address of p)
-    if (p == NULL){
-        temp = (struct node*)malloc(sizeof(struct node));
-        temp->data = n;
-        temp->next = NULL;
-        p = temp;
-        // printf("temp in if: %p\n",temp); //(just to test the address )
-        // printf("p in if: %p\n",p); //(just to test the address)
+    struct Node *temp;
+    temp = (struct Node*)malloc(sizeof(struct Node));
+    temp->data = n;
+    temp->next = NULL;
+    if (head == NULL){
+        
+        head = temp;
+        return head;
     }
     else
     {
-        struct node *temp2;
+    //    struct Node *temp2;
+      //  temp2 =
         // printf("in else part: %p\n",p); //(just to test the address)
-        temp = p;
+        //temp = head;
         // printf("in while loop: %p\n",temp->next); 
         //temp->next is already NULL here (in case of 2nd node only), this while loop will not execute
         // here while loop is upgrading the node; if not used then the next node will always connect to 1st node and only 1st and last node will be printed and inbetween nodes will get overwritten by the next followinf nodes each time.  
-        while (temp->next != NULL)
-        {
-            temp = temp->next;
-        }
-        temp2 = (struct node*)malloc(sizeof(struct node));
-        temp2->data = n;
-        temp2->next = NULL;
-        temp->next = temp2;
-    }
+    //     while (temp->next != NULL)
+    //     {
+    //         temp = temp->next;
+    //     }
+    //     temp2 = (struct Node*)malloc(sizeof(struct Node));
+    //     temp2->data = n;
+    //     temp2->next = NULL;
+    //     temp->next = temp2;
+    // }
+    return temp;
 }
 
 void display()
 {
-    struct node *temp;
-    temp = p;
+    struct Node *temp;
+    temp = head;
     // printf("in display: %p\n",temp); //(just to test the address)
-    while (temp != NULL)
+    while (temp->next != NULL)
     {
-        printf("%d\n",temp->data);
+        // if (temp->next != NULL)
+        // {
+        //     printf("%d->",temp->data);
+        // }
+        printf("%d->",temp->data);
         temp = temp->next;
     }
+    printf("%d ",temp->data);
+
+}
+
+struct node* InsertEnd(int data)
+{
+   struct Node* temp2 = Create_node(data);
+   struct node* temp;
+    
+//     new = (struct Node*)malloc(sizeof(struct Node));
+    // new->data = data; 
+    // new->next = NULL;
+    temp = head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = temp2;
+    return temp;
 }
