@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-// ====================================== INSRTION =============================================
 
+// ====================================== INSRTION =============================================
 
 // struct Node
 // {
 //     int data;
 //     struct Node *next;
 // };
- 
+
 // void Traversing(struct Node *ptr)
 // {
 //     while (ptr != NULL)
@@ -23,7 +22,7 @@
 //     //     ptr = ptr->next;
 //     // }
 //     // printf("%d\n",ptr->data);
-    
+
 // }
 
 // // Case 1 -- Insert at beginning
@@ -67,14 +66,13 @@
 //     return head;
 // }
 
-
 // int main()
 // {
 //     struct Node *head;
 //     struct Node *second;
 //     struct Node *third;
 //     struct Node *fourth;
- 
+
 //     // Allocate memory for nodes in the linked list in Heap
 //     head = (struct Node *)malloc(sizeof(struct Node));
 //     second = (struct Node *)malloc(sizeof(struct Node));
@@ -82,7 +80,7 @@
 //     fourth = (struct Node *)malloc(sizeof(struct Node));
 
 //     head->data = 7;
-//     head->next = second; // Link first and second nodes 
+//     head->next = second; // Link first and second nodes
 //     second->data = 11;
 //     second->next = third; // Link second and third nodes
 //     third->data = 41;
@@ -96,7 +94,7 @@
 //     head = insertAtFirst(head, 1);
 //     printf("Linked list after insertion at beginning\n");
 //     Traversing(head);
-    
+
 //     head = insertAtEnd(head, 100);
 //     printf("Linked list after insertion at end\n");
 //     Traversing(head);
@@ -106,7 +104,6 @@
 //     Traversing(head);
 //     return 0;
 // }
-
 
 // ====================================== DELETION =============================================
 // struct Node
@@ -136,13 +133,13 @@
 // struct Node * deleteAtIndex(struct Node * head, int index){
 //     struct Node *p = head;
 //     struct Node *q = head->next;
-        // int i = 0;
-        // while (i != index-1)
-        // {
-        //     p = p->next;
-        //     q = q->next;
-        //     i++;
-        // }
+// int i = 0;
+// while (i != index-1)
+// {
+//     p = p->next;
+//     q = q->next;
+//     i++;
+// }
 //     p->next = q->next;
 //     free(q);
 //     return head;
@@ -166,10 +163,9 @@
 //     struct Node *q = p->next;
 //     p->next = NULL;
 //     free(q);
-    
+
 //     return head;
 // }
-
 
 // // Case 4: Deleting the element with a given value from the linked list
 // // struct Node * deleteAtIndex(struct Node * head, int value){
@@ -180,7 +176,7 @@
 // //         p = p->next;
 // //         q = q->next;
 // //     }
-    
+
 // //     if(q->data == value){
 // //         p->next = q->next;
 // //         free(q);
@@ -226,7 +222,7 @@
 //     head = deleteAtLast(head);
 //     printf("Linked list after deleting the last node \n");
 //     linkedListTraversal(head);
-    
+
 //     head = deleteAtIndex(head, 1);
 //     printf("Linked list after deleting node at any index/in between \n");
 //     linkedListTraversal(head);
@@ -242,7 +238,7 @@
 //     int data;
 //     struct Node *next;
 // };
- 
+
 // void traversing(struct Node *head){
 //     struct Node *ptr = head;
 //     do{
@@ -261,7 +257,7 @@
 //     p->next = ptr;
 //     ptr->next = head;
 //     head = ptr;
-//     // mine 
+//     // mine
 //     // head = ptr;
 //     // ptr->next = head;
 //     return head;
@@ -273,7 +269,7 @@
 //     struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
 //     ptr->data = data;
 //     struct Node *p = head;
-//     while (p->next != head)     
+//     while (p->next != head)
 //     {
 //         p = p->next;
 //     }
@@ -288,7 +284,7 @@
 //     struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
 //     struct Node *p = head;
 //     int i = 0;
-//     while (i != index-1)     
+//     while (i != index-1)
 //     {
 //         p = p->next;
 //         i++;
@@ -299,12 +295,12 @@
 //     return head;
 // }
 
-// int main(){    
+// int main(){
 //     struct Node *head;
 //     struct Node *second;
 //     struct Node *third;
 //     struct Node *fourth;
- 
+
 //     head = (struct Node *)malloc(sizeof(struct Node));
 //     second = (struct Node *)malloc(sizeof(struct Node));
 //     third = (struct Node *)malloc(sizeof(struct Node));
@@ -343,7 +339,7 @@
 //     int data;
 //     struct Node *next;
 // };
- 
+
 // void traversing(struct Node *head){
 //     struct Node *ptr = head;
 //     do{
@@ -351,7 +347,7 @@
 //         ptr = ptr->next;
 //     }while(ptr != head);
 // }
- 
+
 // // Case 1
 // struct Node * deleteAtFirst(struct Node *head){
 //     struct Node * ptr = head;
@@ -394,12 +390,12 @@
 // }
 
 // int main(){
-    
+
 //     struct Node *head;
 //     struct Node *second;
 //     struct Node *third;
 //     struct Node *fourth;
- 
+
 //     head = (struct Node *)malloc(sizeof(struct Node));
 //     second = (struct Node *)malloc(sizeof(struct Node));
 //     third = (struct Node *)malloc(sizeof(struct Node));
@@ -431,3 +427,68 @@
 
 //     return 0;
 // }
+
+// ===================================================================================================
+// ==================================== DOUBLY LINKED LIST ===========================================
+
+struct Node
+{
+        int data;
+        struct Node *next;
+        struct Node *prev;
+};
+
+void traverse(struct Node *head)
+{
+        struct Node *p = head;
+        printf("Printing List in Right order...\n");
+        do
+        {       
+                printf("%d ",p->data);
+                p = p->next;
+        }while (p->next != NULL);
+        printf("%d ",p->data);
+        printf("\nPrinting List in Reverse order...\n");
+        do
+        {       
+                printf("%d ",p->data);
+                p = p->prev;
+        }while (p != NULL);
+}
+
+int main()
+{
+        struct Node *head;
+        struct Node *second;
+        struct Node *third;
+        struct Node *fourth;
+        struct Node *fifth;
+
+        head = (struct Node *)malloc(sizeof(struct Node));
+        second = (struct Node *)malloc(sizeof(struct Node));
+        third = (struct Node *)malloc(sizeof(struct Node));
+        fourth = (struct Node *)malloc(sizeof(struct Node));
+        fifth = (struct Node *)malloc(sizeof(struct Node));
+
+        head->prev = NULL;
+        head->data = 4;
+        head->next = second;
+        second->prev = head;
+        second->data = 3;
+        second->next = third;
+        third->prev = second;
+        third->data = 6;
+        third->next = fourth;
+        fourth->prev = third;
+        fourth->data = 2;
+        fourth->next = fifth;
+        fifth->prev = fourth;
+        fifth->data = 7;
+        fifth->next = NULL;
+
+        printf("Simple Traversing Linked list\n");
+        traverse(head);
+        // printf("Reverse Traversing Linked list\n");
+        // rev_traverse(head);
+        return 0;
+}

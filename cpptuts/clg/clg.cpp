@@ -148,7 +148,7 @@ First var. c of datatype int is converted into type float and stored in a temp. 
 //         int max(int x, int y){
 //             return x+y;
 //         }
-//         int max(int x, int y, int z){
+//         int max(int x, float y, int z){
 //             return x+y+z;
 //         }
 // };
@@ -194,7 +194,12 @@ First var. c of datatype int is converted into type float and stored in a temp. 
 //     return 0;
 // }
 
-// =========================================================================
+// ================================ OPERATOR OVERLOADING ====================================
+/* 
+1. Unary operator overloading
+2. Binary operator overloading
+ */
+
 // class Complex
 // {
 //     private:
@@ -211,13 +216,14 @@ First var. c of datatype int is converted into type float and stored in a temp. 
 //             cout << "c3(x,y) = " << a<<","<<b <<endl;
 //         }
 //         // Complex add(Complex c2)
-//         Complex operator+(Complex c2)
+//         Complex operator +(Complex c2)
 //         {
 //             Complex c;
 //             c.a = a + c2.a;
 //             c.b = b + c2.b;
 //             return(c);
 //         }
+        
 // };
 // int main()
 // {
@@ -229,6 +235,8 @@ First var. c of datatype int is converted into type float and stored in a temp. 
 //     c3.Display();
 //     return 0;
 // }
+
+// =================================================================================
 // int main()
 // {
 //     char name[10], f_name[10];
@@ -282,21 +290,97 @@ here var_name is the name of pointer variable and data_type is datatype of the p
 //     return 0;
 // }
 
-float add(float, float);
-int main()
-{
-    float a,b,s;
-    float *p;
-    p = &add;
-    a = 20.5;
-    b = 10.3;
-    s = (*p)(a,b); //with pointer
-    // s = add(a,b); //without pointer
-    cout << "s = " << s <<endl;
-}
-float add(float x, float y)
-{
-    float sum;
-    sum = x+y;
-    return (sum);
-}
+// float add(float, float);
+// int main()
+// {
+//     float a,b,s;
+//     float *p;
+//     p = &add;
+//     a = 20.5;
+//     b = 10.3;
+//     s = (*p)(a,b); //with pointer
+//     // s = add(a,b); //without pointer
+//     cout << "s = " << s <<endl;
+// }
+// float add(float x, float y)
+// {
+//     float sum;
+//     sum = x+y;
+//     return (sum);
+// }
+
+// int main()
+// {
+//         int n=0;
+//         while(n<1000000000)
+//         {
+//                 n++;
+//         }
+//         std::cout << n << endl;
+//         return 0;
+// }
+
+// ---------------------------TEMPLATE CLASS------------------------
+// template <class T>
+// class Sample
+// {
+// private:
+//     T digit1, digit2;
+// public:
+//     Sample(T d1, T d2)
+//     {
+//         digit1 = d1;
+//         digit2 = d2;
+//     }
+//     T larger();
+// };
+
+// // T larger() // digit1 and digit2 is not declared in this scope
+// template <class T>
+// T Sample<T>::larger()
+// {
+//     if (digit1 > digit2)
+//         return digit1;
+//     else
+//         return digit2;
+//     // return (digit1 > digit2 ? digit1:digit2);
+
+// }
+
+// int main()
+// {
+//     // int A, B;
+//     Sample <double> big(10.4376483, 20.537846383);
+//     // Sample <float> big1(10.4, 10.5);
+//     // Sample <char> big(A,B);
+//     cout << "Larger no. is: " <<big.larger()<<endl;
+//     // cout << A <<endl;
+//     return 0;
+// }
+
+// ---------------------------TEMPLATE CLASS------------------------
+// template <class T>
+// T larger(T d1, T d2)
+// {
+//     return (d1 > d2 ? d1:d2);
+// }
+// int main()
+// {
+//     int x1, x2;
+//     float y1, y2;
+//     char z1, z2;
+
+//     cout << "Enter values of x1 and x2.: " <<endl;
+//     cin >> x1 >> x2;
+//     cout << "Larger no. is: "<<larger(x1,x2) <<endl; // no need to call through object, already defined "T larger()" 
+
+//     cout << "Enter values of y1 and y2" <<endl;
+//     cin >> y1 >> y2;
+//     cout << "Larger no. is: "<<larger(y1,y2) <<endl;
+    
+//     cout << "Enter values of z1 and z2 " <<endl;
+//     cin >> z1 >> z2;
+//     cout << "Larger no. is: "<<larger(z1,z2) <<endl;
+
+//     return 0;
+// }

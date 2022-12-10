@@ -1,3 +1,295 @@
+""" 
+==> WHAT IS PYTHON?
+* Python is a dynamically typed general purpose programming language that supports OOP approach as well as a functional programming approach.
+* Python is an interpreted and a high-level programming language.
+* It was created by Guido Van Rossum in 1989.
+
+==> FEATURES OF PYTHON
+* Simple and easy to understand, User Friendly
+* Faster
+* Best package for AI
+* Exensively used in industry
+* Read code line by line
+* Portable
+* Platform independent
+
+==> Identifier
+* It can be any alphabet between A to Z or a to z
+* it cannot be started with any digit
+* it cannot be started with any special character except underscore( _ )
+* A keyword cannot be an identifier.
+
+eg. 
+a=10
+print(a)
+--------- 
+A=20
+print(A)
+---------
+_abc = 100
+print(_abc)
+---------
+
+==> KEYWORDS:
+* Keywrods are the restricted words in python which cannot be used as identifiers
+* To know the keyword -- command is: help('keywords)
+
+==> SINGLE LINE STATEMENT:-
+a = 'This is my python class' [with single quotes]
+a = "This is my python class" [with double quotes]
+a = '''This is my python class''' [with triple-single quotes]
+
+==> MULTIPLE LINE STATEMENT:-
+a = '''This
+is
+me'''
+print(a)
+
+==> DATATYPES
+1. Numeric Datatypes
+    - int
+    - float
+    - complex
+2. Sequence Datatypes
+    - list
+    - tuple
+    - dictionary
+    - string
+    - set
+3. Boolean Datatypes
+    - True
+    - False
+------------------------------------------------------------
+
+==> NUMERIC DATATYPES
+
+a = 10
+b = 10.6
+c = 2+3i
+
+print(a)
+print(type(a)) # will print the datatype of a
+print(id(a)) # will print the memory location of a
+
+print(b)
+print(type(b)) # will print the datatype of b
+print(id(b)) # will print the memory location of b
+
+print(c)
+print(type(c)) # will print the datatype of c
+print(id(c)) # will print the memory location of c
+
+==> INPUT FROM USER
+
+num = int(input("Enter any no.: "))
+print(num)
+
+num = float(input("Enter any float no.: "))
+print(num)
+
+num = complex(input("Enter any complex no.: "))
+print(num)
+
+"""
+
+# print("[ + ] Please enter first no. greater than second no. [ + ]")
+# num1 = int(input("Enter first no. "))
+# num2 = int(input("Enter second no. "))
+
+# print(f"Addition: {num1+num2}")
+# print(f"Subtration: {num1-num2}")
+# print(f"Multiplication: {num1*num2}")
+# print(f"Division: {num1/num2}")
+# print(f"Floor Divison (Integer division): {num1//num2}")
+# print(f"Modulus: {num1%num2}")
+
+num1 = int(input("Enter first no: "))
+num2 = int(input("Enter second no: "))
+num3 = int(input("Enter third no: "))
+num4 = int(input("Enter fourth no: "))
+
+
+if (num1>num2):
+    if (num1>num3):
+        if (num1>num4):
+            print(f"{num1} is largest")
+        else:
+            print(f"{num4} is largest")
+    else:
+        if (num3>num4):
+            print(f"{num3} is largest")
+        else:
+            print(f"{num4} is largest")
+else:
+    if (num2>num3):
+        if (num2>num4):
+            print(f"{num2} is largest")
+        else:
+            print(f"{num4} is largest")
+    else:
+        if (num3>num4):
+            print(f"{num3} is largest")
+        else:
+            print(f"{num4} is largest")
+    
+mylist = []
+for i in range(0, 4):
+    data = int(input("Please enter 4 values: "))
+    mylist.append(data)
+
+mylist.sort()
+
+print(f"Largest no: {mylist[3]}")
+print(f"Smallest no: {mylist[0]}")
+
+
+# 1. Arithmatic Operator
+# +, -, *, /, //, %, **
+
+# 1.
+# a = 10 
+# b = 20
+# c = a+b
+# print(c)
+# 2.
+# a = 10
+# b = 5
+# c = a-c
+# print(c)
+# 3.
+# a = 10
+# b = 2
+# c = a*b
+# print(C)
+# 4.
+# a = 10
+# b = 3
+# c = a/b
+# print(C)
+# 5.
+# a = 20
+# b = 5
+# c = a//b
+# print(C)
+# 6.
+# a = 15
+# b = 2
+# c = a%b
+# print(C)
+# 7.
+# a = 4
+# b = 2
+# c = a**b
+# print(C)
+
+# ==> COMPARISION OPERATOR
+# 1. 
+# a = 10
+# b = 20
+# print(a==b)
+# OUTPUT: False
+# 2. 
+# a = 20
+# b = 10
+# print(a>b)  -- True 
+# print(a<b)  -- False
+# print(a!=b) -- True
+# 3. 
+# a = 10
+# b = 2
+# print(a>=b) -- True
+# print(a<=b) -- False
+
+# ==> LOGICAL OPERATOR
+# and , or , not
+
+# print(not(True)) -- False
+# print(not(False)) -- True
+# print(not(1)) -- False
+# print(not(0)) -- True
+# print(not(10)) -- False
+# print(not(-10)) -- False
+
+# print(True and True) -- True
+# print(True and False) -- False
+# print(False and True) -- False
+# print(False and False) -- False
+
+# print(10 and 10) -- 10
+# print(0 and 0) -- 0
+# print(1 and 0) -- 0
+# print(-10 and -10) -- -10
+# print(1 and 1) -- 1
+# print(10 and 20) -- 20
+# print(20 and 10) -- 10
+
+# print(True or True) -- True
+# print(True or False) -- True
+# print(False or True) -- True
+# print(False or False) -- False
+
+# print(10 or 10) -- 10
+# print(0 or 0) -- 0
+# print(1 or 0) -- 1
+# print(-10 or -10) -- -10
+# print(1 or 1) -- 1
+# print(10 or 20) -- 10
+# print(20 or 10) -- 20
+
+# ==> ASSIGNMENT OPERATOR
+
+# a = 20
+
+# a += 10 --> a = 20 + 10 = 30
+# a -= 10 --> a = 20 - 10 = 10
+# a *= 10 --> a = 20 * 10 = 200
+# a /= 10 --> a = 20 / 10 = 2
+# a //= 10 --> a = 20 // 10 = 2
+# a %= 10 --> a = 20 % 10 = 0
+
+# ==> MEMBERSHIP OPERATOR
+
+# in 
+
+# eg.
+# a = "This is my Python class"
+# print('This' in a) -- True
+# print('y' in a) -- True
+
+# not in
+# a = "This is my Python class"
+# print('This' not in a) -- Flase
+# print('f' not in a) -- True
+
+# a = "This is my python class"
+# print("This" is a)
+
+# b = "This is my python class"
+# print("This is my python class" is b)
+
+# c = "This"
+# print('This' is c)
+# print("This" is not c)
+
+# # a = 10
+# # b = 10
+# # print(id(a))
+# # print(id(b))
+
+# a = [1]
+# b = [1]
+# print(id(a))
+# print(id(b))
+
+
+
+
+
+
+
+
+
+
 # # Method 1 - using single triple quotes (used for multiline string)
 # print('''My name is Yash
 # and I am studying in GNIOT''')
@@ -230,6 +522,7 @@ List is Mutablle
 
 #supermarket form.
 
+""" 
 stockPen = 10
 stockBook = 10
 stockCopy = 10
@@ -319,3 +612,4 @@ for i in range(len(shoppingList)):
 # print("==================================================")
 # print("Your product list")
 # print(f"{}")
+ """

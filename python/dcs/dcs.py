@@ -19,31 +19,29 @@ Some key Differences
 	4. Platform Dependent/Independent language
 		Those languages in which program is written on one platform (OS) can be run on any other platform (OS) with the same output are Platform Independent Languages. While the languages in which program is written for some specific platform (OS) and cannot be run on other platforms are Platform dependent Languages. 
 
-Implementation of Python
+======= IMPLEMENTATION OF PYTHON ========
 The interpreter of python was officially written in C lang known as CPython. But there are several more implementation of python like Jpython which was written in Java, IronPython which was written in C# and PyPy which was written in Python itself.
 
 ** This info will be helpful when we use different interpreters in some special situations like many burp extensions want us to provide them Jpython interpreter 
 
-Compilation Process
+======= Compilation Process ========
 Source code (.py) ==> [internally] ==> byte code (.pyc) ==> [internally] ==> machine code (0,1)
 
 2**3 -- exponential
-10%2 -- modulo  
-Division
-10/3 = 3.3 -> this is floating point division
-10//3 = 3 -> this is integer division
+10%2 -- modulos  
+10/3 = 3.3 -> this is floating point division or simple division
+10//3 = 3 -> this is integer division or floor division
 9.0//2.0 = 4.0 -> this is integer division but since the operands are in float, it'll give result in float
 
 
-
-Like BODMAS, python follows PEMDAS
+======== Like BODMAS, python follows PEMDAS ==========
 P - parenthesis ()
 E - exponents **
 MD - Multiplication and Division (solve left to right)
 A - addition
 S - subtraction
 
-Comments
+====== Comments ========
 	Comments are the nothing but code itself which is ignored by the interpreter. Generally comments are used to gives some notes or additional info to other user within the actual source code.
 	
 	1. Single line comment #this is ex of single line comment
@@ -53,23 +51,22 @@ Comments
 	gender: male 
 	'''
 	
-Variable
+====== Variable ========
 	• Variables are the containers which stores some data.
 	• Variables can be assigned to other variables.
-	>>> ayush=5
-	>>> aman = ayush
-	>>> ayush = 7
-	>>> ayush
-	7
-	>>>
-	a,b = 3,4
+	>>>ayush=5
+	>>>aman = ayush
+	>>>ayush = 7
+	>>>ayush = 0
+	>>>a,b = 3,4
+
 	• Variables can be reassigned with another datatype
 			A = 5
 			A = 5.2
 			A = "yash"
 		**This is known as dynamic typing.
 			
-	• Rules of declaring variables:
+****• Rules of declaring variables:
 		1. Var. name must start with letter or underscore
 		2. Var. name other than 1st character must contain only letters, numbers or underscore.
 		3. Var. name cannot have any space.
@@ -80,7 +77,7 @@ Variable
 		__password__ = 1
 		__name__ = 1 -- ye find karne me help karta hai ki jo script run ho rahi hai wo direct ho rahi hai ya dusre file se import hokar
 	
-	Datatype
+======= DATATYPES =======
 		1. Int (integer values) 
 		2. Float (decimal values)
 		3. Bool (true or false / yes or no)
@@ -277,7 +274,8 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # print("*"*5)  
 # print("yash"*5)
 
-#---------------------------------------is keyword---------------------------------------------  
+#---------------------------------------is keyword--------------------------------------------- 
+# whether the two variables refering to same object 
 # a=234.1
 # b=234.1
 # if a is b: #this will execute becoz a and b both are referencing to same location of 234.1 
@@ -389,10 +387,10 @@ Syntax -
 # for i in range(1,5):
 #     print(" "*4 + "|*|")
 
-# new = 0
-# for i in range(1,5):
-#     print(" "*(5-i) + "*"*new)
-#     new = new+2
+new = 0
+for i in range(1,5):
+    print(" "*(5-i) + "*"*new)
+    new = new+2
 
 
 # new = 0
@@ -991,3 +989,28 @@ name.decode()
 	
 # do(add,2,3)()
 
+
+# ------------------------------------------------------------------------------------------
+
+#!/bin/env python3
+
+# server programming
+
+# import socket
+
+# def main(HOST, PORT):
+#   s = socket.socket()
+#   try:
+#      s.bind((HOST, PORT))
+#   except:
+#     print("choose a different Port!")
+#     exit()
+#   print("[+] listining...")
+#   s.listen()
+#   sock_fd, conn = s.accept()
+#   print("[+] Connection ESTAB", conn)
+#   while(True):
+#     tmp_bytes = sock_fd.recv(1024)
+#     print("[+] Recvd:", tmp_bytes.decode().strip())
+  
+# main("127.0.0.1", 80)

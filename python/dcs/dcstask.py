@@ -253,23 +253,76 @@ for i in data:
 print(f"after removing all the alphabest, remaining chars are: {data}")
 """
 
-class Rectangle:
-    # l,b = 5,6
-    def __init__(self,l,b):
-        self.l = l
-        self.b = b
-    def peri(self):
-        pr = 2*(self.l+self.b)
-        print(pr)
-    def area(self):
-        ar = (self.l*self.b)
-        print(ar)
-    def display(self):
-        print(self.l)
-        print(self.b)
-        self.peri()
-        self.area()
-l = int(input("Enter the length: "))
-b = int(input("Enter the breadth: "))
-obj = Rectangle(l,b)
-obj.display()
+# class Rectangle:
+#     # l,b = 5,6
+#     def __init__(self,l,b):
+#         self.l = l
+#         self.b = b
+#     def peri(self):
+#         pr = 2*(self.l+self.b)
+#         print(pr)
+#     def area(self):
+#         ar = (self.l*self.b)
+#         print(ar)
+#     def display(self):
+#         print(self.l)
+#         print(self.b)
+#         self.peri()
+#         self.area()
+# l = int(input("Enter the length: "))
+# b = int(input("Enter the breadth: "))
+# obj = Rectangle(l,b)
+# obj.display()
+
+
+# x=[" "]
+# if x:
+#    print("True")
+
+# print(str(int(str(int(str(int(str("22")))))))+"29.0"+3)
+
+# mylist = []
+# for i in range(0, 4):
+#     data = int(input("Please enter 4 values: "))
+#     mylist.append(data)
+
+# mylist.sort()
+
+# print(f"Largest no: {mylist[3]}")
+# print(f"Smallest no: {mylist[0]}")
+
+# *        *
+# **      **
+# ***    ***
+# ****  ****
+# **********
+# ****  ****
+# ***    ***
+# **      **
+# *        *
+
+# r = 5
+# space = 8
+# for i in range(1,6):
+#     print("*"*i + " "*space + "*"*i)
+#     space = space-2 
+
+# space = 2
+# for i in range(4,0,-1):
+#     print("*"*i + " "*space + "*"*i)
+#     space = space+2 
+
+import time
+
+# time 12:00:00
+totalsec = 3610
+# h = 1
+# m = 60
+# s = 60
+for i in range(totalsec,0,-1):
+    # hour = i/3600
+    # min = (i/60)%60
+    # sec = i%60
+    # print(f"{hour}:{min}:{sec}",end="")   
+    print(f"\r{int(i):02}",end="")   
+    time.sleep(1)

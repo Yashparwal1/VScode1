@@ -64,30 +64,46 @@
 // }
 // ===================================================================================
 
-struct microFields
-{
-	unsigned int addr:3;
-	unsigned int cond:2;
-	unsigned int alu:9;
-	unsigned int wr:1;
-	unsigned int rd:1;
-	unsigned int mar:1;
-	unsigned int b:5;
-	unsigned int a:5;
-	unsigned int c:5;
-};
-union micro
-{
-	unsigned int microCode;
-	struct microFields code;
-};
+// struct microFields
+// {
+// 	unsigned int addr:3;
+// 	unsigned int cond:2;
+// 	unsigned int alu:9;
+// 	unsigned int wr:1;
+// 	unsigned int rd:1;
+// 	unsigned int mar:1;
+// 	unsigned int b:5;
+// 	unsigned int a:5;
+// 	unsigned int c:5;
+// };
+// union micro
+// {
+// 	unsigned int microCode;
+// 	struct microFields code;
+// };
 
-int main(int argc, char* argv[])
-{
-	union micro test;
-    // test.microCode = 101;
-    int x;
-    x = test.code.alu;
-    printf("%d",x);
-	return 0;
-} 
+// int main(int argc, char* argv[])
+// {
+// 	union micro test;
+//     // test.microCode = 101;
+//     int x;
+//     x = test.code.alu;
+//     printf("%d",x);
+// 	return 0;
+// }
+
+// int main()
+// {
+// 	char a = 16;
+// 	printf("%p",&a);
+// }
+
+// int main()
+// {
+// 	char *p = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// 	int i;
+// 	for (i = 0; i < 5; i++) *p++; *p++;
+// 	printf("%c",*p++);
+// }
+
+main(){;}
