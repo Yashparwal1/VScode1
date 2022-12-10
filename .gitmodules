@@ -1,0 +1,3 @@
+[submodule "hugo/portfolio/themes/DoIt"]
+	path = hugo/portfolio/themes/DoIt
+	url = https://github.com/HEIGE-PCloud/DoIt.git
