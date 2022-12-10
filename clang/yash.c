@@ -3214,3 +3214,30 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //     }
 //     return 0; 
 // }
+
+// 3. Program to search element in an array
+
+int main()
+{
+    int arr[] = {6,7,1,3,4,9};
+    int n = 6;
+    int data, i=0;
+    printf("Array is: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\nEnter the element you want to search: ");
+    scanf("%d",&data);
+    for (i; i < n; i++)
+    {
+        if (arr[i] == data)
+        {   
+            printf("Element %d found on index no. %d",data,i);
+            break;
+        }
+    }
+    if (i == 6)
+        printf("Element not found in above array !!!");
+    return 0;
+}
