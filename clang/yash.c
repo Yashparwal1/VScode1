@@ -1774,7 +1774,7 @@ int main()
 //--------------------------------------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------------------------------------
 
-// 
+//
 
 // 1. to take 5 values from the user and store them in an array.
 // int main()
@@ -2090,7 +2090,7 @@ gets(3): "The gets() function cannot be used securely. Because of its lack of bo
 //     {
 //         for (int j = 0; j < 3; j++)
 //         {
-            
+
 //             printf("%5d",A[i][j]);
 //         }
 //     }
@@ -2834,7 +2834,7 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 // {
 //     int id;
 //     char name[33];
-//     int salary; 
+//     int salary;
 // };
 // int main()
 // {
@@ -3090,24 +3090,24 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //     return 0;
 // }
 
-// 50 -- Program to display its own source code 
+// 50 -- Program to display its own source code
 // int main()
 // {
 //     FILE *fp;
 //     char c;
 //     fp = fopen(__FILE__,"r");
-    
+
 //     while (c != EOF)
 //     {
 //         c = getc(fp);
 //         printf("%c",c);
 //     }
-    
+
 //     fclose(fp);
 //     return 0;
 // }
 
-// // 51 -- Program to open the file in write mode 
+// // 51 -- Program to open the file in write mode
 // int main()
 // {
 //     char arr[33],c;
@@ -3212,32 +3212,131 @@ void TimePeriod(struct TIME start, struct TIME stop, struct TIME *diff)
 //     {
 //         printf("%d ",arr[i]);
 //     }
-//     return 0; 
+//     return 0;
 // }
 
 // 3. Program to search element in an array
 
+// int main()
+// {
+//     int arr[] = {6,7,1,3,4,9};
+//     int n = 6;
+//     int data, i=0;
+//     printf("Array is: \n");
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ",arr[i]);
+//     }
+//     printf("\nEnter the element you want to search: ");
+//     scanf("%d",&data);
+//     for (i; i < n; i++)
+//     {
+//         if (arr[i] == data)
+//         {
+//             printf("Element %d found on index no. %d",data,i);
+//             break;
+//         }
+//     }
+//     if (i == 6)
+//         printf("Element not found in above array !!!");
+//     return 0;
+// }
+
+// 4. program to reversing the array
+
+// int main()
+// {
+//     int arr[] = {6,7,1,3,4,9};
+//     int n = 6;
+//     printf("Array is: \n");
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ",arr[i]);
+//     }
+//     printf("\nResersed Array is: \n");
+//     for (int i = n-1; i >= 0; i--)
+//     {
+//         printf("%d ",arr[i]);
+//     }
+//     return 0;
+// }
+
+// 5. Program to merge two sorted array
+
+// int main()
+// {
+//     int arr1[] = {8, 4, 6, 2, 10};
+//     int s1 = 5;
+//     int arr2[] = {16, 12, 14, 18};
+//     int s2 = 4;
+//     int arr3[9];
+//     printf("Array 1: \n");
+//     for (int i = 0; i < 4; i++)
+//     {
+//         printf("%d ", arr1[i]);
+//     }
+//     printf("\nArray 2: \n");
+//     for (int i = 0; i < 4; i++)
+//     {
+//         printf("%d ", arr2[i]);
+//     }
+
+//     printf("\nMerging Array1 and Array2...");
+//     for (int i = 0; i < s1; i++)
+//     {
+//         arr3[i] = arr1[i];
+//     }
+//     int j = s1;
+//     for (int i = 0; i < s2; i++)
+//     {
+//         arr3[j] = arr2[i];
+//         j++;
+//     }
+//     //sorting the array
+//     for (int i = 0; i < 9; i++)
+//     {
+//         int temp;
+//         for (int j = i+1; j < 9; j++)
+//         {
+//             if (arr3[i] > arr3[j])
+//             {
+//                 temp = arr3[i];
+//                 arr3[i] = arr3[j];
+//                 arr3[j] = temp;
+//             }
+//         }
+//     }
+//     printf("\nSorted array after merging: \n");
+//     for (int i = 0; i < 9; i++)
+//     {
+//         printf("%d ", arr3[i]);
+//     }
+
+//     return 0;
+// }
+
+// 6. program to sort array in assending array
+
 int main()
 {
-    int arr[] = {6,7,1,3,4,9};
-    int n = 6;
-    int data, i=0;
-    printf("Array is: \n");
-    for (int i = 0; i < n; i++)
+    int arr[] = {7, 2, 1, 9, 8, 3};
+    printf("Array is : \n");
+    for (int i = 0; i < 6; i++)
     {
-        printf("%d ",arr[i]);
+        printf("%d ", arr[i]);
     }
-    printf("\nEnter the element you want to search: ");
-    scanf("%d",&data);
-    for (i; i < n; i++)
+    printf("Array sorted in assending order: \n");
+    for (int i = 0; i < s3; i++)
     {
-        if (arr[i] == data)
-        {   
-            printf("Element %d found on index no. %d",data,i);
-            break;
+        int tem;
+        for (int j = i + 1; j < s3; j++)
+        {
+            if (arr3[i] > arr3[j])
+            {
+                tem = arr3[i];
+                arr3[i] = arr3[j];
+                arr3[j] = tem;
+            }
         }
     }
-    if (i == 6)
-        printf("Element not found in above array !!!");
-    return 0;
 }

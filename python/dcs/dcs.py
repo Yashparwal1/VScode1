@@ -387,10 +387,10 @@ Syntax -
 # for i in range(1,5):
 #     print(" "*4 + "|*|")
 
-new = 0
-for i in range(1,5):
-    print(" "*(5-i) + "*"*new)
-    new = new+2
+# new = 0
+# for i in range(1,5):
+#     print(" "*(5-i) + "*"*new)
+#     new = new+2
 
 
 # new = 0
@@ -1014,3 +1014,5 @@ name.decode()
 #     print("[+] Recvd:", tmp_bytes.decode().strip())
   
 # main("127.0.0.1", 80)
+
+# ---------------------------------------------------------------------------------
