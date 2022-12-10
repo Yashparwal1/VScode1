@@ -673,23 +673,7 @@ struct node* InsertEnd(int data)
 // ----- till here --------------
 . */
 
-#define exp_size 15
-int top = -1; 
-int main()
-{
-    char exp[exp_size];
-    printf("Enter the no. in Roman: ");
-    
-    for (int i = 0; i < ; i++)
-    {
-        
-        top++;
-    }
-    
+// ==================================== FILE WORK ======================================
 
-    for (int i = 0; i <= exp_size-1; i++)
-    {
-        printf("%c\n",exp[i]);
-    }
-     
-}
+// 1. program to traversing or printing value of array
+
