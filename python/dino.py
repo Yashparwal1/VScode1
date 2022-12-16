@@ -21,10 +21,7 @@ def isColloide(data):
                 hit("up") 
                 return 
     return 
-
-
     
-
 if __name__ == "__main__":
     print("game is starting in 3 seconds")
     time.sleep(3)

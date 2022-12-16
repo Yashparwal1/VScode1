@@ -45,6 +45,23 @@ is
 me'''
 print(a)
 
+
+# # Method 1 - using single triple quotes (used for multiline string)
+# print('''My name is Yash
+# and I am studying in GNIOT''')
+
+# # Method 2 - using double triple quotes
+# print('''My name is Yash 
+# and I am studying in GNIOT''')
+
+# # Method 3 - using double quotes
+# print("My name is Yash\nand I am studying in GNIOT")
+
+# # Method 4 - using single quotes
+# print('My name is Yash\nand I am studying in GNIOT')
+
+
+
 ==> DATATYPES
 1. Numeric Datatypes
     - int
@@ -103,45 +120,52 @@ print(num)
 # print(f"Floor Divison (Integer division): {num1//num2}")
 # print(f"Modulus: {num1%num2}")
 
-num1 = int(input("Enter first no: "))
-num2 = int(input("Enter second no: "))
-num3 = int(input("Enter third no: "))
-num4 = int(input("Enter fourth no: "))
+# --------------------------------------------------------------------------
+# num1 = int(input("Enter first no: "))
+# num2 = int(input("Enter second no: "))
+# num3 = int(input("Enter third no: "))
+# num4 = int(input("Enter fourth no: "))
 
 
-if (num1>num2):
-    if (num1>num3):
-        if (num1>num4):
-            print(f"{num1} is largest")
-        else:
-            print(f"{num4} is largest")
-    else:
-        if (num3>num4):
-            print(f"{num3} is largest")
-        else:
-            print(f"{num4} is largest")
-else:
-    if (num2>num3):
-        if (num2>num4):
-            print(f"{num2} is largest")
-        else:
-            print(f"{num4} is largest")
-    else:
-        if (num3>num4):
-            print(f"{num3} is largest")
-        else:
-            print(f"{num4} is largest")
-    
-mylist = []
-for i in range(0, 4):
-    data = int(input("Please enter 4 values: "))
-    mylist.append(data)
+# if (num1>num2):
+#     if (num1>num3):
+#         if (num1>num4):
+#             print(f"{num1} is largest")
+#         else:
+#             print(f"{num4} is largest")
+#     else:
+#         if (num3>num4):
+#             print(f"{num3} is largest")
+#         else:
+#             print(f"{num4} is largest")
+# else:
+#     if (num2>num3):
+#         if (num2>num4):
+#             print(f"{num2} is largest")
+#         else:
+#             print(f"{num4} is largest")
+#     else:
+#         if (num3>num4):
+#             print(f"{num3} is largest")
+#         else:
+#             print(f"{num4} is largest")
 
-mylist.sort()
 
-print(f"Largest no: {mylist[3]}")
-print(f"Smallest no: {mylist[0]}")
+# mylist = []
+# for i in range(0, 4):
+#     data = int(input("Please enter 4 values: "))
+#     mylist.append(data)
 
+# mylist.sort()
+
+# print(f"Largest no: {mylist[3]}")
+# print(f"Smallest no: {mylist[0]}")
+
+#using max and min function
+# print(max(mylist))
+# print(min(mylist))
+
+# --------------------------------------------------------------------------
 
 # 1. Arithmatic Operator
 # +, -, *, /, //, %, **
@@ -282,27 +306,666 @@ print(f"Smallest no: {mylist[0]}")
 # print(id(b))
 
 
+# DATATYPES
+
+# 1. List :
+# Its a collection of various datatypes
+# It is enclosed in square brackets
+# Its is separated by comma
+# It is mutable
+
+# a = [10, 10.5, 4+5j,True, None, 'Python']
+# print(a)
+# print(type(a))
+# print(id(a))
+
+# Append element to the end of the list.
+# a.append(10) #10 will be added at end
+
+# # Clear delets all the elements and will give empty list 
+# a.clear()
+
+# # Copy all the elements of a list into another list 
+# b = a.copy
+# print(b)
+
+# # Count the occurance an element in a list.  
+# a = [1,1,1,1,1,4,5,63,5]
+# print(a.count(2))
+
+# # Extend list by appending elements from the iterable.
+# a = [1,2,3,4]
+# b = [5,6,7]
+# a.extend(b) #extending a with the help of b
+# b.extend(a) #extending b with the help of a
+# print(a)
+
+# # Return the index of a value
+# a = [11,22,33,44,55,66,77]
+# a.index(33) #output is 2
+
+
+# # insert(index_number,value)
+# a = [11,22,33,44,55,66,77]
+# a.insert(-1,5)  
+# a.insert(7,5) 
+
+# #Remove and return item at index (default last).
+# a = [11,22,33,44,55,66,77]
+# a.pop()  #remove element at last index
+# a.pop(2) #remove element at index 2 
+
+# # Remove first occurrence of value.
+# a = [11,22,33,44,55,66,77]
+# a.remove(33) #remove 33
+
+# a = [2,4,4,6,7,4,3,5,7]
+# a.sort() #sort the list in assending order
+# a.sort(reverse=True)
+
+# a.reverse() #reverse the list
+
+# -------------------------------------------------------------------------------------
+
+# 2. TUPLE 
+# It is enclosed in parenthesis
+# It is separated by comma
+# It is immutable
+# It consists of diff. datatypes
+
+# a = (10,10.5, 'Python', None, True, True, True, False)
+
+# # Return number of occurrences of value.
+# print(a.count(True))
+# print(a.count('Python'))
+
+# # Return first index of value.
+# print(a.index(None))
+
+# ------------------------------------------------------------------------------
+
+# 3. String 
+
+# a = 'This is my Python Class'
+# print(a)
+# print(type(a))
+# print(id(a))
+
+
+# a = 'This is my Python Class'
+# b = "I am a BCA student"
+# a.count("i")
+# a.count("This")
+
+# # a.lower() #convert all characters into lowercase
+
+# a.title() #capitalize the first letter of each word
+
+# a.capitalize() #capitalize the first letter of first word and 
+
+# a.replace('i','y') #replace all 'i' with 'y'
+# a.replace("Python", "Java")
+
+# print(a.split(' '))  #['This', 'is', 'my', 'Python', 'Class']
+# print(a.split('my')) ['This is ', ' Python Class']
+
+# c = '. '.join([a,b])
+# print(c)
+
+#concatination
+# print(a+'. '+b)
+
+# ---------------------------------------------------------------------------------
+
+# 4. SETS
+# It is enclosed in curly braces {}
+# It is separated by comma
+# It is an unordered collection of data
+# It consist of unique elements
+# It consist of various datatypes
+# Mathematical Operations can be done on set
+
+# a = {2,3,4,5,34,3,4,5,3,3,45,43,3}
+# print(a) #{34, 3, 2, 4, 5, 43, 45}
+# print(type(a))
+# print(id(a))
+
+# a.add(5) #no duplicate elements !!
+# a.add(1)
+# print(a)
+# b = {1,2,3,5,6,7}
+# b.add(4) 
+# print(b)
+
+# a = {1,2,3,4}
+# b = {5,6,7}
+
+# b = a.copy()
+
+# a.pop() #removes 1st element
+
+# a.remove(4) #remove(value)
+
+# a = {1,2,3,4,5,6}
+# b = {1,2,7,8,9}
+# a.difference(a) #a-b
+# a.union(b) 
+# a.intersection(b)
+
+# ------------------------------------------------------------------------------
+
+# 5. Dictionary
+# It is a collection of key:value pair 
+# It consist of unique keys
+# It is enclosed in curly braces
+# It is separeated by comma
+# Key and Value is separated by colon
+
+# a = {1:'Python',
+# 2:'Java',
+# 3:'C++' }
+# print(a)
+# print(type(a))
+# print(id(a))
+
+# 1,2,3 are keys
+# 'Python','Java','C++' are values
+
+# print(a.keys())
+
+# print(a.values())
+
+# print(a.items())
+
+# a.clear()
+
+# b = a.copy()
+
+# a.get(3) #values availabe on 3 key
+
+# a.fromkeys() #Create a new dictionary with keys from iterable and values set to value.
+
+# ==> Slicing
+
+# a = 'This is my Python Class'
+# print(a[::8])
+
+# ==> CONDITIONAL STATEMENT
+
+# a = int(input("Enter the first number: "))
+# b = int(input("Enter the second number: "))
+# if a>b:
+#     print("A is bigger")
+# if b>a:
+#     print("B is bigger")
+# if a==b:
+#     print("A and B are equal")
+
+# ------------------------------------------------------------
+
+# a = int(input("Enter the first number: "))
+# b = int(input("Enter the second number: "))
+# if a>b:
+#     print("A is bigger")
+# elif b>a:
+#     print("B is bigger")
+# else:
+#     print("A and B are equal")
+
+# wap to find the greater number between 2 numbers
+# wap to find the greatest number between 3 numbers
+# wap to swap 2 numbers
+# wap to find whether the given number is even or odd
+
+# a = int(input("Enter first number: ")) 
+# b = int(input("Enter second number: ")) 
+# c = int(input("Enter third number: "))
+# d = int(input("Enter fourth number: "))
+
+# if(a>b):
+#     print(f"no. {a} is greater")
+# else:
+#     print(f"no. {b} is greater")
+
+# if(a>b and a>c):
+#     print(f"no. {a} is greatest")
+# elif (b>a and b>c):
+#     print(f"no. {b} is greater")
+# else:
+#     print(f"no. {c} is greater")
+
+
+# if(a>b and a>c and a>d):
+#     print("a is greatest")
+# elif(b>a and b>c and b>d):
+#     print("b is greatest")
+# elif(c>a):
+#     print("c is greatest")
+# else:
+#     print("d is greatest")    
+# -----------------------------------------------------
+    
+# a,b = b,a
+# print(a,b)
+# -----------------------------------------------------
+
+# if a%2==0:
+#     print(f"{a} is even")
+# else:
+#     print(f"{a} is odd")
+# -----------------------------------------------------
+# if(a>0):
+#     print(f"{a} is positive")
+# elif(a<0):
+#     print(f"{a} is negative")
+# else:
+#     print(f"{a} is zero")
+
+# ----------------------LEAP YEAR------------------------------
+# year = int(input("Enter the year: "))
+# if (year % 4 == 0):  # if it is true
+#     if (year % 100 == 0):  # then it should be false BUT if it is also true
+#         if (year % 400 == 0):  # then it should also be true becoz 100 se divide hone ka mtlb h vo century year h so we have to check if this century year is divisible by 400 to be a leap year othervise no leap year.
+#             print(f"Year {year} is a leap year")
+#         else:
+#             print(f"Year {year} is NOT a leap year")
+#     else:
+#         print(f"Year {year} is a leap year")
+# else:
+#     print(f"Year {year} is NOT a leap year")
+
+# if (year % 4 == 0 and year % 100 != 0 or year % 400 == 0):
+#     print(f"year {year} is a leap year")
+# else:
+#     print(f"year {year} is NOT a leap year")
+
+# ------------------FACTORIAL-------------------------
+
+# f = int(input("Enter a number: "))
+# fact = 1
+# for i in range(f,0,-1):
+#     fact = fact*i
+# print(f"Factorial of {f} is {fact}")
+
+#-----------------------prime no.---------------------
+
+# num = int(input("Enter a number: "))
+# count = 0
+# for i in range(1,num+1):
+#     if num%i == 0:
+#         count+=1
+# if num == 1:
+#     print(f"{num} is prime no.")
+# elif count == 2:
+#     print(f"{num} is prime no.")
+# else:
+#     print(f"{num} is NOT a prime no.")
+
+
+# =========================================FOR LOOP==========================================
+
+# for i in range(0,2):
+#     print("Manish")
+
+# a = 'This'
+# for i in a:
+#     print(i) #it will print T h i s line by line
+
+# for i in range(0,4):
+#     print(i) #it will print the index line by line
+
+
+# a = 'This is my Python Class'
+# for i in range(0,10):
+#     print(a)
+
+# for i in range(0,len(a)):
+#     print(i)
+
+# for i in range(0,len(a)):
+#     print(a[i])
+# ======================================================================================
+
+# a = int(input("Enter the first number: "))
+# b = int(input("Enter the second number: "))
+
+# print('''+ = Addition
+# - = Subtraction
+# * = Multiplication
+# / = Division''')
+# print("*"*20)
+# ch = input("Enter operator: ")
+# print("*"*20)
+# if ch=='+':
+#     print(f"{a}+{b} = {a+b}")
+# elif ch=='-':
+#     print(f"{a}-{b} = {a-b}")
+# elif ch=='*':
+#     print(f"{a}*{b} = {a*b}")
+# elif ch=='/':
+#     print(f"{a}/{b} = {a/b}")
+# else:
+#     print("Worong operator entered !!!")
+
+
+""" name, phone no., age, location , pin code, email id, alt. contact no, aadharcard. 
+which disease?
+list of doctors with their specialization
+enter the choice
+doctor name is been appointed for your consultantation 
+"""
+
+# import pyfiglet
+# banner = pyfiglet.figlet_format("Surya Hospital")
+# print(banner,end="")
+# # print("*"*10 + "" + "*"*10)
+# print("-"*70)
+# print("*"*25 + "FIll Patient Details" + "*"*25)
+# print("-"*70)
+# name = input("Name: ")
+# ph = int(input("Phone number: "))
+# aph = int(input("Alternate Phone number: "))
+# age = int(input("Age: "))
+# loc = input("Address: ")
+# pin = int(input("Pin Code: "))
+# email = input("Email: ")
+# aadhar = int(input("Aadhar No.: "))
+# print("-"*30)
+# while(True):
+#     print('''[ 1 ]. Cold
+# [ 2 ]. Feaver
+# [ 3 ]. Stomachache
+# [ 4 ]. Heart Problem
+# [ 5 ]. Skin Problem''')
+#     doc = {1:'Dr. Ramhesh', 2:'Dr. Suresh', 3:'Dr. Natwar', 4:'Dr. Mahesh', 5:'Dr. Ram'}
+#     disease = int(input("Enter Number from above list your disease is related with: "))
+
+    # if disease==1:
+    #     print("Dr. Ramesh is appointed for your consultation")  
+    #     break 
+    # elif disease==2:
+    #     print("Dr. Suresh is appointed for your consultation")   
+    #     break 
+    # elif disease==3:
+    #     print("Dr. Natwar is appointed for your consultation")   
+    #     break 
+    # elif disease==4:
+    #     print("Dr. Mahesh is appointed for your consultation")   
+    #     break 
+    # elif disease==5:
+    #     print("Dr. Ram is appointed for your consultation")   
+    #     break 
+    # else: 
+    #     print("Enter choice from given list !!!")
+
+    # for key,value in doc.items():
+    #     key = disease
+    #     if key == 1:
+    #         print(value)
+    #         break
+    #     elif key == 2:
+    #         print(value)
+    #         break
+    #     elif key == 3:
+    #         print(value)
+    #         break
+        
+# -------------------------------------------------------------------
+
+# ================================== FUNCTIONS =============================
+
+# def func_name():
+#     statements
+
+# by default function returns None Value 
+
+# def add(): #function defination
+#     a = int(input("Enter value of a: "))
+#     b = int(input("Enter value of b: "))
+#     print(f"Sum of {a} and {b} is {a+b}")
+# add() #Function call
+
+# def add(): #function defination
+#     a = int(input("Enter value of a: "))
+#     b = int(input("Enter value of b: "))
+#     c = a+b
+#     return c
+# print(add()) #Function call
+
+# a = int(input("Enter value of a: "))
+# b = int(input("Enter value of b: "))
+
+# def sum(a,b):
+#     print(f"{a}+{b} = {a+b}")
+# def sub(a,b):
+#     print(f"{a}-{b} = {a-b}")
+# def mul(a,b):
+#     print(f"{a}*{b} = {a*b}")
+# def div(a,b):
+#     print(f"{a}/{b} = {a/b}")
+
+# print('''+ = Addition
+# - = Subtraction
+# * = Multiplication
+# / = Division''')
+# print("*"*20)
+# ch = input("Enter operator: ")
+# print("*"*20)
+# if ch=='+':
+#     sum()
+# elif ch=='-':
+#     sub()
+# elif ch=='*':
+#    mul()
+# elif ch=='/':
+#     div()
+# else:
+#     print("Worong operator entered !!!")
+
+# sum(10,20)
+# sub(14,3)
+# mul(2,5)
+# div(20,2)
+
+# =============================================================================
+# WAP to find whether a given no. is even or odd using function
+
+# def func(a):
+#     if a%2 == 0:
+#         print(f"{a} is even")
+#     else:
+#         print(f"{a} is odd")
+
+# ch = 'y'
+# while(ch != 'n'):
+#     a = int(input("Enter any number: "))
+#     func(a)
+#     ch = input("Run again ? (y/n)")
+
+# ==============================================================================
+# WAP to find the largest out of three numbers using functions and check which is even or odd and also check if it is positive or negative
+
+
+# ==============================================================================
+# WAP to add two strings
+
+# a = 'Python Class'
+# b = 'BCA Student'
+# # 1. using concatination
+# print(a+' '+b)
+# # 2. using join method
+# print(' '.join([a,b]))
+
+# WAP t odo the following things
+# # 1. slice - Class from a
+# print(a[7:len(a)])
+# # 2. slice - BCA from b
+# print(a[:3])
+# # 3. make all letter capital in a and small in b
+# print(a.upper())
+# print(b.lower())
+
+# ------------------------------------------------------------------------
+
+# def Evenodd(n):
+#     if n%2==0:
+#         print(f"{n} is even")
+#     else:
+#         print(f"{n} is odd")
+# def posnev(n):
+#     if n>0:
+#         print(f"{n} is positive")
+#     elif n<0:
+#         print(f"{n} is negative")
+#     else:
+#         print(f"{n} is zero")
+# def large(a,b,c):
+#     if(a>b and a>c):
+#         print(f"no. {a} is greatest")
+#         Evenodd(a)
+#         posnev(a)
+#     elif (b>a and b>c):
+#         print(f"no. {b} is greater")
+#         Evenodd(b)
+#         posnev(b)
+#     else:
+#         print(f"no. {c} is greater")
+#         Evenodd(c)
+#         posnev(c)
+# a = int(input("Enter first no.: "))
+# b = int(input("Enter second no.: "))
+# c = int(input("Enter third no.: "))
+# large(a,b,c)
+# -----------------------------------------------------------------------------
+
+# ==> Shorthand If else statement
+# a = 10
+# b = 20
+# print("a is greater" if a>b else "b is greater")
+
+# ==> Nested if else statememnt 
+# a = 10
+# b = 20
+# if a != 0:
+#     if a>b:
+#         print("a is greater")
+#         if a%2==0:
+#             print("a is even")
+#         else:
+#             print("a is odd")
+#     else:
+#         print("b is greater")   
+# else:
+#     print("invalid entry")
+
+
+# ==> Nested Loop
+# r = 5
+# for i in range(r):
+#     for j in range(i+1):
+#         print("*",end="")
+#     print("\n")
+
+# r = 5
+# for i in range(r+1,0,-1):
+#     for j in range(i-1):
+#         print("*",end="")
+#     # print("\n")
+
+# r = 5
+# for i in range(r):
+#     for j in range(r-1):
+#         print("*",end='')
+#     print("\n")
+
+# for i in range(5,0,-1):
+#     print("*"*i)
+#     i-=1
+        
+# ==> lambda function 
+# func = lambda a,b,c: a+b+c
+# func(10,20,30)
+
+
+# mylist = [1,2,5,63,7]
+# for i in mylist:
+#     for j in mylist:
+#         j = i+1
+#         if i>j:
+#             i,j = j,i
+#             print(i,j)
+# print(mylist)
+
+
+#WAP to find SI and CI
+# p = int(input("Enter principle value: "))
+# r = int(input("Enter rate : "))
+# t = int(input("Enter time in year: "))
+# print (f" Simple interest is {(p*r*t)/100}")
+# print (f" Compound interest is {p*((1+r)/100)**t}")
+# print (f" Compound interest is {p*pow((1+r/100),t)}")
+
+
+#WAP to find whether a no. is armstrong or not
+# num = int(input("Enter a no.: "))
+# x = str(num)
+# for i in x:
+#     sum = sum + i**3
+# if sum == int(x):
+#     print("Armstrong no.")
+# else:
+#     print("Not a Armstrong no.")
+
+#WAP to find area of circle and rect.
+
+# len = int(input("Enter length: "))
+# wid = int(input("Enter width: "))
+# side = int(input("Enter side of square: "))
+# print(f"Area of square is: {side**2}")
+# print(f"Area of rectangle is: {len*wid}")
+
+
+#WAP to interchange first and last elements in the list
+# mylist = [1,5,6,3]
+# mylist[0],mylist[-1] = mylist[-1],mylist[0]
+# print(mylist)
+
+# WAP to swap two no. in list
+# mylist = [1,5,6,3]
+# mylist.index(5)
+# mylist.index(6) 
+
+#WAP to reverse a list
+# mylist = [1,5,6,3]
+# newlist = []
+# for i in mylist[::-1]:
+#     newlist.append(i)
+# print(newlist)
+
+# num = 121
+# x = str(num)
+# # for i in x:
+# #     n = x(int(len(x),0,-1))
+# rev = ''.join(reversed(x))
+
+# if num == rev:
+#     print("Yes")
+# else:
+#     print("No")
+
+# WAP to find whether a number is palindrome or not 
+# x = str(num)
+# rev = x[::-1]
+# rev = 
+# if num == rev:
+#     print(f"{num} is a palindrome number")
+# else:
+#     print(f"{num} is a NOT a palindrome number")
 
 
 
 
-
-
-
-
-# # Method 1 - using single triple quotes (used for multiline string)
-# print('''My name is Yash
-# and I am studying in GNIOT''')
-
-# # Method 2 - using double triple quotes
-# print("""My name is Yash
-# and I am studying in GNIOT""")
-
-# # Method 3 - using double quotes
-# print("My name is Yash\nand I am studying in GNIOT")
-
-# # Method 4 - using single quotes
-# print('My name is Yash\nand I am studying in GNIOT')
+# ************************************ START ************************************************
 
 # name = input("Enter Your Name: ")
 

@@ -19,5 +19,5 @@ def bruteforce(passwd):
 # login("test")
 
 for i in pass_list:
-	thread = threading.Thread(target=login, args=(i,))
+	thread = threading.Thread(target=bruteforce, args=(i,))
 	thread.start()

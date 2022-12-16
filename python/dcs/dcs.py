@@ -482,15 +482,10 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # data.extend([4,5]) #add list [4,5] to the data as individual items like 4, 5 
 # print(data)
 
-# ==> 3. index(index_number,object_to_add)
+# ==> 3. insert(index_number,object_to_add)
 # data.insert(3,"hlo") #hlo will be inserted at 3rd index
 # print(data) 
 
-# ------------------------------- PROBLEM WITH NEGATIVE INDEXING ------------------------------
-#NOTE: in negative indexing, first it it converted into equivalent positive index and then data is inserted
-# temp = [1,2,3]
-# temp.insert(-1,4) #4 should be added at last ==> [1,2,3,4] but NO....
-# ---------------------------------------------------------------------------------------------
 # ==> 4. clear
 # data.clear() #do empty the list
 
@@ -525,6 +520,13 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # print(data.index(10)) #will return ValueError that 10 is not in the list.
 # index(what_to_find , start_index , end_index)
 # print(data.index(3,1,4)) #find 3 between one and four index.
+
+# ------------------------------- PROBLEM WITH NEGATIVE INDEXING ------------------------------
+#NOTE: in negative indexing, first it it converted into equivalent positive index and then data is inserted
+# temp = [1,2,3]
+# temp.insert(-1,4) #4 should be added at last ==> [1,2,3,4] but NO....
+# ---------------------------------------------------------------------------------------------
+
 
 # ==> 8. count(2) element 2 is how many times. That is 3 times.
 # print(data.count(2))
