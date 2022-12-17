@@ -6,15 +6,14 @@ import pyfiglet
 
 usage = "  python3 port_scaner.py [TARGET] [START_PORT] [END_PORT]"
 banner = pyfiglet.figlet_format("Port Scanner")
-print(banner,end="")
+print(banner, end="")
 print("|"+"_"*22 + "@Yashparwal1" + "_"*22+"|")
 print("\n")
-# start_time = time.time() #calculating start time
 
 try:
-    domain = input("[ + ] Enter Target domain or IP: ")  
+    domain = input("[ + ] Enter Target domain or IP: ")
     try:
-        target = socket.gethostbyname(domain) #resolve host to ip
+        target = socket.gethostbyname(domain)  # resolve host to ip
     except socket.gaierror:
         print("Name Resolution Error")
         print("Exiting...")
@@ -22,7 +21,8 @@ try:
 
     start_port = int(input("[ + ] Enter Starting port: "))
     end_port = int(input("[ + ] Enter Ending Port: "))
-except KeyboardInterrupt: #exception handeling for keyboard interrupt ctrl + c.
+# exception handeling for keyboard interrupt ctrl + c.
+except KeyboardInterrupt:
     print("\nExiting...")
     sys.exit()
 
@@ -30,29 +30,42 @@ print("-"*40)
 print("Scanning Target ==>", target)
 print("-"*40)
 
+
 def scan_port(port):
     # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s = socket.socket() #socket start
-    s.settimeout(5) #setting timeout (time for waiting for connection)
-    conn = s.connect_ex((target, port)) #bind host and port and establish connection and store in conn
-    if(conn == 0): #if connection exist that means port is open because connect_ex returns 0 if port is open.
+    s = socket.socket()  # socket start
+    s.settimeout(5)  # setting timeout (time for waiting for connection)
+    # bind host and port and establish connection and store in conn
+    conn = s.connect_ex((target, port))
+    # if connection exist that means port is open because connect_ex returns 0 if port is open.
+    if (conn == 0):
         print(f"Port {port}: OPEN")
-        # service = socket.getservbyport(port) #to detect service running on the port
-        # print(f"Service running: {service}") 
-        # print("-"*40)
-    s.close() #socket close
+        try:
+            # to detect service running on the port
+            service = socket.getservbyport(port)
+            print(f"Service running: {service}")
+        except:
+            print(f"Service running: NOT FOUND!!")
+        print("-"*40)
+    s.close()  # socket close
 
+start_time = time.time() #calculating start time
+thread_list = []
 try:
-    for port in range(start_port, end_port + 1): #run loop from start port and end port
-        thread = threading.Thread(target = scan_port, args = (port,)) 
-        #calling scan_port func as one thread and similarly for each port as a different threads. 
+    for port in range(start_port, end_port + 1):  # run loop from start port and end port
+        thread = threading.Thread(target=scan_port, args=(port,))
+        # calling scan_port func as one thread and similarly for each port a different threads is running.
         thread.start()
+        # this appenig and for loop thing is for "Scan completed in: " thing 
+        thread_list.append(thread) #add all threads in the list 
+    for item in thread_list: #then iterate over that list and check for each thread whether that t. is completed or not 
+        item.join() #ensure that if a thread is completed or not and then only it will move further 
 except KeyboardInterrupt:
     print("Exiting...")
     sys.exit()
 
-# end_time = time.time()
-# print("Scan Completed in :", end_time - start_time  , "sec")
+end_time = time.time()
+print("Scan Completed in :", end_time - start_time  , "sec")
 
 """ 
 Threading:
