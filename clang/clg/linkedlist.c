@@ -431,64 +431,64 @@
 // ===================================================================================================
 // ==================================== DOUBLY LINKED LIST ===========================================
 
-struct Node
-{
-        int data;
-        struct Node *next;
-        struct Node *prev;
-};
+// struct Node
+// {
+//         int data;
+//         struct Node *next;
+//         struct Node *prev;
+// };
 
-void traverse(struct Node *head)
-{
-        struct Node *p = head;
-        printf("Printing List in Right order...\n");
-        do
-        {       
-                printf("%d ",p->data);
-                p = p->next;
-        }while (p->next != NULL);
-        printf("%d ",p->data);
-        printf("\nPrinting List in Reverse order...\n");
-        do
-        {       
-                printf("%d ",p->data);
-                p = p->prev;
-        }while (p != NULL);
-}
+// void traverse(struct Node *head)
+// {
+//         struct Node *p = head;
+//         printf("Printing List in Right order...\n");
+//         do
+//         {       
+//                 printf("%d ",p->data);
+//                 p = p->next;
+//         }while (p->next != NULL);
+//         printf("%d ",p->data);
+//         // printf("\nPrinting List in Reverse order...\n");
+//         // do
+//         // {       
+//         //         printf("%d ",p->data);
+//         //         p = p->prev;
+//         // }while (p != NULL);
+// }
 
-int main()
-{
-        struct Node *head;
-        struct Node *second;
-        struct Node *third;
-        struct Node *fourth;
-        struct Node *fifth;
+// int main()
+// {
+//         struct Node *head;
+//         struct Node *second;
+//         struct Node *third;
+//         struct Node *fourth;
+//         struct Node *fifth;
 
-        head = (struct Node *)malloc(sizeof(struct Node));
-        second = (struct Node *)malloc(sizeof(struct Node));
-        third = (struct Node *)malloc(sizeof(struct Node));
-        fourth = (struct Node *)malloc(sizeof(struct Node));
-        fifth = (struct Node *)malloc(sizeof(struct Node));
+//         head = (struct Node *)malloc(sizeof(struct Node));
+//         second = (struct Node *)malloc(sizeof(struct Node));
+//         third = (struct Node *)malloc(sizeof(struct Node));
+//         fourth = (struct Node *)malloc(sizeof(struct Node));
+//         fifth = (struct Node *)malloc(sizeof(struct Node));
 
-        head->prev = NULL;
-        head->data = 4;
-        head->next = second;
-        second->prev = head;
-        second->data = 3;
-        second->next = third;
-        third->prev = second;
-        third->data = 6;
-        third->next = fourth;
-        fourth->prev = third;
-        fourth->data = 2;
-        fourth->next = fifth;
-        fifth->prev = fourth;
-        fifth->data = 7;
-        fifth->next = NULL;
+//         head->prev = NULL;
+//         head->data = 4;
+//         head->next = second;
+//         second->prev = head;
+//         second->data = 3;
+//         second->next = third;
+//         third->prev = second;
+//         third->data = 6;
+//         third->next = fourth;
+//         fourth->prev = third;
+//         fourth->data = 2;
+//         fourth->next = fifth;
+//         fifth->prev = fourth;
+//         fifth->data = 7;
+//         fifth->next = NULL;
 
-        printf("Simple Traversing Linked list\n");
-        traverse(head);
-        // printf("Reverse Traversing Linked list\n");
-        // rev_traverse(head);
-        return 0;
-}
+//         printf("Simple Traversing Linked list\n");
+//         traverse(head);
+//         // printf("Reverse Traversing Linked list\n");
+//         // rev_traverse(head);
+//         return 0;
+// }

@@ -963,6 +963,195 @@ doctor name is been appointed for your consultantation
 #     print(f"{num} is a NOT a palindrome number")
 
 
+# --------------------------------------------------------------------------------
+
+# PRACTICE QUESTIONS
+'''
+1. Who developed python ?
+Ans. G.V Rossom
+
+2. Is python case senditive while dealing with identifier?
+Ans. Yes
+
+3. What is the extension of python file.
+Ans. .py
+
+4. Output?
+4+3%5
+Ans. 7
+
+5. Output?
+print(2**3 + (5+6)**(1+1))
+Ans. 129
+
+6. Output?
+var = 10
+print(type(var))
+var = 'Hello'
+print(type(var))
+Ans. Int and Str
+
+7. Output?
+print(type(5/2))
+print(type(5//2))
+Ans. Float and Int
+
+8. Output?
+a = [1,2,3,4,5]
+sum = 0
+for i in a:
+    sum = sum + i
+print(sum)
+Ans. 15
+
+9. WAP to find whether 's' is available in a string or not
+
+a = 'This is me'
+count = 0
+for i in a:
+    if i=='s':
+        count += 1
+print("Available {count} times")
+
+10. WAP to convert a tuple into a list.
+tp = (1,2,3,4)
+my_list = list(tp)
+print(type(my_list))
+
+11. WAP
+1
+12
+123
+1234
+12345
+
+'''
+    
+# for i in range(1,6):
+#     for j in range(1,i+1):
+#         print(j,end='')
+#     print('\n')
+
+# l = []
+# for i in range(1,6):
+#     l.append(i)
+#     print(l)
+
+# l = ''
+# for i in range(1,6):
+#     l = str(l)+str(i)
+#     print(l)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # ************************************ START ************************************************

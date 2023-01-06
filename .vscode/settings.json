@@ -8,7 +8,14 @@
         "math.h": "c",
         "stdlib.h": "c",
         "types.h": "c",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "typeinfo": "cpp",
+        "array": "c",
+        "deque": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cmake.clearOutputBeforeBuild": false,

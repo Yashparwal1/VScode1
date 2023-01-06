@@ -7,9 +7,11 @@ eg:
   in a proram:
     * 1 main thread is there and 4 extra chreads
     * so these 4 threads are non-daemon threads by default.
+  * when the main thread and these 4 daemon threads are not completed, the program execution will remian continue.
     * main thread is also a kind of non-daemon thread
   * We need to create daemon thread separately.
   * when the main thread and all non-daemon threads are finished in the program, the daemon threads will be ended automatically even if the work of daemon thread is still pending.
+
 """
 
 

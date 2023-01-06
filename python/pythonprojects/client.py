@@ -31,7 +31,7 @@ def thread_recv(s,key):
 
 #main function for establishing connection and sending data
 def main():
-  HOST = "192.168.29.167" #IP address
+  HOST = "127.0.0.1" #IP address
   PORT = 1234 #Port no. to connect with
   s = socket.socket()
   s.connect((HOST,PORT))

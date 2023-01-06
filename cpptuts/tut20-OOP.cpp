@@ -21,12 +21,13 @@ Q. Why Object-Oriented Programming?
 * A class is a template to create objects
 * Treats data as a critical element
 * Decomposes the problem in objects and builds data and functions around the objects
-* Basic Concepts in Object-Oriented Programming
+ 
+==> Basic Concepts in Object-Oriented Programming
 
 # Classes - Basic template for creating objects
 # Objects – Basic run-time entities
 # Data Abstraction & Encapsulation – Wrapping data and functions into a single unit
-# Inheritance – Properties of one class can be inherited into others
+# Inheritance – Properties of one class can be inherited into others (**enhance code reusability)
 # Polymorphism – Ability to take more than one forms
 # Dynamic Binding – Code which will execute is not known until the program runs
 # Message Passing – message (Information) call format
@@ -39,3 +40,16 @@ Q. Why Object-Oriented Programming?
 - Software complexity can be easily managed
 
 */
+
+#include<iostream>
+
+using namespace std;
+int f(int n){
+  if(n < 1)return 0;
+  cout << n << endl;
+  return ((n%2==0)?-n:n) + f(n-1);
+}
+int main(){
+  cout<<f(10)<<endl;
+  return 0;
+}

@@ -13,7 +13,7 @@ counter = 1
 def play(btn):
     global flag, counter
     if btn["text"] == " " and flag == True:
-        flag=False
+        flag=False 
         btn["text"] = "X"
         counter+=1
         Check()

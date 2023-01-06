@@ -36,10 +36,19 @@ def scan_port(port):
         print("Port {} is OPEN".format(port))
     s.close()
     
+threads = []
 # multiplethreading requires a function that's why 
 for port in range(start_port, end_port + 1):
     thread = threading.Thread(target = scan_port, args = (port,))
     thread.start()
+    threads.append(thread)
 
+for item in threads:
+    item.join()
+""" 
+item.join() -- thread1, thread2, thread3 ... are the items in threads list.  
+So,
+.join() here will ensure that the execution of program will move ahead iff the threads (t1,t2,t3...) are completed.
+"""
 end_time = time.time()
 print("Scan Completed in :", end_time - start_time  , "sec")
