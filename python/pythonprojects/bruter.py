@@ -4,8 +4,8 @@ import threading
 url = "http://testphp.vulnweb.com/userinfo.php"
 # url = input("Enter url: ")
 
-with open("pass.txt","r"):
-	pass_list = {"aaaa","yash","test"}
+# with open("pass.txt","r"):
+pass_list = {"aaaa","yash","test"}
 
 def bruteforce(passwd):
 	s = requests.session()

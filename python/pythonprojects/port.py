@@ -4,7 +4,6 @@ import time
 import threading
 import pyfiglet
 
-usage = "  python3 port_scaner.py [TARGET] [START_PORT] [END_PORT]"
 banner = pyfiglet.figlet_format("Port Scanner")
 print(banner, end="")
 print("|"+"_"*22 + "@Yashparwal1" + "_"*22+"|")
