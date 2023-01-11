@@ -53,6 +53,7 @@ def main():
     HOST = "127.0.0.1"  # IP address
     PORT = 1234  # Port no. to connect with
     s = socket.socket()
+    # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((HOST, PORT))
     print("[+] Connection established...")
     while True:

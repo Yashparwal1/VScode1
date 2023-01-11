@@ -41,15 +41,84 @@ Q. Why Object-Oriented Programming?
 
 */
 
-#include<iostream>
+// #include<iostream>
 
-using namespace std;
-int f(int n){
-  if(n < 1)return 0;
-  cout << n << endl;
-  return ((n%2==0)?-n:n) + f(n-1);
-}
-int main(){
-  cout<<f(10)<<endl;
-  return 0;
-}
+// using namespace std;
+// int f(int n){
+//   if(n < 1)return 0;
+//   cout << n << endl;
+//   return ((n%2==0)?-n:n) + f(n-1);
+// }
+// int main(){
+//   cout<<f(10)<<endl;
+//   return 0;
+// }
+
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// void fun(vector<int>&v,int i,int j,int r,vector<int>&ans){
+//    if(i == r){
+//     for(int k : ans)
+//     cout<<k<<" ";
+//     cout<<endl;
+//     return;
+//    }
+   
+//    if(j >= v.size())return;
+//    ans[i] = v[j];
+//    fun(v,i+1,j+1,r,ans);
+//    fun(v,i,j+1,r,ans);
+// }
+// int main(){
+//     vector<int>v={1,2,3,4};
+//     int r = 3;
+//     vector<int>ans(r);
+//     fun(v,0,0,r,ans);    
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <algorithm>
+
+// using namespace std;
+
+// // Recursive function to generate all possible combinations of the elements in the array
+// void generateCombinations(int arr[], int index, int n, int k)
+// {
+//     // if the combination has k elements, print it
+//     if (index == k)
+//     {
+//         for (int i = 0; i < k; i++)
+//             cout << arr[i] << " ";
+//         cout << endl;
+//         return;
+//     }
+
+//     // if there are no more elements to choose from, return
+//     if (n == 0)
+//         return;
+
+//     // recursive case: generate all combinations that include arr[n-1]
+//     arr[index] = n - 1;
+//     generateCombinations(arr, index + 1, n - 1, k);
+
+//     // recursive case: generate all combinations that do not include arr[n-1]
+//     generateCombinations(arr, index, n - 1, k);
+// }
+
+// int main()
+// {
+//     int arr[] = {1, 2, 3, 4};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+
+//     // generate all possible combinations of the array elements
+//     for (int k = 1; k <= n; k++)
+//     {
+//         int combination[k];
+//         generateCombinations(combination, 0, n, k);
+//     }
+
+//   return 0;
+// }
