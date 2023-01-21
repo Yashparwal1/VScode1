@@ -19,7 +19,7 @@ def change_tor_ip():
 
   # requests.get("http://localhost:9151/tor/renew")
   
-  # pyautogui.hotkey("ctrl","shift","l")  
+  pyautogui.hotkey("ctrl","shift","l")  
   print("\nNew Circuit Established")
 
 # time.sleep(10)

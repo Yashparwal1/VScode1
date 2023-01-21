@@ -5,30 +5,31 @@ Python is an interpreted, high level and object oriented programming language wh
 Some key Differences
 	1. High/Low level languages
 		High level lang are more programmer friendly while low level languages are more machine friendly
-	2. Interpreted and compiled languages 
-		A. In compiled language, 
+	2. Interpreted and compiled languages
+		A. In compiled language,
 			• The machine directly translates the code in compiled version.
 			• Compiler is used as a mediator to translate source code to machine code
 			• Compiler compile the whole code in one go and then gives error(if any).
-		B. In interpreted language, 
+		B. In interpreted language,
 			• the code is read and interpreted in real time.
 			• Interpreter is used as a mediator to translate source code to machine code
-			• Interpreter executes the code line by line and gives error (if any) and stop further execution 
+			• Interpreter executes the code line by line and gives error (if any) and stop further execution
 	3. Programming and Scripting language
 		Scripting language do not require an explicit compilation step. So all scripting languages are programming languages but all programming languages are not scripting languages.
 	4. Platform Dependent/Independent language
-		Those languages in which program is written on one platform (OS) can be run on any other platform (OS) with the same output are Platform Independent Languages. While the languages in which program is written for some specific platform (OS) and cannot be run on other platforms are Platform dependent Languages. 
+		Those languages in which program is written on one platform (OS) can be run on any other platform (OS) with the same output are Platform Independent Languages. While the languages in which program is written for some specific platform (OS) and cannot be run on other platforms are Platform dependent Languages.
 
 ======= IMPLEMENTATION OF PYTHON ========
-The interpreter of python was officially written in C lang known as CPython. But there are several more implementation of python like Jpython which was written in Java, IronPython which was written in C# and PyPy which was written in Python itself.
+# and PyPy which was written in Python itself.
+The interpreter of python was officially written in C lang known as CPython. But there are several more implementation of python like Jpython which was written in Java, IronPython which was written in C
 
-** This info will be helpful when we use different interpreters in some special situations like many burp extensions want us to provide them Jpython interpreter 
+** This info will be helpful when we use different interpreters in some special situations like many burp extensions want us to provide them Jpython interpreter
 
 ======= Compilation Process ========
 Source code (.py) ==> [internally] ==> byte code (.pyc) ==> [internally] ==> machine code (0,1)
 
 2**3 -- exponential
-10%2 -- modulos  
+10%2 -- modulos
 10/3 = 3.3 -> this is floating point division or simple division
 10//3 = 3 -> this is integer division or floor division
 9.0//2.0 = 4.0 -> this is integer division but since the operands are in float, it'll give result in float
@@ -43,14 +44,14 @@ S - subtraction
 
 ====== Comments ========
 	Comments are the nothing but code itself which is ignored by the interpreter. Generally comments are used to gives some notes or additional info to other user within the actual source code.
-	
+
 	1. Single line comment #this is ex of single line comment
-	2. Multiline comment 
+	2. Multiline comment
 	''' developer : ayush
-	age:40 
-	gender: male 
+	age:40
+	gender: male
 	'''
-	
+
 ====== Variable ========
 	• Variables are the containers which stores some data.
 	• Variables can be assigned to other variables.
@@ -65,7 +66,7 @@ S - subtraction
 			A = 5.2
 			A = "yash"
 		**This is known as dynamic typing.
-			
+
 ****• Rules of declaring variables:
 		1. Var. name must start with letter or underscore
 		2. Var. name other than 1st character must contain only letters, numbers or underscore.
@@ -76,9 +77,9 @@ S - subtraction
 		IsMale = 1
 		__password__ = 1
 		__name__ = 1 -- ye find karne me help karta hai ki jo script run ho rahi hai wo direct ho rahi hai ya dusre file se import hokar
-	
+
 ======= DATATYPES =======
-		1. Int (integer values) 
+		1. Int (integer values)
 		2. Float (decimal values)
 		3. Bool (true or false / yes or no)
 			isMale = false
@@ -87,7 +88,7 @@ S - subtraction
 			X = 3e+5j
 		5. None (same as NULL)
 			isPremium=None
-			
+
 	String: sequence of unicode characters
 		a. Single line string: can be declared with single or double quotes
 			'hello'
@@ -97,9 +98,9 @@ S - subtraction
 					Parwal
 					'''
 			Print(Name)
-	
+
 	NOTE: string can be multiplied by integer but cannot perform addition.
-	
+
 	Escape sequence chars.
 		\char ==> char has some meaning
 		\n ==> n means new line
@@ -109,30 +110,30 @@ S - subtraction
 
 Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 
-'Ayush"Pathak' 
-'Ayush"Pathak' 
+'Ayush"Pathak'
+'Ayush"Pathak'
 
-"Ayush'Pathak" 
-"Ayush'Pathak" 
+"Ayush'Pathak"
+"Ayush'Pathak"
 
-'''Ayush pathak" ''' 
-'Ayush pathak" ' 
+'''Ayush pathak" '''
+'Ayush pathak" '
 
-''' Ayush ' pathak ''' 
-" Ayush ' pathak " 
+''' Ayush ' pathak '''
+" Ayush ' pathak "
 
-"Ayush \" Pathak" 
-'Ayush " Pathak' 
+"Ayush \" Pathak"
+'Ayush " Pathak'
 
-'Ayush \' Pathak' 
+'Ayush \' Pathak'
 "Ayush ' Pathak"
 
 """
 # name = 'yash'
 # # ageS = '19' #if this is number then it'll not be added to string
 # ageN = 19 # this is integer
-# # print(name + ageN) #str+int=error 
-# print(name,ageN) #we can join like this but cannot add using + operator 
+# # print(name + ageN) #str+int=error
+# print(name,ageN) #we can join like this but cannot add using + operator
 
 # # print("hello",end="") #end="" is hidden due to which new print function executes from next line
 
@@ -152,7 +153,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # # Negative indexing -- index starts from last (reverse)
 # print(name[0:-1]) # -1=last , -2=last-1
 
-#==================================TYPECASTING=============================================
+# ==================================TYPECASTING=============================================
 
 # ==> Converting one datatype into another
 # Implicit ==> done by interpreter like 9//3.0=3.0 ==> 9 will be converted into 9.0
@@ -166,7 +167,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # int = 40.1
 # # print(str(int)) #correct,, int varirable it typecasted into string
 # '''
-# print(int(int)) 
+# print(int(int))
 # error,, because here int is not int anymore, main work of int is replaced with 40.1 so interpreter will see it like this: print(40.1(40.1)) and this is not a correct syntax
 # '''
 # str = None
@@ -175,11 +176,11 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # no = input("Enter no: ") #bydefault input is of string type in python, so have to do some typecasting here like this...
 # no = int(input(f"Enter number: "))
 # print(f"number is {no}")
-# print(type(no)) 
+# print(type(no))
 # print(round(no/3)) #will give round off value
 # print(round(no/3,2)) #will give value upto 2 decimal places
 
-#================================Conditional Statements=====================================
+# ================================Conditional Statements=====================================
 
 # If condition:
 # 	Statements
@@ -196,14 +197,14 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 #     print("No")
 
 # if "yash"=="yaSh": #false
-#     print("true") 
+#     print("true")
 # if 4=="4": #false
-#     print("true") 
+#     print("true")
 
-#-----------------------------------THRUTHNESS----------------------------------------------
+# -----------------------------------THRUTHNESS----------------------------------------------
 
-    # in binary: 1 -> True and 0 -> False
-    ### False items are: 0, Empty Objects, Empty String, None 
+# in binary: 1 -> True and 0 -> False
+# False items are: 0, Empty Objects, Empty String, None
 
 # if 0:
 #     print("true")
@@ -217,7 +218,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # n = 15
 # if l<m and m<n: #both conditions should be true for true output
 # 	print("Alright")
-	
+
 # if l<m or m>n: #either of the condition is true, the output will be true
 # 	print("Yeeees!! Alright!")
 
@@ -232,7 +233,7 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # True and True -- True
 # True and False -- False
 # False and True -- False
-'''If both conditions are true, it will give the last value in case of "and" and first value in case of "or".''' 
+'''If both conditions are true, it will give the last value in case of "and" and first value in case of "or".'''
 
 # if(10 and 20):
 # 	print("yes")
@@ -264,21 +265,21 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 #         print(age)
 # else:
 #     print("You have entered something wrong")
-''' 
+'''
 
 
-# \__________________________________Python - 3 (2nd oct.)_____________________________________/ 
+# \__________________________________Python - 3 (2nd oct.)_____________________________________/
 
 
 # String multiplication
-# print("*"*5)  
+# print("*"*5)
 # print("yash"*5)
 
-#---------------------------------------is keyword--------------------------------------------- 
-# whether the two variables refering to same object 
+# ---------------------------------------is keyword---------------------------------------------
+# whether the two variables refering to same object
 # a=234.1
 # b=234.1
-# if a is b: #this will execute becoz a and b both are referencing to same location of 234.1 
+# if a is b: #this will execute becoz a and b both are referencing to same location of 234.1
 #     print("yes")
 # else:
 #     print("no")
@@ -291,19 +292,19 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # else:
 #     print("Wrong") #this will execute
 
-# if c == d: # == checks the values 
+# if c == d: # == checks the values
 #     print("right") #this will execute
 # else:
-#     print("Wrong") 
+#     print("Wrong")
 
 # c=d
-# we can see their memor location by 
-# print(id(c)) #same 
+# we can see their memor location by
+# print(id(c)) #same
 # print(id(d)) #same
-# if c is d: #this 
-#     print("right") #NOW this will execute becoz now we assigned d into c, so these both will have same location 
+# if c is d: #this
+#     print("right") #NOW this will execute becoz now we assigned d into c, so these both will have same location
 # else:
-#     print("Wrong") 
+#     print("Wrong")
 
 # SO WHAT IS THE DIFFERENCE BETWEEN "IS" & "=="
 # == (checks for equality) compares the values, if they are equal or not WHILE is (checks identity) compares the memory location in terms of being the same object in the memory.
@@ -313,19 +314,18 @@ Print(This\n\tis\n\t\tMetaxone\n\t\t\tSolutions)
 # b = 'yash'
 
 
-
-#====================================LOOPS IN PYTHON===========================================
+# ====================================LOOPS IN PYTHON===========================================
 '''
 ==> For Loop:
-syntax - 
+syntax -
 	For item in iterable_object:
 		#code
 
-Item: hold current value 
-Iterable_object: collection of values 
+Item: hold current value
+Iterable_object: collection of values
 
 ==> While loop:
-Syntax - 
+Syntax -
 	While booleam_expression:
     #code
 '''
@@ -334,8 +334,8 @@ Syntax -
 # for i in range(1,5):
 #     print("yash")
 
-#------------------------------------range()------------------------------------------------
-#range(start,stop,step)
+# ------------------------------------range()------------------------------------------------
+# range(start,stop,step)
 # for i in range(1,10,2):   #print 1 to 10 with gap of 2
 #     print(i)
 # for i in range(5):   #print 0 to 4, it will take
@@ -355,7 +355,7 @@ Syntax -
 # else:
 #     print("Not an armstrong no.")
 
-# OR 
+# OR
 
 # no = str(no)
 # for i in no:
@@ -397,7 +397,7 @@ Syntax -
 # for i in range(0,7,2):
 #     print(" "*(i-new) + "*"*(7-i))
 #     new = new+1
-# these 👇 and ☝ both are same  
+# these 👇 and ☝ both are same
 # star = 7
 # for i in range(5):
 #     print(" "*i + "*"*star)
@@ -408,13 +408,13 @@ Syntax -
 #     print(a)
 #     a=a-1
 
-#=====================================JUMP STATEMENT========================================== 
+# =====================================JUMP STATEMENT==========================================
 # 1. break statement -- exit from the loop
 # 2. continue statement -- ignore the further execution and go over next iteration
 
 # for x in range(1,10):
 #     if(x/3==2):
-#         # break 
+#         # break
 #         # continue
 #         # pass #pass is not a jump statement
 #         print(x)
@@ -473,18 +473,18 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # data.append([4,5]) #we can provide list within a list
 # print(data)
 # print(data[-1]) # will give oblect at index(-1) of list that is [4,5]
-# print(data[-1][0]) # will give index0 object of index(-1) object if the index(-1) object is a list othervise it'll give error 
-# item of a list within a list 
+# print(data[-1][0]) # will give index0 object of index(-1) object if the index(-1) object is a list othervise it'll give error
+# item of a list within a list
 
 # ==> 2. extend()
 # a = [10,11,12,13]
 # data.extend(a) #add list a into data with elements of list 'a' as individual items
-# data.extend([4,5]) #add list [4,5] to the data as individual items like 4, 5 
+# data.extend([4,5]) #add list [4,5] to the data as individual items like 4, 5
 # print(data)
 
 # ==> 3. insert(index_number,object_to_add)
 # data.insert(3,"hlo") #hlo will be inserted at 3rd index
-# print(data) 
+# print(data)
 
 # ==> 4. clear
 # data.clear() #do empty the list
@@ -522,7 +522,7 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # print(data.index(3,1,4)) #find 3 between one and four index.
 
 # ------------------------------- PROBLEM WITH NEGATIVE INDEXING ------------------------------
-#NOTE: in negative indexing, first it it converted into equivalent positive index and then data is inserted
+# NOTE: in negative indexing, first it it converted into equivalent positive index and then data is inserted
 # temp = [1,2,3]
 # temp.insert(-1,4) #4 should be added at last ==> [1,2,3,4] but NO....
 # ---------------------------------------------------------------------------------------------
@@ -532,12 +532,12 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # print(data.count(2))
 # print(data.count(9)) #will give '0' as output
 
-# ----------------------to remove duplicates of a particular item.---------------------------  
+# ----------------------to remove duplicates of a particular item.---------------------------
 # for i in range(data.count(2) - 1):
 # 	data.remove(2)
 # print(data)
 
-# ==> 
+# ==>
 # for i in data[::-1]:
 #     print(i)
 
@@ -560,56 +560,82 @@ grocery = ["harpic", "vim", "deo", "bhujiya", "lollypop", 56, True]
 # ip = '192.168.1.'
 
 # for x in range(0,256):
-#     addr = ip+str(x)    
+#     addr = ip+str(x)
 #     print(addr)
 #     result = os.popen(f"ping -n 1 {addr}")
+
+# ============================ LIST comprehension ============================
+# It lets us create new lists based on sequences and ranges
+
+# multiple = []
+# for i in range(1,11):
+# 	multiple.append(5*i)
+# print(multiple)
+
+# OR
+
+# multiple = [5*i for i in range(1,11)]
+# print(multiple)
+
+# languages = ['Python', 'Perl', 'Ruby', 'Go', 'Java', 'C', 'C++']
+# length = [len(i) for i in languages]
+# print(length)
+
+# temp = [x for x in range(0,100) if x%3==0 ]
+# print(temp)
+
+# mylist = [10,3,5,6,4,8,0]
+# mylist.sort()
+# mylist.reverse()
+# print(mylist)
+# print(new.reverse())
 
 '''_____________________________________________________________________________________'''
 
 # ====================================STRING==============================================
 # STRING FUNCTIONS (Note: these func do not modify the original string)
 
-'''
-# PYTHON STRING METHODS https://www.w3schools.com/python/python_ref_string.asp
 
-name = "yash parwal"
+# # PYTHON STRING METHODS https://www.w3schools.com/python/python_ref_string.asp
 
-# 1. capitalise -- capital the first letter of string
-name.capitalize()
+# name = "yash parwal"
 
-# 2. count -- coubt the no of letters in a string
-name.count("a")
+# # 1. capitalise -- capital the first letter of string
+# name.capitalize()
 
-# 3. endswith -- S.endswith(suffix[, start[, end]]) -> bool
-# Return True if S ends with the specified suffix, False otherwise.
-name.endswith("l")
+# # 2. count -- coubt the no of letters in a string
+# name.count("a")
 
-# 4. find -- print the first ouucurance of the provided letter in string 
-name.find("h")
-# if not there, it will return -1
+# # 3. endswith -- S.endswith(suffix[, start[, end]]) -> bool
+# # Return True if S ends with the specified suffix, False otherwise.
+# name.endswith("l")
 
-# 5. index -- 	Searches the string for a specified value and returns the position of where it was found
+# # 4. find -- print the first ouucurance of the provided letter in string
+# name.find("h")
+# # if not there, it will return -1
+
+# # 5. index -- 	Searches the string for a specified value and returns the position of where it was found
 
 
-# if not there, it will give error due to which further program execution will stop
+# # if not there, it will give error due to which further program execution will stop
 
-# 6. Replace -- replace all occurance of 1st item with second item
-name.replace("a","b")
+# # 6. Replace -- replace all occurance of 1st item with second item
+# name.replace("a","b")
 
-# 7. upper and lower
-name.upper()
-name.lower()
+# # 7. upper and lower
+# name.upper()
+# name.lower()
 
-# 8. strip -- Return a copy of the string with leading and trailing whitespace removed.
-name.strip() 
+# # ******** 8. strip -- Return a copy of the string with leading and trailing whitespace removed.
+# name.strip()
 
-# 9. exit
+# # 9. exit
 
-# 10. encode & decode -- Encode the string using the codec registered for encoding.
-# Convert the string into byte/binary from
-name.encode()
-name.decode()
-'''
+# # 10. encode & decode -- Encode the string using the codec registered for encoding.
+# # Convert the string into byte/binary from
+# name.encode()
+# name.decode()
+
 
 # =======================================DICTIONARIES=======================================
 # DICTIONARIES constis of keys and value pairs
@@ -621,14 +647,14 @@ name.decode()
 #     2:25
 # }
 
-# or 
+# or
 
 # data = dict(name="Yash", age=15)
 
 # print(data["name"])
 # print(data["age"])
 
-# for key,value in test.items(): 
+# for key,value in test.items():
 #     print(key,value)
 # for key in test.keys():
 #     print(key)
@@ -653,7 +679,7 @@ name.decode()
 # print(di)
 
 
-# print(test.get("name")) 
+# print(test.get("name"))
 # print(test["name"])
 
 # print(test.pop("name")) #pop from begning
@@ -677,7 +703,7 @@ name.decode()
 # #this will also update the dict like .update() but this is shortcut as in .update we have to create new dict but here we can directly give key:value
 # print(data)
 
-#DICTIONARY COMPREHENSION
+# DICTIONARY COMPREHENSION
 
 # data = {"a":10, "b":20}
 
@@ -704,19 +730,26 @@ name.decode()
 # TUPLE -- collection of item
 # * Tuple is immutable i.e cannot be modified once created
 # * Tuple is faster than list
-# * used when we want the data to be constant always like date of acc. created, months in year 
+# * used when we want the data to be constant always like date of acc. created, months in year
 # name = ("yash", 1,2, True)
 # we can create tuple like this also
 # name = tuple([1,2,3,4])
 
-# * We can use tuple as the key of a dictionary but cannot use list for the same 
+# * We can use tuple as the key of a dictionary but cannot use list for the same
 # * Slicing and nesting is same like we did in list
+
+"""
+Iterating Over Lists Using Enumerate
+
+When we covered for loops, we showed the example of iterating over a list. This lets you iterate over each element in the list, exposing the element to the for loop as a variable. But what if you want to access the elements in a list, along with the index of the element in question? You can do this using the enumerate() function. The enumerate() function takes a list as a parameter and returns a tuple for each element in the list. The first value of the tuple is the index and the second value is the element itself.
+
+"""
 
 # =========================================SETS==============================================
 # SETS - well defined collection of distinct objects
-# Sets have no order 
+# Sets have no order
 # Sets cannot be accesed by index no.
-# Sets objects can be iterated 
+# Sets objects can be iterated
 # A = {1,2,True,"1"}
 # print(A)
 # B = set({}) #we can create set like this also
@@ -724,13 +757,13 @@ name.decode()
 # a.add(4)
 # a.remove(1)
 # a.remove(6) #error becz, 6 element is not there
-# a.discard(6) #NO error, even if 6 is not there. it wll still not give error like that happened in .remove 
+# a.discard(6) #NO error, even if 6 is not there. it wll still not give error like that happened in .remove
 # b = a.copy()
-# print(b) 
+# print(b)
 # a.clear()
 
-# OPERATION ON STES 
-# 1. union a|b 
+# OPERATION ON STES
+# 1. union a|b
 # 2. intersection a&b
 
 # c = {3,4,5}
@@ -745,20 +778,20 @@ name.decode()
 
 # file = open("dcs.txt","r")
 # data = file.read() #read complete data
-# data = file.read(4) #read 
-# data = file.readline() #read one line only 
+# data = file.read(4) #read
+# data = file.readline() #read one line only
 # data = file.readlines() # gives a list with each line a an object of list
 # print(data)
 
-# ======================================= FUNCTION =============================================== 
-# - A part of code that does some specific task each time it is called 
+# ======================================= FUNCTION ===============================================
+# - A part of code that does some specific task each time it is called
 # - It can accept and return data upon calling
 # - Doesn't gets executed unless called
 # *- If you don't use return at the end of the function, python will auto return None
-# *- Once a return statement is executed, no other code after that statement (within the function) will execute 
+# *- Once a return statement is executed, no other code after that statement (within the function) will execute
 
 # def name_of_function(parameters):
-#	# some_code
+# # some_code
 
 # def hello():
 #     print("hello")
@@ -797,8 +830,8 @@ name.decode()
 # ----------------------------------VAriablle SCOPE -------------------------------------
 
 # * Each variable has its own scope.
-# * Global Variable -- variablles defined outside the main functions 
-# * Local Variable -- variablles defined within the main functions 
+# * Global Variable -- variablles defined outside the main functions
+# * Local Variable -- variablles defined within the main functions
 
 # global keyword: global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.
 # We can actually access global variables inside any function but we can't manipulate them, that's why global keyword is important.
@@ -857,7 +890,7 @@ name.decode()
 
 
 # add = lambda x,y:x+y #one liner function
-# print(add(1,2)) 
+# print(add(1,2))
 
 # def do(x,y,func):
 # 	ans = func(x,y)
@@ -872,7 +905,7 @@ name.decode()
 # 	a[i] = a[i] +2
 # print(a)
 
-# 1. map() --  executes a function for each in an itrable/collection. 
+# 1. map() --  executes a function for each in an itrable/collection.
 # Make an iterator that computes the function using arguments from each of the iterables. Stops when the shortest iterable is exhausted.
 
 # a = map(lambda x:x+2,a)
@@ -880,13 +913,13 @@ name.decode()
 
 
 # 2. filter() -- elements are based on certain condition. and returns those elements for which function/condition is true
-# a = filter(lambda x:x%2==0,a) 
+# a = filter(lambda x:x%2==0,a)
 # print(list(a))
 
 # name = ["Ayush","Aman","Srishti","Harsh"]
 
 # new = filter(lambda x:len(x)>4,name)
-# # print(list(new)) #it will reset 
+# # print(list(new)) #it will reset
 # new = list(new)
 # new = map(lambda x:"Your instructor is "+x,new)
 # print(list(new))
@@ -901,7 +934,7 @@ name.decode()
 # print(max('a','b'))
 # print(min('a','b'))
 
-#\_____________________________________PYTHON-9 29oct.___________________________________________/ 
+# \_____________________________________PYTHON-9 29oct.___________________________________________/
 
 # ========================================== OOP ================================================
 
@@ -909,23 +942,23 @@ name.decode()
 
 # Blueprint for object that can contain methods(funcrions) and attributes(variables)
 # When a function is associated with a class, then it it knows as method and when variables are associated with class, then these are known as attributes.
- 
+
 # ------------------------------------------ INSTANCE ------------------------------------------
 # * These are nothing but objects thet are constructed from class blueprint that contain their class properties.
 # * Any no. of objects or instances can be created of a class.
 # * All objects are independent of each other.
 
-# ---------------------------------------- PROPERTIES ------------------------------------------     
+# ---------------------------------------- PROPERTIES ------------------------------------------
 # 1. Encapsulation -- Grouping of public/private methods and attributes in a programmiatic class making abstraction possible.(wrapping data and the methods that work on data within one unit.)
 
-# 2. Abstraction -- Exposing only revelent data to outside and hiding the private attributes and methods's inner workings from users. 
+# 2. Abstraction -- Exposing only revelent data to outside and hiding the private attributes and methods's inner workings from users.
 
 # class Users:
 # 	def func():
 # 		print("hello")
 
 
-#\_____________________________________PYTHON-10 30oct.___________________________________________/
+# \_____________________________________PYTHON-10 30oct.___________________________________________/
 
 # 3. Inheritance -- OOP ability to define a class which inherits from another class (base or parent class)
 
@@ -943,7 +976,7 @@ name.decode()
 
 # 4. Polimorphism -- An object can take-on many(poly) forms(morph)
 
-# Special or Magic methods 
+# Special or Magic methods
 
 # class Test:
 #     def __init__(self,first):
@@ -960,7 +993,7 @@ name.decode()
 # final = obj+obj2+obj3
 # print(final.first)
 
-# Iterator -- 
+# Iterator --
 # Iterablle -- An object which will return an itertor when iter() method is called on it.
 
 # generators ==> subsets of iterators
@@ -978,7 +1011,7 @@ name.decode()
 # 	return count
 # count(5
 
-# Decorators -- These are functions that wrap other functions and enhance their behaviour 
+# Decorators -- These are functions that wrap other functions and enhance their behaviour
 
 # def do(func,x,y):
 #     func(x,y)
@@ -988,7 +1021,7 @@ name.decode()
 
 # def add(x,y):
 #     print(x+y)
-	
+
 # do(add,2,3)()
 
 
@@ -1014,7 +1047,150 @@ name.decode()
 #   while(True):
 #     tmp_bytes = sock_fd.recv(1024)
 #     print("[+] Recvd:", tmp_bytes.decode().strip())
-  
+
 # main("127.0.0.1", 80)
 
 # ---------------------------------------------------------------------------------
+
+# def calculate_storage(filesize):
+#     block_size = 4096
+#     # Use floor division to calculate how many blocks are fully occupied
+#     full_blocks = filesize//block_size
+#     # Use the modulo operator to check whether there's any remainder
+#     partial_block_remainder = filesize%block_size
+#     # Depending on whether there's a remainder or not, return
+#     # the total number of bytes required to allocate enough blocks
+#     # to store your data.
+#     if partial_block_remainder > 0:
+#         return block_size*(full_blocks+1)
+#     return block_size*(full_blocks)
+
+# print(calculate_storage(1))    # Should be 4096
+# print(calculate_storage(4096)) # Should be 4096
+# print(calculate_storage(4097)) # Should be 8192
+# print(calculate_storage(6000)) # Should be 8192
+
+
+# ---------------------------------------------------------------------------------
+
+# def replace_ending(sentence, old, new):
+# 	# Check if the old string is at the end of the sentence
+
+# 	if sentence.endswith(old) is True:
+# 		# Using i as the slicing index, combine the part
+# 		# of the sentence up to the matched string at the
+# 		# end with the new string
+# 		# i = len(old)
+# 		new_sentence = sentence[:-len(old)] + new
+# 		return new_sentence
+
+# 	# Return the original sentence if there is no match
+# 	return sentence
+
+# print(replace_ending("It's raining cats and cats", "cats", "dogs"))
+# # Should display "It's raining cats and dogs"
+# print(replace_ending("She sells seashells by the seashore", "seashells", "donuts"))
+# # Should display "She sells seashells by the seashore"
+# print(replace_ending("The weather is nice in May", "may", "april"))
+# # Should display "The weather is nice in May"
+# print(replace_ending("The weather is nice in May", "May", "April"))
+# # Should display "The weather is nice in April"
+
+
+# ---------------------------------------------------------------------------------
+
+# def convert(sec):
+# 	h = sec//3600
+# 	remaining_sec = sec%3600
+# 	m = remaining_sec//60
+# 	s = remaining_sec%60
+# 	return h,m,s
+
+# result = convert(5000)
+# print(result)
+
+# ---------------------------------------------------------------------------------
+# Try out the enumerate function for yourself in this quick exercise. Complete the skip_elements function to return every other element from the list, this time using the enumerate function to check if an element is in an even position or an odd position.
+
+# def skip_elements(elements):
+# 	result = []
+# 	for index, value in enumerate(elements):
+# 		if index%2 == 0:
+# 			result.append("{}".format(value))
+# 		else:
+# 			continue
+# 	return result
+
+# print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+# print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+
+
+"""
+filenames = ["program.c", "stdio.hpp",
+    "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# Generate newfilenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+newfilenames = []
+for files in filenames:
+    if files[-3:] == "hpp":
+        newfiles = files[:-3] + 'h'
+        newfilenames.append(newfiles)
+    else:
+        newfilenames.append(files)
+print(newfilenames)
+# Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
+
+"""
+# -------------------------------------------------------------------------------------------------
+
+"""
+# Question 3
+# The permissions of a file in a Linux system are split into three sets of three permissions: read, write, and execute for the owner, group, and others. Each of the three values can be expressed as an octal number summing each permission, with 4 corresponding to read, 2 to write, and 1 to execute. Or it can be written with a string using the letters r, w, and x or - when the permission is not granted.
+#  For example:
+#  640 is read/write for the owner, read for the group, and no permissions for the others; converted to a string, it would be: "rw-r-----"
+#  755 is read/write/execute for the owner, and read/execute for group and others; converted to a string, it would be: "rwxr-xr-x"
+#  Fill in the blanks to make the code convert a permission in octal format into a string format.
+
+def octal_to_string(octal):
+    result = ""
+    value_letters = [(4,"r"),(2,"w"),(1,"x")]
+    # Iterate over each of the digits in octal
+    for x in [int(n) for n in str(octal)]:
+        # Check for each of the permissions values
+        for value, letter in value_letters:
+            if x >= value:
+                result += letter
+                x -= value
+            else:
+                result += '-'
+    return result
+
+print(octal_to_string(755)) # Should be rwxr-xr-x
+print(octal_to_string(644)) # Should be rw-r--r--
+print(octal_to_string(750)) # Should be rwxr-x---
+print(octal_to_string(600)) # Should be rw-------
+
+"""
+
+# --------------------------------------------------------------------------------------------
+
+
+# def group_list(group, users):
+# 	members = ''
+# 	for user in users:
+# 		members += user + ', '
+# 	return group + ': ' + members
+# # Should be "Marketing: Mike, Karen, Jake, Tasha"
+# print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"]))
+
+# def group_list(group, users):
+# 	members = ', '.join(users)
+# 	return f"{group}: {members}"
+# # Should be "Marketing: Mike, Karen, Jake, Tasha"
+# print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"]))
+
+# -----------------------------------------------------------------------------------------------
+
+text = 'hello'
+for i in text:
+	
