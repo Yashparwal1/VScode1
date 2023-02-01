@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup
 # URL = "https://gitlab.com/kalilinux/packages/fern-wifi-cracker"
 URL = "https://www.kali.org/tools/wifite/"
 # URL = "https://github.com/aircrack-ng/aircrack-ng"
-print("please wait..\r",end="")
+print("please wait..\r", end="")
 r = requests.get(URL)
 soup = BeautifulSoup(r.content, 'html5lib')
-paras = soup.select('pre') #hardik
+paras = soup.select('pre')  # hardik
 # paras = soup.select('article[class="file-holder limited-width-container readme-holder"]')
 print(paras[0].text)
 
@@ -44,7 +44,7 @@ print(paras[0].text)
 
 # import subprocess,os
 
-# # url = "https://www.google.com/" 
+# # url = "https://www.google.com/"
 # # print("[+] Opening Article")
 # proc = subprocess.Popen([f"pwd"], stdout=subprocess.PIPE, shell=True)
 # (there, notthere) = proc.communicate()
@@ -59,3 +59,5 @@ print(paras[0].text)
 # print(uid)
 # # if "root" in there:
 # # 	os.system(f"firefox {url} 2>/dev/null")
+
+

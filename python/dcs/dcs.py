@@ -1191,6 +1191,113 @@ print(octal_to_string(600)) # Should be rw-------
 
 # -----------------------------------------------------------------------------------------------
 
-text = 'hello'
-for i in text:
-	
+# def email_list(domains):
+#     emails = []
+#     for domain, users in domains.items():
+#         for user in users:
+#             # print(user)
+#             emails.append(user+"@"+domain)
+#     return (emails)
+
+
+# print(email_list({"gmail.com": ["clark.kent", "diana.prince", "peter.parker"], "yahoo.com": [
+#       "barbara.gordon", "jean.grey"], "hotmail.com": ["bruce.wayne"]}))
+
+# -----------------------------------------------------------------------------------------------
+
+# def groups_per_user(group_dictionary):
+# 	user_groups = {}
+# 	group_list = []
+# 	# Go through group_dictionary
+# 	for group, users in group_dictionary.items():
+# 		# Now go through the users in the group
+# 		for user in users:
+# 			if user in user_groups:
+# 				user_groups[user].append(group)
+# 			else:
+# 				user_groups[user]=[group]
+# 			# Now add the group to the the list of
+# # groups for this user, creating the entry
+# # in the dictionary if necessary
+
+# 	return(user_groups)
+
+# print(groups_per_user({"local": ["admin", "userA"],
+# 		"public":  ["admin", "userB"],
+# 		"administrator": ["admin"] }))
+
+# -----------------------------------------------------------------------------------------------
+
+# def format_address(address_string):
+#     house_no = 0
+#     house_name = ''
+#     string = address_string.split()
+#     for x in string:
+#         if x.isdigit():
+#             house_no += int(x)
+#         else:
+#             house_name += x + ' '
+        
+#     print(house_no , house_name)
+#     return "house number {} on street named {}".format(house_no, house_name)
+
+
+# print(format_address("123 Main Street"))
+
+# -------------------------------------------------------------------------------------------
+
+# Question 7
+# Use a dictionary to count the frequency of letters in the input string. Only letters should be counted, not blank spaces, numbers, or punctuation. Upper case should be considered the same as lower case. For example, count_letters("This is a sentence.") should return {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}.
+
+# def count_letters(text):
+#   result = {}
+#   # Go through each letter in the text
+#   for letter in text.lower():
+#     # Check if the letter needs to be counted or not
+#     if not letter.isalpha():
+#       continue
+#     elif letter not in result:
+#       result[letter] = 1
+#     else:
+#       result[letter] += 1
+
+#     # Add or increment the value in the dictionary
+#     # ___
+#   return result
+
+# print(count_letters("AaBbCc"))
+# # Should be {'a': 2, 'b': 2, 'c': 2}
+
+# print(count_letters("Math is fun! 2+2=4"))
+# # Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+# print(count_letters("This is a sentence."))
+# # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+# ----------------------------------------------------------------------------------
+
+# mydict = {"one":3, "two":4, "three":10}
+# sum = 0	
+# test = mydict.values()
+# # print(test)
+# for x in test:
+# 	sum  = sum + x
+# print(sum)
+
+# def add_prices(basket):
+# 	# Initialize the variable that will be used for the calculation
+# 	total = 0
+# 	# Iterate through the dictionary items
+# 	# for key,val in basket.items():
+# 	# 	total += val
+# 	prices = basket.values()
+# 	for price in prices:
+# 		total += price
+# 	return round(total, 2)  
+
+# groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59, 
+# 	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
+
+# print(add_prices(groceries)) # Should print 28.44
+
+

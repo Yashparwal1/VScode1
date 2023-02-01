@@ -121,6 +121,7 @@
 // ========================================================================================
 
 // program to sort array in assending order 
+
 // int main()
 // {
 //     int arr[] = {6,7,1,3,4,0,9,10};
@@ -155,7 +156,8 @@
 // }
 
 // ========================================================================================
-// prohram ot traversing the elements of an array
+
+// prohram of traversing the elements of an array
 
 // int main()
 // {
@@ -174,6 +176,7 @@
     
 // }
 // ========================================================================================
+
 // program to find whetehr a matrix is sparce matirix or not.
 
 // int main()
@@ -541,7 +544,8 @@
 //     temp->next = new;
 //     return temp;
 // };
-// ==========================INSERT AT MID===============================================
+
+// -------------------------------- INSERT AT MID --------------------------------
 
 // struct Node* InsertMid(strut Node* head, int data, int index)
 // {
@@ -556,7 +560,7 @@
 //     }
 // }
 
-// ============================== DELETION AT BEG================================
+// -------------------------------- DELETION AT BEG --------------------------------
 // struct Node* DeleteBeg(struct Node* head)
 // {
 //     struct Node* temp = head;
@@ -564,7 +568,7 @@
 //     free (temp);
 //     return head;
 // }
-// ============================== DELETION AT END ================================
+// -------------------------------- DELETION AT END --------------------------------
 // struct Node* DeleteEnd(struct Node* head)
 // {
 //     struct Node* temp = head;
@@ -670,10 +674,9 @@ struct node* InsertEnd(int data)
     return temp;
 }
 
+
 // ----- till here --------------
 . */
 
 // ==================================== FILE WORK ======================================
-
-// 1. program to traversing or printing value of array
-
+// [done in yash.c file]
