@@ -48,16 +48,4 @@ int main()
     cout << "l+m is: " <<l + int(m)<<endl; //int
     cout << "l+m is: " <<l + (int)m<<endl; //int
 
-
-
-
-
-
-
-
-
-
-
-
-
 }   

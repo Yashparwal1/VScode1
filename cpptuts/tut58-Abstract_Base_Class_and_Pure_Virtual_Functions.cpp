@@ -1,13 +1,34 @@
+/* 
+Abstract base class is a class that has at least one pure virtual function in its body. 
+The classes which are inheriting the base class must need to override the virtual function of the abstract class otherwise compiler will throw an error.
+[isko banane maksad hi hota h ki isse or derived classed bna sake and unpe kaam kia ja ske]
+
+Pure virtual function is a function that doesn’t perform any operation and the function is declared by assigning the value 0 to it. Pure virtual functions are declared in abstract classes.
+Pure virtual function are not executed but it is necessary to override them.  
+[ye force krte h defived classes ko ki missing function ko banaye hi (if missing) otherwise error!!]
+
+*/
+
 #include <iostream>
 #include <cstring>
 using namespace std;
 /*
- ==> Rules for virtual functions <==
-1. They cannot be static
-2. They are accessed by object pointers**
-3. Virtual functions can be a friend of another class
-4. A virtual function in the base class might not be used sometimes.
-5. If a virtual function is defined in a base class, there is no necessity of redefining it in the derived class
+    tuts[0]->display();
+    tuts[1]->display();
+here both derived class's display is invoked 
+        BUT
+what if one or both of these display function are not then...
+        THEN
+virtual function of base class itself will run.. we know this...
+        BUT
+I want to something that will force all the derived classes which do not have display function to make one.  (ek esa virtual function jiski vajah se derived class me function banana HIIII pde)
+      SO WHAT CAN I DO??
+      HERE COME THIS...
+PURE VIRTUAL FUNCTION: (aka "do nothing function")
+       FOR THIS
+we only need to do one thing that is assigning '0' to the existing notrmal virtual fucntion
+       LIKE THIS
+    virtual void display()=0
 */
 
 class cwh
@@ -22,8 +43,7 @@ public:
         title = s;
         rating = r;
     }
-    virtual void display() {} // derived class vale apne pane display hi call honge while calling cwh class using pointer
-    // void display(){}
+    virtual void display()=0 
 };
 class cwhvideo : public cwh
 {
@@ -86,32 +106,3 @@ int main()
 
     return 0;
 }
-
-// -------------------------------------------------------------------------------
-
-class B
-{
-public:
-    // virtual void show() //one time base show and other time dericed show.
-    void show() //both times base show
-    {
-        cout << "I am in base show" << endl;
-    }
-};
-class D : public B
-{
-public:
-    void show()
-    {
-        cout << "I am in derived show" << endl;
-    }
-};
-// int main()
-// {
-//     B b, *bp;
-//     D d;
-//     bp = &b;
-//     bp->show();
-//     bp = &d;
-//     bp->show();
-// }
