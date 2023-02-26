@@ -125,7 +125,8 @@ def Kismet():
         os.system("clear")
         banner.main()
         banner.attack("Kismet")
-        github = github_getting_text("https://github.com/kismetwireless/kismet-docs/blob/master/readme/000-intro.md", 'p[dir="auto"]', 0)
+        github = github_getting_text(
+            "https://github.com/kismetwireless/kismet-docs/blob/master/readme/000-intro.md", 'p[dir="auto"]', 0)
         banner.description(github)
         ask = tool_options()
         if ask == "1":
@@ -165,7 +166,8 @@ def Fern_wifi():
         os.system("clear")
         banner.main()
         banner.attack("Fern Wifi Cracker")
-        github = github_getting_text("https://github.com/savio-code/fern-wifi-cracker", 'p[dir="auto"]', 0)
+        github = github_getting_text(
+            "https://github.com/savio-code/fern-wifi-cracker", 'p[dir="auto"]', 0)
         banner.description(github)
         
         ask = tool_options()
@@ -212,7 +214,8 @@ def Fluxion():
         os.system("clear")
         banner.main()
         banner.attack("Fluxion")
-        github = github_getting_text("https://github.com/FluxionNetwork/fluxion", 'p[dir="auto"]', 1)
+        github = github_getting_text(
+            "https://github.com/FluxionNetwork/fluxion", 'p[dir="auto"]', 1)
         banner.description(github)
         ask = tool_options()
         if ask == "1":
@@ -249,7 +252,8 @@ def Wifiphisher():
         os.system("clear")
         banner.main()
         banner.attack("Wifiphisher")
-        github = github_getting_text("https://github.com/wifiphisher/wifiphisher", 'p[dir="auto"]', 2)
+        github = github_getting_text(
+            "https://github.com/wifiphisher/wifiphisher", 'p[dir="auto"]', 2)
         banner.description(github)
         ask = tool_options()
         if ask == "1":

@@ -120,7 +120,7 @@
 
 // ========================================================================================
 
-// program to sort array in assending order 
+// program to sort array in assending order  [--> SELECTION SORT <--]
 
 // int main()
 // {
@@ -177,7 +177,7 @@
 // }
 // ========================================================================================
 
-// program to find whetehr a matrix is sparce matirix or not.
+// program to find whether a matrix is sparce matirix or not.
 
 // int main()
 // {
@@ -680,3 +680,23 @@ struct node* InsertEnd(int data)
 
 // ==================================== FILE WORK ======================================
 // [done in yash.c file]
+
+// ========================================================================================
+
+int main(int argc, char const *argv[])
+{
+    int arr[4] = {1,2,3,4};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    printf("%d",size);
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+    arr[7] = 500;
+    for (int i = 0; i < 8; i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+    
+    return 0;
+}

@@ -1237,7 +1237,7 @@ print(octal_to_string(600)) # Should be rw-------
 #             house_no += int(x)
 #         else:
 #             house_name += x + ' '
-        
+
 #     print(house_no , house_name)
 #     return "house number {} on street named {}".format(house_no, house_name)
 
@@ -1277,7 +1277,7 @@ print(octal_to_string(600)) # Should be rw-------
 # ----------------------------------------------------------------------------------
 
 # mydict = {"one":3, "two":4, "three":10}
-# sum = 0	
+# sum = 0
 # test = mydict.values()
 # # print(test)
 # for x in test:
@@ -1293,11 +1293,612 @@ print(octal_to_string(600)) # Should be rw-------
 # 	prices = basket.values()
 # 	for price in prices:
 # 		total += price
-# 	return round(total, 2)  
+# 	return round(total, 2)
 
-# groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59, 
+# groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59,
 # 	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
 
 # print(add_prices(groceries)) # Should print 28.44
 
 
+# def combine_lists(list1, list2):
+#     # Generate a new list containing the elements of list2 # Followed by the elements of list1 in reverse order
+#     new_list = list2
+#     for i in reversed(list1):
+#         new_list.append(i)
+#     return new_list
+
+
+# Jamies_list = ["Alice", "Cindy", "Bobby", "Jan", "Peter"]
+# Drews_list = ["Mike", "Carol", "Greg", "Marcia"]
+
+# print(combine_lists(Jamies_list, Drews_list))
+
+# ----------------------------------------------------------------------------------------------
+# ----------------------------------------OOPS (Coursera)---------------------------------------
+
+# class Flower:
+#   color = 'unknown'
+
+# rose = Flower()
+# rose.color = 'red'
+
+# violet = Flower()
+# violet.color = 'blue'
+
+# this_pun_is_for_you = 'this_pun_is_for_you'
+
+# print("Roses are {},".format(rose.color))
+# print("violets are {},".format(violet.color))
+# print(this_pun_is_for_you)
+
+# --------------------------------------------------------------------------------------------------
+"""
+# define a basic city class
+class City:
+	name = ""
+	country = ""
+	elevation = 0 
+	population = 0
+
+# create a new instance of the City class and
+# define each attribute
+city1 = City()
+city1.name = "Cusco"
+city1.country = "Peru"
+city1.elevation = 3399
+city1.population = 358052
+
+# create a new instance of the City class and
+# define each attribute
+city2 = City()
+city2.name = "Sofia"
+city2.country = "Bulgaria"
+city2.elevation = 2290
+city2.population = 1241675
+
+# create a new instance of the City class and
+# define each attribute
+city3 = City()
+city3.name = "Seoul"
+city3.country = "South Korea"
+city3.elevation = 38
+city3.population = 9733509
+
+def max_elevation_city(min_population):
+	# Initialize the variable that will hold 
+# the information of the city with 
+# the highest elevation 
+	return_city = City()
+
+	# Evaluate the 1st instance to meet the requirements:
+	# does city #1 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city1.population >= min_population and city1.elevation > return_city.elevation:
+		return_city = city1
+	# Evaluate the 2nd instance to meet the requirements:
+	# does city #2 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city2.population >= min_population and city2.elevation > return_city.elevation:
+		return_city = city2
+	# Evaluate the 3rd instance to meet the requirements:
+	# does city #3 have at least min_population and
+	# is its elevation the highest evaluated so far?
+	if city3.population >= min_population and city3.elevation > return_city.elevation:
+		return_city = city3
+	#Format the return string
+	if return_city.name:
+		return "{}, {}".format(return_city.name, return_city.country)
+	else:
+		return ""
+
+print(max_elevation_city(100000)) # Should print "Cusco, Peru"
+print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
+print(max_elevation_city(10000000)) # Should print ""
+
+"""
+# -------------------------------------------------------------------------------------------------
+
+# class Piglet:
+#     name = ""
+#     def speak(self):
+#         print(f"Oink! Oink! I am {self.name}")
+
+# hamlet = Piglet()
+# hamlet.name = "Hamlet"
+# hamlet.speak()
+
+# class Piglet:
+#     years = 0
+#     def pig_years(self):
+#         return self.years * 18
+
+# piggy = Piglet()
+# print(piggy.pig_years())
+# piggy.years = 2
+# print(piggy.pig_years())
+
+# --------------------------------------------------------------------------------------------------------------------------
+
+# class Person:
+#     def __init__(self, name, yr):
+#         self.name = name
+#         self.year = yr
+        
+#     def __str__(self):
+#         return f"My name is {self.name} and I am {self.year} years old."
+#     def greeting(self):
+#         # Should return "hi, my name is " followed by the name of the Person.
+#         return "hi my name is {}".format(self.name)
+
+
+# # Create a new instance with a name of your choice
+# some_person = Person("yash",20)
+# print(some_person) #if we call the instance direct it will return the memory location that where this object is located at. So we need to define __str__ (self) in the class.
+# # <__main__.Person object at 0x000001FB549CF510>
+# print(some_person.greeting())
+
+# --------------------------------------------------------------------------------------------------------
+
+# class Elevator:
+#     def __init__(self, bottom, top, current):
+#         """Initializes the Elevator instance."""
+#         self.bottom = bottom
+#         self.top = top
+#         self.current = current
+#     def __str__(self):
+#         return "Current floor: {}".format(self.current)
+        
+#     def up(self):
+#         """Makes the elevator go up one floor."""
+#         if self.current < self.top:
+#             self.current += 1
+#     def down(self):
+#         """Makes the elevator go down one floor."""
+#         if self.current > self.bottom:
+#             self.current -= 1
+#     def go_to(self, floor):
+#         """Makes the elevator go to the specific floor."""
+#         self.current = floor
+
+# elevator = Elevator(-1, 10, 0)
+
+# elevator.up() 
+# print(elevator.current) #should output 1
+
+# elevator.down() 
+# print(elevator.current) #should output 0
+
+# elevator.go_to(10) 
+# print(elevator.current) #should output 10
+
+# # Go to the top floor. Try to go up, it should stay. Then go down.
+# elevator.go_to(10)
+# elevator.up()
+# elevator.down()
+# print(elevator.current) # should be 9
+# # Go to the bottom floor. Try to go down, it should stay. Then go up.
+# elevator.go_to(-1)
+# elevator.down()
+# elevator.down()
+# elevator.up()
+# elevator.up()
+# print(elevator.current) # should be 1
+
+# elevator.go_to(5)
+# print(elevator)
+
+
+# --------------------------------------- INHERITANCE -------------------------------------------
+
+# class Fruit:
+# 	def __init__(self, color, flavor):
+# 		self.color = color
+# 		self.flavor = flavor
+
+# class Apple(Fruit):
+# 	pass
+# class Banana(Fruit):
+# 	pass
+
+# jnc = Apple("red", "tart")
+# raj = Banana("yelllow", "sweet")
+
+# print(jnc.color)
+# print(jnc.flavor)
+# print(raj.color)
+# print(raj.flavor)
+
+# -----------------------------------------------------------------------------------------------------
+
+# class Animal:
+# 	sound = ''
+# 	def __init__(self, name):
+# 		self.name = name
+# 	def speak(self):
+# 		print(f"{self.sound}! I am {self.name}")
+
+# class Pigllet(Animal):
+# 	sound = 'Oink'
+
+# anny = Pigllet("piggy")
+# anny.speak()
+
+# class Cow(Animal):
+# 	sound = "Moooo"
+
+# milky = Cow("krishna")
+# milky.speak()
+
+# -----------------------------------------------------------------------------------------------------
+
+# __init__ is a method inside the repository class, that's making use of the values method in the dictionary class and it's accessing the size attribute in the package class. That is the power of composition. 
+class Repo:
+	def __init__(self):
+		self.packages = {}
+	def add_pkg(self, package):
+		self.packages[package.name] = package
+	def total_size(self):
+		result = 0
+		for pkg in self.packages.values():
+			result += pkg.size
+		return result
+
+# -----------------------------------------------------------------------------------------------------
+
+# QUESTION: Let’s expand a bit on our Clothing classes from the previous in-video question. Your mission: Finish the "Stock_by_Material" method and iterate over the amount of each item of a given material that is in stock. When you’re finished, the script should add up to 10 cotton Polo shirts.
+
+# class Clothing:
+#   stock={ 'name': [],'material' :[], 'amount':[]}
+#   def __init__(self,name):
+#     material = ""
+#     self.name = name
+#   def add_item(self, name, material, amount):
+#     Clothing.stock['name'].append(self.name)
+#     Clothing.stock['material'].append(self.material)
+#     Clothing.stock['amount'].append(amount)
+#   def Stock_by_Material(self, material):
+#     count=0
+#     n=0
+#     for item in Clothing.stock['material']:
+#       if item == material:
+#         count += Clothing.stock['amount'][n]
+#         n+=1
+#     return count
+
+# class shirt(Clothing):
+#   material="Cotton"
+# class pants(Clothing):
+#   material="Cotton"
+  
+# polo = shirt("Polo")
+# sweatpants = pants("Sweatpants")
+# polo.add_item(polo.name, polo.material, 4)
+# sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
+# current_stock = polo.Stock_by_Material("Cotton")
+# print(current_stock)
+
+# --------------------------------------------- CODE REUSE ------------------------------------------------------------------
+
+# class Animal:
+#     name = ""
+#     category = ""
+    
+#     def __init__(self, name):
+#         self.name = name
+    
+#     def set_category(self, category):
+#         self.category = category
+
+# """
+# What we have is not enough to do much -- yet. That’s where you come in.
+
+# In the next cell, define a Turtle class that inherits from the Animal class. Then go ahead and set its category. For instance, a turtle is generally considered a reptile. Although modern cladistics call this categorization into question, for purposes of this exercise we will say turtles are reptiles!
+# """
+
+# class Turtle(Animal):
+#     category = "reptile"
+
+# print(Turtle.category)
+
+# class Snake(Animal):
+#     category = 'reptile'
+
+# """
+# Now, let’s say we have a large variety of Animals (such as turtles and snakes) in a Zoo. Below we have the Zoo class. We’re going to use it to organize our various Animals. Remember, inheritance says a Turtle is an Animal, but a Zoo is not an Animal and an Animal is not a Zoo -- though they are related to one another.
+
+# Fill in the blanks of the Zoo class below so that you can use zoo.add_animal( ) to add instances of the Animal subclasses you created above. Once you’ve added them all, you should be able to use zoo.total_of_category( ) to tell you exactly how many individual Animal types the Zoo has for each category! Be sure to run the cell once you've finished your edits.
+# """
+
+# class Zoo:
+#     def __init__(self):
+#         self.current_animals = {}
+    
+#     def add_animal(self, animal):
+#         self.current_animals[animal.name] = animal.category
+    
+#     def total_of_category(self, category):
+#         result = 0
+#         for animal in self.current_animals.values():
+#             if animal == category:
+#                 result += 1
+#         return result
+
+# zoo = Zoo()
+
+# turtle = Turtle("Turtle") #create an instance of the Turtle class
+# snake = Snake("Snake") #create an instance of the Snake class
+
+# zoo.add_animal(turtle)
+# zoo.add_animal(snake)
+
+# print(zoo.total_of_category("reptile")) #how many zoo animal types in the reptile category
+
+# """
+# Was the output of the above cell 2? If not, go back and edit the Zoo class making sure to fill in the blanks with the appropriate attributes. Be sure to re-run that cell once you've finished your edits.
+
+# Did you get it? If so, perfect! You have successfully defined your Turtle and Snake subclasses as well as your Zoo class. You are all done with this notebook. Great work!
+# """
+
+# -----------------------------------------------------------------------------------------------------------------------------
+
+# -------------------------------------------- Assessment - Object-oriented programming ----------------------------------------------
+
+"""
+In this exercise, we'll create a few classes to simulate a server that's taking connections from the outside and then a load balancer that ensures that there are enough servers to serve those connections.
+
+To represent the servers that are taking care of the connections, we'll use a Server class. Each connection is represented by an id, that could, for example, be the IP address of the computer connecting to the server. For our simulation, each connection creates a random amount of load in the server, between 1 and 10.
+
+Run the following code that defines this Server class.
+"""
+
+# #Begin Portion 1#
+# import random
+
+# class Server:
+#     def __init__(self):
+#         """Creates a new server instance, with no active connections."""
+#         self.connections = {}
+
+#     def add_connection(self, connection_id):
+#         """Adds a new connection to this server."""
+#         connection_load = random.random()*10+1
+#         # Add the connection to the dictionary with the calculated load
+#         self.connections[connection_id] = connection_load
+
+#     def close_connection(self, connection_id):
+#         """Closes a connection on this server."""
+#         # Remove the connection from the dictionary
+#         if connection_id in self.connections:
+#             del self.connections[connection_id]
+    
+#     def load(self):
+#         """Calculates the current load for all connections."""
+#         total = 0
+#         # Add up the load for each of the connections
+#         for load in self.connections.values():
+#             total += load
+#         return total
+
+#     def __str__(self):
+#         """Returns a string with the current load of the server"""
+#         return "{:.2f}%".format(self.load())
+    
+# #End Portion 1#
+
+# """
+# Now run the following cell to create a Server instance and add a connection to it, then check the load:
+# """
+# server = Server()
+# server.add_connection("192.168.1.1")
+
+# print(server.load())
+
+# """
+# After running the above code cell, if you get a NameError message, be sure to run the Server class definition code block first.
+
+# The output should be 0. This is because some things are missing from the Server class. So, you'll need to go back and fill in the blanks to make it behave properly.
+
+# Go back to the Server class definition and fill in the missing parts for the add_connection and load methods to make the cell above print a number different than zero. As the load is calculated randomly, this number should be different each time the code is executed.
+
+# Hint: Recall that you can iterate through the values of your connections dictionary just as you would any sequence.
+
+# Great! If your output is a random number between 1 and 10, you have successfully coded the add_connection and load methods of the Server class. Well done!
+
+# What about closing a connection? Right now the close_connection method doesn't do anything. Go back to the Server class definition and fill in the missing code for the close_connection method to make the following code work correctly:
+# """
+
+# server.close_connection("192.168.1.1")
+# print(server.load())
+
+# """
+# You have successfully coded the close_connection method if the cell above prints 0.
+
+# Hint: Remember that del dictionary[key] removes the item with key key from the dictionary.
+
+# Alright, we now have a basic implementation of the server class. Let's look at the basic LoadBalancing class. This class will start with only one server available. When a connection gets added, it will randomly select a server to serve that connection, and then pass on the connection to the server. The LoadBalancing class also needs to keep track of the ongoing connections to be able to close them. This is the basic structure:
+# """
+
+# #Begin Portion 2#
+# class LoadBalancing:
+#     def __init__(self):
+#         """Initialize the load balancing system with one server"""
+#         self.connections = {}
+#         self.servers = [Server()]
+
+#     def add_connection(self, connection_id):
+#         """Randomly selects a server and adds a connection to it."""
+#         server = random.choice(self.servers)
+#         # Add the connection to the dictionary with the selected server
+#         self.connections[connection_id] = server
+#         # Add the connection to the server
+#         server.add_connection(connection_id)
+        
+#     def close_connection(self, connection_id):
+#         """Closes the connection on the the server corresponding to connection_id."""
+#         # Find out the right server
+#         server = self.connections[connection_id]
+#         # Close the connection on the server
+#         server.close_connection(connection_id)
+#         # Remove the connection from the load balancer
+#         del self.connections[connection_id]
+
+#     def avg_load(self):
+#         """Calculates the average load of all servers"""
+#         # Sum the load of each server and divide by the amount of servers
+#         total_load = 0
+#         for server in self.servers:
+#             total_load += server.load()
+#         avg_load = total_load/len(self.servers)
+#         return avg_load
+
+#     def ensure_availability(self):
+#         """If the average load is higher than 50, spin up a new server"""
+#         if self.avg_load() > 50:
+#             self.servers.append(Server())
+
+#     def __str__(self):
+#         """Returns a string with the load for each server."""
+#         loads = [str(server) for server in self.servers]
+#         return "[{}]".format(",".join(loads))
+# #End Portion 2#
+
+# """
+# As with the Server class, this class is currently incomplete. You need to fill in the gaps to make it work correctly. For example, this snippet should create a connection in the load balancer, assign it to a running server and then the load should be more than zero:
+# """
+# l = LoadBalancing()
+# l.add_connection("fdca:83d2::f20d")
+# print(l.avg_load())
+
+# """
+# After running the above code, the output is 0. Fill in the missing parts for the add_connection and avg_load methods of the LoadBalancing class to make this print the right load. Be sure that the load balancer now has an average load more than 0 before proceeding.
+
+# What if we add a new server?
+# """
+# l.servers.append(Server())
+# print(l.avg_load())
+
+# """
+# The average load should now be half of what it was before. If it's not, make sure you correctly fill in the missing gaps for the add_connection and avg_load methods so that this code works correctly.
+
+# Hint: You can iterate through the all servers in the self.servers list to get the total server load amount and then divide by the length of the self.servers list to compute the average load amount.
+
+# Fantastic! Now what about closing the connection?
+# """
+
+# l.close_connection("fdca:83d2::f20d")
+# print(l.avg_load())
+
+# """
+# Fill in the code of the LoadBalancing class to make the load go back to zero once the connection is closed.
+
+# Great job! Before, we added a server manually. But we want this to happen automatically when the average load is more than 50%. To make this possible, fill in the missing code for the ensure_availability method and call it from the add_connection method after a connection has been added. You can test it with the following code:
+# """
+
+# for connection in range(20):
+#     l.add_connection(connection)
+# print(l)
+
+# """
+# The code above adds 20 new connections and then prints the loads for each server in the load balancer. If you coded correctly, new servers should have been added automatically to ensure that the average load of all servers is not more than 50%.
+
+# Run the following code to verify that the average load of the load balancer is not more than 50%.
+# """
+# print(l.avg_load())
+
+# """
+# Awesome! If the average load is indeed less than 50%, you are all done with this assessment.
+# """
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------
+
+# def get_event_date(event):
+# 	return event.date
+
+# def currnet_users(events):
+# 	events.sort(key = get_event_date)
+# 	machines = {}
+# 	for event in events:
+# 		if event.machine not in machines:
+# 			machines[event.machine] = set()
+# 		if event.type == "login":
+# 			machines[event.machine].add(event.user)
+# 		elif event.type == "logout":
+# 			if event.user in machines[event.machine]:
+# 				machines[event.machine].remove(event.user)
+# 	return machines
+
+# def generate_report(machines):
+# 	for machine, user in machines.items():
+# 		if len(user) > 0:
+# 			user_list = ", ".join(user)
+# 			print(f"{machine}: {user}")
+
+# class Event:
+# 	def __init__(self, event_date, event_type, machine_name, user):
+# 		self.date = event_date
+# 		self.type = event_type
+# 		self.machine = machine_name
+# 		self.user = user
+
+# events = [
+#     Event('2020-01-21 12:45:56', 'login', 'myworkstation.local', 'jordan'),
+#     Event('2020-01-22 15:53:42', 'logout', 'webserver.local', 'jordan'),
+#     Event('2020-01-21 18:53:21', 'login', 'webserver.local', 'lane'),
+#     Event('2020-01-22 10:25:34', 'logout', 'myworkstation.local', 'jordan'),
+#     Event('2020-01-21 08:20:01', 'login', 'webserver.local', 'jordan'),
+#     Event('2020-01-23 11:24:35', 'logout', 'mailserver.local', 'chris'),
+# ]
+
+# users = currnet_users(events)
+# print(users)
+
+# generate_report(users)
+
+
+# ----------------------------------------------------------------------------------------------------------------
+
+import wordcloud
+import numpy as np
+from matplotlib import pyplot as plt
+from IPython.display import display
+import fileupload
+import io
+import sys
+
+def calculate_frequencies(file_contents):
+    # Here is a list of punctuations and uninteresting words you can use to process your text
+    punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", \
+    "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", \
+    "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", \
+    "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how", \
+    "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
+    
+    # LEARNER CODE START HERE
+    file_contents = file_contents.lower()
+    for char in punctuations:
+        file_contents.replace(char,"")
+    
+    words = file_contents.split()
+    
+    word_count = {}
+    for word in words:
+        if word not in uninteresting words: #yha humne uninteresting words ko filter bhi kr lia
+            if word.isalpha(): #yha humne check kia ki vo words alphabetic hi h na
+                if word in word_count:
+                    word_count[word] += 1 #agar duara aa rha h to 1 se increase krdo 
+                else:
+                    word_count[word] = 1 #else 1 hi rehene do
+
+    #wordcloud
+    cloud = wordcloud.WordCloud()
+    cloud.generate_from_frequencies(word_count)
+    return cloud.to_array()
+
+# Display your wordcloud image
+
+myimage = calculate_frequencies(file_contents)
+plt.imshow(myimage, interpolation = 'nearest')
+plt.axis('off')
+plt.show()
