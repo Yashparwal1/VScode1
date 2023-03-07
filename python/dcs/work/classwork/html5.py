@@ -33,7 +33,7 @@ def main():
                         
         elif vulns =='2':
                 github = 'Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.'
-                template.template("WEB Storage SQL Injection","no-tools",github.strip(),{'What is Web CORS in HTML5 ?':'https://www.geeksforgeeks.org/what-is-web-cors-in-html5/',
+                template.template("CORS Implementation","no-tools",github.strip(),{'What is Web CORS in HTML5 ?':'https://www.geeksforgeeks.org/what-is-web-cors-in-html5/',
                 'Cross-origin resource sharing (CORS)':'https://portswigger.net/web-security/cors',
                 'Testing Cross Origin Resource Sharing':'https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing',
                 'CORS Misconfiguration':'https://systemweakness.com/first-bug-bounty-program-found-cors-cross-origin-resource-sharing-misconfiguration-52c1bd3ebfe0',
