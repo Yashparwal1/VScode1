@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Share Tech', sans-serif;
+
+}
+
+:root{
+    --bg-color: #16181c;
+    --second-bg-color: #262e3b;
+    --text-color: #fff;
+    --main-color: rgb(0, 255, 17);
+}
+
+html{
+    font-size: 82.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+.navbar a:hover, a.active{
+    color: var(--main-color);
+}

@@ -40,6 +40,7 @@ def cmd_recv(sock_fd):
         data = data + sock_fd.recv(1024).decode()
         # recved cmd in bytes --> decoded it --> and converted into json
         try:
+            # load take a file as input while loads take string content as input **[s in loads stands for string]
             data = json.loads(data)
             return data
         except:

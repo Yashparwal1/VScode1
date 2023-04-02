@@ -38,8 +38,8 @@ def main():
         elif option == "4":
             print("\n[+] Fluxion")
             github = github_getting_text("https://github.com/FluxionNetwork/fluxion", 'p[dir="auto"]', 1)
-            template.template("flucion","kismet -h",github.strip(),{"Fluxion kali linux tutorial": "https://linuxhint.com/fluxion-kali-linux-tutorial/", "Fluxion - Wifi security auditing tool": "https://www.hackingloops.com/fluxion/", "Fluxion -- Crack WiFi Passwords in Minutes": "https://www.kalilinux.in/2020/07/fluxion-kali-linux-crack-wifi.html",
-                    "Cracking WPA/WPA2 Passwords in Minutes with Fluxion": "https://gbhackers.com/cracking-wpawpa2-passwords-fluxion/amp/", "Wireless Penetration Testing: Fluxion": "https://www.hackingarticles.in/wireless-penetration-testing-fluxion/", "Fluxion in Kali Linux usage": "https://www.cyberpratibha.com/blog/fluxion-wpa-wpa2-hacking/"},method="github")
+            template.template("fluxion","./fluxion.sh -h",github.strip(),{"Fluxion kali linux tutorial": "https://linuxhint.com/fluxion-kali-linux-tutorial/", "Fluxion - Wifi security auditing tool": "https://www.hackingloops.com/fluxion/", "Fluxion -- Crack WiFi Passwords in Minutes": "https://www.kalilinux.in/2020/07/fluxion-kali-linux-crack-wifi.html",
+                    "Cracking WPA/WPA2 Passwords in Minutes with Fluxion": "https://gbhackers.com/cracking-wpawpa2-passwords-fluxion/amp/", "Wireless Penetration Testing: Fluxion": "https://www.hackingarticles.in/wireless-penetration-testing-fluxion/", "Fluxion in Kali Linux usage": "https://www.cyberpratibha.com/blog/fluxion-wpa-wpa2-hacking/"},method="github", github_install="git clone https://github.com/FluxionNetwork/fluxion.git", github_check="fluxion")
         elif option == "5":
             print("\n[+] Wifiphisher")
             github = github_getting_text("https://github.com/wifiphisher/wifiphisher", 'p[dir="auto"]', 2)
