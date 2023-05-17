@@ -31,4 +31,5 @@ int main(){
     // c ke addr pe ek or addr h, us addr pe ky value h
 
     return 0;
+    
 }
