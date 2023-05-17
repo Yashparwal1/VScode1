@@ -384,3 +384,5 @@ here var_name is the name of pointer variable and data_type is datatype of the p
 
 //     return 0;
 // }
+
+// ========================================================================

@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     // a = 45; //a's value will be changed
     // cout << "the value of a is: " <<a<<endl;
 
-    // if we do not want this to happen, we can use Constants
+    //  if we do not want this to happen, we can use Constants
     //  const int a = 4;
     //  cout << "the value of a is: " <<a<<endl;
     //  a = 45; //will give error, a is now become read only variable

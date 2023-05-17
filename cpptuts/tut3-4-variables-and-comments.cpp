@@ -1,5 +1,5 @@
 /* 
-Variables are nothing but containerss to store our data.
+Variables are nothing but containers to store our data.
 Variables can be of various types:
     int, float, double, char, boolean
 Based on scope, variables can be of 2 types:

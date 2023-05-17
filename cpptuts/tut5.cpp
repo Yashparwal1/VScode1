@@ -1,6 +1,6 @@
 /* 
 C++ comes with libraires wihich helps us in performing input/output.
-In C+ sequence of bytes corresponding to input and output are commonly known as streams.
+In C++ sequence of bytes corresponding to input and output are commonly known as streams.
 
 => Input Stream: Direction of flow of bytes takes place from input device (eg. keyboard) to the main memory.
 => Output Stream: Direction of flow of bytes takes place from main memory to the output device(eg. display).
@@ -12,8 +12,8 @@ using namespace std;
 // int main()
 // {
 //     int num1, num2, sum;
-// // << -- this is called Insertion operator
-// // >> -- this is called Extraction operator
+// // << -- this is called Extraction operator
+// // >> -- this is called Insertion operator
 //     cout<<"Enter the value of num1: ";
 //     cin>>num1;
 //     cout<<"Enter the value of num2: ";
