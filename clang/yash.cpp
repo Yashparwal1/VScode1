@@ -206,9 +206,9 @@
 
 //     cout << "Enter your name: ";
 //     cin >> name;
-    
+
 //     // getline(cin, name); // To read an entire line of input,
-    
+
 //     cout << "Hello, " << name << "!\n";
 //     return 0;
 // }
@@ -475,3 +475,5 @@ Finally, the program deallocates the memory using the delete operator, which rel
 
 //     return 0;
 // }
+
+

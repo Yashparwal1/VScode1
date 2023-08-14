@@ -1,0 +1,74 @@
+[2023-07-01T16:30:41.317176 17184] === CCACHE 4.6 STARTED =========================================
+[2023-07-01T16:30:41.317176 17184] Config: (default) absolute_paths_in_stderr = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) base_dir = 
+[2023-07-01T16:30:41.317176 17184] Config: (environment) cache_dir = C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache
+[2023-07-01T16:30:41.317176 17184] Config: (default) compiler = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) compiler_check = mtime
+[2023-07-01T16:30:41.317176 17184] Config: (default) compiler_type = auto
+[2023-07-01T16:30:41.317176 17184] Config: (default) compression = true
+[2023-07-01T16:30:41.317176 17184] Config: (default) compression_level = 0
+[2023-07-01T16:30:41.317176 17184] Config: (default) cpp_extension = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) debug = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) debug_dir = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) depend_mode = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) direct_mode = true
+[2023-07-01T16:30:41.317176 17184] Config: (default) disable = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) extra_files_to_hash = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) file_clone = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) hard_link = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) hash_dir = true
+[2023-07-01T16:30:41.317176 17184] Config: (default) ignore_headers_in_manifest = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) ignore_options = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) inode_cache = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) keep_comments_cpp = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) limit_multiple = 0.8
+[2023-07-01T16:30:41.317176 17184] Config: (environment) log_file = D:\VScode\python\pythonprojects\keylogger.onefile-build\ccache-27112.txt
+[2023-07-01T16:30:41.317176 17184] Config: (default) max_files = 0
+[2023-07-01T16:30:41.317176 17184] Config: (default) max_size = 5.0G
+[2023-07-01T16:30:41.317176 17184] Config: (default) namespace = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) path = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) pch_external_checksum = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) prefix_command = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) prefix_command_cpp = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) read_only = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) read_only_direct = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) recache = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) reshare = false
+[2023-07-01T16:30:41.317176 17184] Config: (default) run_second_cpp = true
+[2023-07-01T16:30:41.317176 17184] Config: (default) secondary_storage = 
+[2023-07-01T16:30:41.317176 17184] Config: (environment) sloppiness = include_file_mtime, include_file_ctime
+[2023-07-01T16:30:41.317176 17184] Config: (default) stats = true
+[2023-07-01T16:30:41.317176 17184] Config: (default) stats_log = 
+[2023-07-01T16:30:41.317176 17184] Config: (default) temporary_dir = C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/tmp
+[2023-07-01T16:30:41.317176 17184] Config: (default) umask = 
+[2023-07-01T16:30:41.317176 17184] Command line: C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\downloads\ccache\v4.6\ccache.exe C:\msys64\mingw64\bin\gcc.exe -o static_src\OnefileBootstrap.o -c -flto -fuse-linker-plugin -fno-fat-lto-objects -std=c11 -fvisibility=hidden -fwrapv -pipe -fpartial-inlining -ftrack-macro-expansion=0 -Wno-deprecated-declarations -fno-var-tracking -Wno-misleading-indentation -fcompare-debug-second -O3 -D_WIN32_WINNT=0x0501 -D__NUITKA_NO_ASSERT__ -D_NUITKA_ONEFILE_MODE -I. -IC:\Users\Yash\AppData\Roaming\Python\PYTHON~1\SITE-P~1\nuitka\build\include -IC:\Users\Yash\AppData\Roaming\Python\PYTHON~1\SITE-P~1\nuitka\build\static_src -IC:\Users\Yash\AppData\Roaming\Python\PYTHON~1\SITE-P~1\nuitka\build\inline_copy\zstd static_src\OnefileBootstrap.c
+[2023-07-01T16:30:41.317176 17184] Hostname: k3ton
+[2023-07-01T16:30:41.317176 17184] Working directory: D:/VScode/python/pythonprojects/keylogger.onefile-build
+[2023-07-01T16:30:41.317176 17184] Compiler type: gcc
+[2023-07-01T16:30:41.317176 17184] Source file: static_src\OnefileBootstrap.c
+[2023-07-01T16:30:41.317176 17184] Object file: static_src\OnefileBootstrap.o
+[2023-07-01T16:30:41.317176 17184] Trying direct lookup
+[2023-07-01T16:30:41.317176 17184] No 69505blv3h6uuo9aq1uesj5f96mora36a in primary storage
+[2023-07-01T16:30:41.317176 17184] Running preprocessor
+[2023-07-01T16:30:42.823760 17184] Got result key from preprocessor
+[2023-07-01T16:30:42.823760 17184] No 895cmjfi34uvbmccue0m51n1q11ohuo5s in primary storage
+[2023-07-01T16:30:42.823760 17184] Running real compiler
+[2023-07-01T16:30:44.836336 17184] Using default compression level 1
+[2023-07-01T16:30:44.836336 17184] Storing embedded entry #0 .o (538947 bytes) from static_src\OnefileBootstrap.o
+[2023-07-01T16:30:44.836336 17184] Stored 895cmjfi34uvbmccue0m51n1q11ohuo5s in primary storage (C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/9/5cmjfi34uvbmccue0m51n1q11ohuo5sR)
+[2023-07-01T16:30:44.836336 17184] Adding result key to C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/9/505blv3h6uuo9aq1uesj5f96mora36aM
+[2023-07-01T16:30:44.851942 17184] Using default compression level 1
+[2023-07-01T16:30:44.851942 17184] Stored 69505blv3h6uuo9aq1uesj5f96mora36a in primary storage (C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/9/505blv3h6uuo9aq1uesj5f96mora36aM)
+[2023-07-01T16:30:44.851942 17184] Result: cache_miss
+[2023-07-01T16:30:44.851942 17184] Result: direct_cache_miss
+[2023-07-01T16:30:44.851942 17184] Result: preprocessed_cache_miss
+[2023-07-01T16:30:44.851942 17184] Result: primary_storage_miss
+[2023-07-01T16:30:44.851942 17184] Acquired lock C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/stats.lock
+[2023-07-01T16:30:44.851942 17184] Releasing lock C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/6/stats.lock
+[2023-07-01T16:30:44.851942 17184] Acquired lock C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2023-07-01T16:30:44.851942 17184] Releasing lock C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/8/stats.lock
+[2023-07-01T16:30:44.851942 17184] Unlink C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/tmp/tmp.stderr.vaK26R
+[2023-07-01T16:30:44.851942 17184] Unlink C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/tmp/tmp.stdout.2ymnC2
+[2023-07-01T16:30:44.851942 17184] Unlink C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/tmp/tmp.cpp_stderr.Kb0kaG
+[2023-07-01T16:30:44.851942 17184] Unlink C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/tmp/tmp.cpp_stdout.2ZLLg4.i
+[2023-07-01T16:30:44.851942 17184] Unlink C:\Users\Yash\AppData\Local\Nuitka\Nuitka\Cache\ccache/tmp/tmp.cpp_stdout.2ZLLg4
