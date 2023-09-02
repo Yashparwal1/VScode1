@@ -6,6 +6,7 @@ Types of loops:
     while loop
     do while loop
 
+forEach() function lets us iterate over an array but not object. So to iterate over object, convert it into array first using Object.keys() or Object.values() or Object.entries()
 */
 const prompt = require("prompt-sync")({sigint: true});
 
@@ -30,9 +31,9 @@ for (let key in children) {
     console.log("Marks of",key,"is",children[key])
 }
 
-// for (let key of children){ //children isn not iterable -- in for-of loop the given object should be iterable
-//     console.log("Marks of",key,"is",children[key]);
-// }
+for (let key of children){ //children isn not iterable -- in for-of loop the given object should be iterable
+    console.log("Marks of",key,"is",children[key]);
+}
 
 // arr = ['h','a','r','r','y']
 // // arr = [1,2,3,4,5]

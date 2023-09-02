@@ -150,17 +150,17 @@ Concept:
 year should be divisible by 4 and not by 100 or year should be divisible by 400 
 agar 4 se nhi ho rha to obviously nhi h, but 4 se ho rha h to 100 se nhi hona chahiye tab vo leap yr h agar phir bhi 100 se ho rha h to phir 400 se bhi hona chahiye 
 '''
-# year = int(input("Enter the year: "))
-# if (year % 4 == 0):  # if it is true
-#     if (year % 100 == 0):  # then it should be false BUT if it is also true
-#         if (year % 400 == 0):  # then it should also be true becoz 100 se divide hone ka mtlb h vo century year h so we have to check if this century year is divisible by 400 to be a leap year othervise no leap year.
-#             print(f"Year {year} is a leap year")
-#         else:
-#             print(f"Year {year} is NOT a leap year")
-#     else:
-#         print(f"Year {year} is a leap year")
-# else:
-#     print(f"Year {year} is NOT a leap year")
+year = int(input("Enter the year: "))
+if (year % 4 == 0):  # if it is true
+    if (year % 100 == 0):  # then it should be false BUT if it is also true
+        if (year % 400 == 0):  # then it should also be true becoz 100 se divide hone ka mtlb h vo century year h so we have to check if this century year is divisible by 400 to be a leap year othervise no leap year.
+            print(f"Year {year} is a leap year")
+        else:
+            print(f"Year {year} is NOT a leap year")
+    else:
+        print(f"Year {year} is a leap year")
+else:
+    print(f"Year {year} is NOT a leap year")
 
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 

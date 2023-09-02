@@ -282,3 +282,137 @@ window.mainloop()
 #         small = i
 #         # print(f"small changed to {small}")
 # print(small)
+
+# ----------------------------------------------------------------
+"""
+# this code is the python verison of anew tool written in go by tomnomnom 
+import argparse
+import os
+import sys
+
+def main():
+    parser = argparse.ArgumentParser(description='Append unique lines from stdin to a file')
+    parser.add_argument('-q', action='store_true', help='quiet mode (no output at all)')
+    parser.add_argument('-d', action='store_true', help="don't append to file, print new lines to stdout")
+    parser.add_argument('-t', action='store_true', help='trim leading and trailing whitespace before comparison')
+    parser.add_argument('filename', nargs='?', help='file to read and append to')
+    args = parser.parse_args()
+
+    lines = set()
+
+    if args.filename:
+        # read the whole file into a set if it exists
+        try:
+            with open(args.filename, 'r') as file:
+                for line in file:
+                    if args.t:
+                        lines.add(line.strip())
+                    else:
+                        lines.add(line)
+        except FileNotFoundError:
+            pass
+
+        if not args.d:
+            # open the file for appending new stuff
+            try:
+                f = open(args.filename, 'a')
+            except IOError as e:
+                print(f"failed to open file for writing: {e}")
+                return
+
+    # read the lines, append and output them if they're new
+    for line in sys.stdin:
+        line = line.strip() if args.t else line
+        if line in lines:
+            continue
+
+        # add the line to the set so we don't get any duplicates from stdin
+        lines.add(line)
+
+        if not args.q:
+            print(line)
+        if not args.d:
+            if args.filename:
+                f.write(line + '\n')
+
+    if not args.d and args.filename:
+        f.close()
+
+if __name__ == "__main__":
+    main()
+"""
+
+"""
+ans = []
+
+a = [2,4]
+b = [16,32,96]
+for i in range(4,17):
+    if all(i%e == 0 for e in a) and all(e%i==0 for e in b): # all e's should be divisible by i, that i will be printed
+        ans.append(i)
+print(len(ans))
+    
+    # if all(e%i==0 for e in b):
+    #     ans.append(i)
+# for i in range(4,17): # either e divisible by i, that i will be printed
+#     for e in a:
+#         if i%e == 0:
+#             print(i)
+"""
+# -----------------------------------------------------------------------
+# s = "5 1 2 4 4 2 4 2 2 5 1 4 3 1 1 1 2 1 4 1"
+# s = s.replace(" ",",")
+# print(s)
+
+# -----------------------------------------------------------------------
+# def climbingLeaderboard(ranked, player):
+#     unique_ranked = sorted(set(ranked), reverse=True)
+#     rankings = []
+#     i = len(unique_ranked) - 1  # Start from the last rank
+    
+#     for score in player:
+#         while i >= 0 and score >= unique_ranked[i]:
+#             i -= 1
+#         rankings.append(i + 2)  # Add 2 because ranks are 1-based
+        
+#     return rankings
+
+# # Example usage
+# ranked = [100, 100, 50, 40, 40, 20, 10]
+# player = [5, 25, 50, 120]
+# result = climbingLeaderboard(ranked, player)
+# print(result)  # Output: [4, 3, 1]
+
+# -----------------------------------------------------------------------
+
+# import os
+
+# # Directory containing the files
+# directory = r"C:\Users\Yash\Documents\Bca2_images\Life_updated"
+
+# # List all files in the directory
+# files = os.listdir(directory)
+
+# # Iterate through the files and rename them
+# for file in files:
+#     if file.startswith("Slide"):
+#         # Split the filename into two parts: "Slide" and the number
+#         parts = file.split("Slide")
+        
+#         if len(parts) == 2:
+#             # Extract the number
+#             number = parts[1].split(".")[0]
+            
+#             # Rename the file with a space
+#             new_name = f"Slide {number}.png"
+            
+#             # Construct the full paths for renaming
+#             old_path = os.path.join(directory, file)
+#             new_path = os.path.join(directory, new_name)
+            
+#             # Rename the file
+#             os.rename(old_path, new_path)
+
+# print("Files renamed successfully.")
+
+# -------------------------------------------------------------------------------
