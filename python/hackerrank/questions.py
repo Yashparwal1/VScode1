@@ -736,3 +736,29 @@ A video player plays a game in which the character competes in a hurdle race. Hu
 #     return final
 
 # =======================================================================
+""" 
+When a contiguous block of text is selected in a PDF viewer, the selection is highlighted with a blue rectangle. In this PDF viewer, each word is highlighted independently. For example:
+    yash par wal  [assume these highlighted]
+There is a list of 26 character heights aligned by index to their letters. For example, 'a' is at index 0 and 'z' is at index 25. There will also be a string. Using the letter heights given, determine the area of the rectangle highlight in mm2 assuming all letters are 1mm wide.
+z=5, a=1, b=2, a=1, so max is z=5 and zaba=4mm so area = 4mm x 1mm for word and then multiply by 5 (the max mm of a word in zaba which is z)
+
+"""
+
+# h = [1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ,5, 5, 5, 5, 5, 5, 5]
+# word = "zaba"
+
+# alpha = "abcdefghijklmnopqrstuvwxyz"
+# heights = []
+# for letter in word:
+#     for i in range(len(alpha)):
+#         if letter == alpha[i]:
+#             heights.append(h[i])
+# print(heights)
+# area = len(word)*max(heights)
+# print(area)
+
+# for i in range(26):
+#     print(alpha[i])
+
+# ===================================================================================
+
