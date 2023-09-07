@@ -25,5 +25,8 @@
     "cmake.clearOutputBeforeBuild": false,
     "code-runner.clearPreviousOutput": false,
     "liveServer.settings.multiRootWorkspaceName": "VScode",
-    "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "none",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
 }

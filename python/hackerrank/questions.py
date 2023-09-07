@@ -91,6 +91,7 @@ print(f"{a:.6f}")
 # print(candles.count(h)) #how many candles are there with the max hight, count them
 
 # -----------------------------------------------------------------------------------------
+
 """
 s = "07:05:45PM"
 # print(s[-2:]) -- PM
@@ -761,4 +762,80 @@ z=5, a=1, b=2, a=1, so max is z=5 and zaba=4mm so area = 4mm x 1mm for word and 
 #     print(alpha[i])
 
 # ===================================================================================
+""" 
+The Utopian Tree goes through 2 cycles of growth every year. Each spring, it doubles in height. Each summer, its height increases by 1 meter.
+A Utopian Tree sapling with a height of 1 meter is planted at the onset of spring. How tall will the tree be after n growth cycles?
 
+Period  Height
+0          1
+1          2
+2          3
+3          6
+4          7
+5          14
+
+"""
+# # spring - x*2 --> Summer - (x*2)+1
+# def tree():
+#     t = 0
+#     height = 1
+#     if t==0:
+#         return height
+#     for i in range(t):
+#         if i%2==0:
+#             height = height * 2
+#         else:
+#             height = height + 1
+#         print(height)    
+
+# result = tree()
+# print(result)
+
+# ============================================================================
+
+# def professor():
+#     count = 0
+#     # k = 3
+#     # a = [-2,-1,0,1,2]
+#     a = [-3,-1,4,2]
+#     k = 3
+#     for i in a:
+#         if i<=0:
+#             count += 1
+#     if count >= k:
+#         return 'YES'
+#     else:
+#         return 'NO'
+
+# result = professor()
+# print(result)
+
+# ===========================================================================
+"""
+Lily likes to play games with integers. She has created a new game where she determines the difference between a number and its reverse. For instance, given the number 12, its reverse is 21. Their difference is 9. The number 120 reversed is 21, and their difference is 99.
+
+She decides to apply her game to decision making. She will look at a numbered range of days and will only go to a movie on a beautiful day.
+"""
+# def beautifulDays(i, j, k):
+#     count = 0
+#     for x in range(i,j+1):
+#         num = x-int(str(x)[::-1])
+#         print("num",num)
+#         if num%k==0:
+#             count+=1
+#         print("count",count)
+#     return count
+
+# i = 20
+# j = 23
+# k = 6
+# result = beautifulDays(i,j,k)
+# print(result)
+
+# =======================================================================
+
+""" 
+#Strange Advertising
+
+
+"""
