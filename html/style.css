@@ -1,0 +1,52 @@
+.container-3{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+    border: gray 2px solid;
+}
+
+.container-3 section{
+    display: flex;
+}
+
+.container-3 img{
+    margin: auto;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.container-2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+    height: auto;
+    border: gray 2px solid;
+}
+
+
+.container-2 img{
+    width: 350px;
+}
+
+.container-2 h2{
+    margin-top: -25px;
+    color: green;
+}
+
+.container-2 button{
+    width: 30%;
+    background-color: green;
+}
+
+.over{
+    overflow:visible;
+}
+
+#lef{
+    margin-left: -125px;
+    margin-top: 25px;
+}

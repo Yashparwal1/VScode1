@@ -836,6 +836,399 @@ She decides to apply her game to decision making. She will look at a numbered ra
 
 """ 
 #Strange Advertising
+n = 5
+Day Shared Liked Cumulative
+1      5     2       2
+2      6     3       5
+3      9     4       9
+4     12     6      15
+5     18     9      24
+"""
 
+# n = 3
+# shared = 5
+# comm = 0
+# for i in range(n):
+#     liked = shared//2
+#     shared = liked*3
+#     comm += liked
+
+# print(comm)
+
+# ===================================================================================
 
 """
+# Save the Prisoner!
+A jail has a number of prisoners and a number of treats to pass out to them. Their jailer decides the fairest way to divide the treats is to seat the prisoners around a circular table in sequentially numbered chairs. A chair number will be drawn from a hat. Beginning with the prisoner in that chair, one candy will be handed to each prisoner sequentially around the table until all have been distributed.
+
+The jailer is playing a little joke, though. The last piece of candy looks like all the others, but it tastes awful. Determine the chair number occupied by the prisoner who will receive that candy.
+"""
+# candy % prisoner ==> candies left to be distributed
+# if rem is any num ==> add that rem in s and do -1 (s+rem-1). Means whatever candies are left, distribute them again from s that's why add rem to s and here s is already included, so do -1. We will get last prisoner with this. Now may be this last prisoner is out of range of giver prisoner, so we need to modulus it with n
+# n = 4
+# m = 6
+# s = 2
+# n = 5
+# m = 2
+# s = 1
+
+# left_candies = m%n
+# last_prisoner = s+left_candies-1
+# last_prisoner = last_prisoner%n
+# if last_prisoner==0:
+#     last_prisoner = n
+# print(last_prisoner)
+
+# ========================================================================================
+"""
+Circular array rotation
+John Watson knows of an operation called a right circular rotation on an array of integers. One rotation operation moves the last array element to the first position and shifts all remaining elements right one. To test Sherlock's abilities, Watson provides Sherlock with an array of integers. Sherlock is to perform the rotation operation a number of times then determine the value of the element at a given position.
+
+For each array, perform a number of right circular rotations and return the values of the elements at the given indices.
+"""
+# first store the last element in a temp_var --> start loop from last and shift elements one by one --> now assign temp_var into a[0]. --> repeat this loop for k times and each time assign temp_var into a[0]
+ 
+# def circularArrayRotation(a, k, queries):
+#     #the below code has time complexity of O(k*n) and is bad for large values of k.
+#     #here k(rotation by k positions) is same as the k%len(a), so we can use this fact to optimise the code 
+#     # for i in range(k):
+#     #     last = a[len(a)-1]
+#     #     for i in range(len(a)-1,-1,-1):
+#     #         # print(a[i])
+#     #         # print(i)
+#     #         a[i] = a[i-1]
+#     #     a[0] = last
+#     #     # print(a)
+#     temp = k%len(a)
+#     a = a[-temp:]+a[:-temp]
+#     result = []
+#     for i in queries:
+#         result.append(a[i])
+#     return result
+    
+
+# a = [3,4,5]
+# k = 2
+# queries = [1,2]
+# result = circularArrayRotation(a,k,queries)
+# print('\n'.join(map(str,result)))
+# # d = k%len(a)
+# # print(a[-d:])
+# # print(a[:-d])
+# # print(a[-d:]+a[:-d])
+
+# ===========================================================================================
+"""
+Given a sequence of n integers, p(1), p(2),..,p(n) where each element is distinct and satisfies 1<=p(x)<=n. For each x where 1<=x<=n, that is x increments from 1 to n, find any integer y such that p(p(y))=x and keep a history of the values of y in a return array.
+"""
+# a = [2,3,1]
+
+# y = []
+# for i in range(1,len(a)+1):
+#     for j in range(len(a)):
+#         if i==a[j]:
+#             temp = (j+1) #temp = 3 | 1 | 2
+#             for k in range(len(a)):
+#                 if temp == a[k]:
+#                     y.append(k+1) #y=2,3,1
+#                     break
+#             break
+# print(y)
+
+# ======================================================================================
+# Jumping on the Clouds(Revisited)
+# n = 8
+# k = 2
+# c = [0, 0, 1, 0, 0, 1, 1, 0]
+
+# n = 10
+# k = 3
+# c = [1, 1, 1, 0, 1, 1, 0, 0, 0, 0]
+# # arr = [0,1,1,0,0,0]
+# e = 100
+# i = k
+# while i!=0:
+#     if i>=len(c):
+#         i = i - len(c)
+#     if c[i] == 0:
+#         e -= 1
+#     else:
+#         e -= 3
+#     if i==0:
+#         break
+#     i+=k
+# print(e)
+
+# ==============================================================================================
+""" Find digits
+An integer d is a divisor of an integer n if the remainder of n/d=0.
+Given an integer, for each digit that makes up the integer determine whether it is a divisor. Count the number of divisors occurring within the integer.
+ """
+# n = 124
+# count = 0
+# for i in str(n):
+#     if int(i)==0:
+#         continue
+#     if n%int(i)==0:
+#         count+=1
+# print(count)
+
+# =================================================================================================
+
+# import math
+# f = math.factorial(25)
+# print(f)
+# =================================================================================================
+"""
+Append and Delete
+You have two strings of lowercase English letters. You can perform two types of operations on the first string:
+    Append a lowercase English letter to the end of the string.
+    Delete the last character of the string. Performing this operation on an empty string results in an empty string.
+"""
+# s = ['a','b','c']
+# t = ['d','e','f']
+# s = 'qwerasdf'
+# t = 'qwerbsdf'
+# k = 6
+# s1 = list(s)
+# t1 = list(t)
+
+# if s1==t1[0:len(s1)]:
+#     print('yes')
+# y = []
+# if not y:
+#     print("empty")
+# y.pop()
+# print(y)
+# yes = 0
+# count = 0
+# for i in range(k):
+#     if not s1:
+#         # print("appending")
+#         for j in t1:
+#             s1.append(j)
+#             count += 1
+#     elif s1==t1[0:len(s1)]:
+#         # print("yes")
+#         for j in t1[len(s1):]:
+#             s1.append(j)
+#             count += 1
+#         # print(s1)
+#     else:
+#         # print("removing")
+#         s1.pop()
+#         # print(s1)
+#         count += 1
+#     if s1==t1:
+#         yes = 1
+#         # print(s)
+#         break
+#     else:
+#         pass
+#         # print(s)
+#         # break
+
+# if yes == 1 and count<=k:
+#     print("yes")
+# else:
+#     print('no')
+
+# -----------------------------------------------------
+# for ind,(i,j) in enumerate(zip(s,t)):
+#     print("comparing",i,"and",j)
+#     if i!=j:
+#         break
+# print(ind)
+# print(s[ind],t[ind])
+
+# #remove same characters from total length, so that we can know on how many characters do we need to do operations on.
+# total = len(s) + len(t)
+# ops = total - 2*ind 
+
+# if k >= ops and (k-ops)%2 == 0 or k >=  total:
+#     print('Yes')
+# else:
+#     print('No')
+
+# =================================================================================================
+# Sherlock and Squares
+
+# import math
+# def squares(a, b):
+#     count = 0
+#     # for i in range(a,b+1):
+#     #     if math.sqrt(i).is_integer():
+#     #         count += 1 
+
+#     for i in range(math.isqrt(a),math.isqrt(b)+1):
+#         sq = i*i
+#         if sq>=a and sq<=b:
+#             count += 1
+
+#     return count
+
+# a = 59
+# b = 999999922
+# res = squares(a,b)
+# print(res)
+
+# =================================================================================================
+
+# Library Fine
+
+# d1,m1,y1 = 14,10,2018
+# d2,m2,y2 = 15,7,2018
+
+# if y1==y2:
+#     if m1==m2:
+#         if d1<=d2:
+#             fine = 0
+#         else:
+#             fine = 15*(d1-d2)
+#     elif m1<m2:
+#         fine = 0
+#     else:
+#         fine = 500*(m1-m2)
+# elif y1 < y2:
+#     fine = 0
+# else:
+#     fine = 10000
+
+# print(fine)
+
+# ========================================================================================
+""" Cut the Sticks 
+You are given a number of sticks of varying lengths. You will iteratively cut the sticks into smaller sticks, discarding the shortest pieces until there are none left. At each iteration you will determine the length of the shortest stick remaining, cut that length from each of the longer sticks and then discard all the pieces of that shortest length. When all the remaining sticks are the same length, they cannot be shortened so discard them.
+
+Given the lengths of n sticks, print the number of sticks that are left before each iteration until there are none left.
+"""
+
+# arr = [5,4,4,2,2,8]
+# arr = [1, 2, 3, 4, 3, 3, 2, 1]
+# arr.sort()
+# arr.reverse()
+# sticks = []
+# while arr:
+#     sticks.append(len(arr))
+#     length = min(arr)
+#     for i in range(len(arr)):
+#         # length = min(arr)
+#         arr[i] = arr[i]-length
+#     arr = list(filter(lambda num: num!=0,arr))
+# print(sticks)
+
+# ========================================================================================
+
+""" 
+Non-Divisible Subset
+Given a set of distinct integers, print the size of a maximal subset of S where the sum of any 2 numbers in S' is not evenly divisible by k.
+arr = [19,10,12,24,25,22], k = 4
+subset = [19, x, x, x]
+pick elements in such a way that (19+x)/k != 0 
+"""
+
+# s = [1,7,2,4]
+# s = [278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436]
+# k = 7
+# s_dash = []
+# discard = []
+# count = 0
+# for i in range(len(s)):
+#     for j in range(i+1,len(s)):
+#         print(f"{s[i]}+{s[j]}={s[i]+s[j]}")
+#         val = s[i]+s[j]
+#         if val%k!=0:
+#             # if s[i] not in discard and s[j] not in discard:
+#             s_dash.extend((s[i],s[j]))
+#             count+=1
+#         # else:
+#         #     discard.extend((s[i],s[j]))
+# print(count)
+# print(list(set(s_dash)))
+
+
+# s = [1,7,2,4]
+# k = 3
+# count = [0] * k
+# print(count) # [0,0,0]
+# for i in s:
+#     remainder = i % k
+#     # print("reminder: ",remainder)
+#     count[remainder] +=1
+#     # print("count: ",count)
+
+# ans = min(count[0] , 1)          # Handling case 1 // This takes care of cases where an element itself is not divisible by k. and if not divisible by k, the rem will never be 0
+# # print(ans)
+# if k % 2 == 0:                    # Handling case even exception case
+#     ans += min(count[k//2] ,1 )
+
+# for i in range( 1 , k//2 + 1):    # Check for the pairs and take appropriate count
+#     if i != k - i:           # Avoid over-counting when k is even
+#         ans += max(count[i] , count[k-i])
+
+# print(ans)
+
+# =======================================================================================
+""" - Repeated String
+There is a string, s, of lowercase English letters that is repeated infinitely many times. Given an integer, n, find and print the number of letter a's in the first n letters of the infinite string.
+1. count the no. of a's in the original string.
+2. now divide ==> repeat = n/len(s) [how many times the string will repeat]
+3. left_chars_of_string = n - repeart*len(s) 
+4. as we already counted a's in the original string, and the original sting itself repeating in SETP2. So multiply==> count = count*repeat
+5. now count the a's till the "left_chars_of_string" in the original sting . 
+    ==> for i in range(left_chars_of_sting)
+            if s[i] == 'a' ==> count += 1  
+"""
+
+# s = 'ababa'
+# n = 3
+
+# s = 'a'
+# n = 1000000000000
+# count = s.count('a')
+# print(count)
+# repeat = n//len(s)
+# left_chars = n - repeat*len(s)
+# count = count*repeat
+# for i in range(left_chars):
+#     if s[i] == 'a':
+#         count += 1
+# print(count) 
+
+# =====================================================================================
+
+# jumping on the clouds
+
+# c = [0,1,0,0,0,1,0]
+# c = [0,0,0,1,0,0]
+# jumps = 0
+# i = 0
+# while i<len(c)-1:
+#     if i!=len(c)-2 and c[i+2]==0:
+#         jumps += 1
+#         print("if jumps ",jumps)
+#         i = i+2
+#         print("i ",i)
+#     elif c[i+1]==0:
+#         jumps += 1
+#         print("elif jumps ",jumps)
+#         i = i+1
+#         print("i ",i)
+# print(jumps)
+
+# ======================================================================================
+
+# lst = [1, 2, 2,2,2, 45, 55, 5, 4, 4, 4, 4, 5456, 56, 6, 7, 67]
+lst = [3,3,2,1,3]
+res = []
+# r = max(lst,key=lst.count)
+# print(r)
+# for x in lst:
+#     if x==r:
+#         res.append(x)
+r = max(lst, key=lst.count)
+res = [x for x in lst if x==r]
+    # return res
+print(res)
+final = len(lst) - len(res)
+print(final)
