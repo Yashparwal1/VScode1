@@ -1217,18 +1217,32 @@ There is a string, s, of lowercase English letters that is repeated infinitely m
 # print(jumps)
 
 # ======================================================================================
+# Equalize the Array
 
-# lst = [1, 2, 2,2,2, 45, 55, 5, 4, 4, 4, 4, 5456, 56, 6, 7, 67]
-lst = [3,3,2,1,3]
-res = []
-# r = max(lst,key=lst.count)
-# print(r)
-# for x in lst:
-#     if x==r:
-#         res.append(x)
-r = max(lst, key=lst.count)
-res = [x for x in lst if x==r]
-    # return res
-print(res)
-final = len(lst) - len(res)
-print(final)
+# # lst = [1, 2, 2,2,2, 45, 55, 5, 4, 4, 4, 4, 5456, 56, 6, 7, 67]
+# lst = [3,3,2,1,3]
+# res = []
+# # r = max(lst,key=lst.count)
+# # print(r)
+# # for x in lst:
+# #     if x==r:
+# #         res.append(x)
+# r = max(lst, key=lst.count)
+# res = [x for x in lst if x==r]
+#     # return res
+# print(res)
+# final = len(lst) - len(res)
+# print(final)
+
+# =========================================================================
+n = 5
+r,c = 4,3
+# obs = []
+# for i in range(3):
+#     obs.append(list(map(int, input().rstrip().split())))
+# print(obs) #[[5, 5], [4, 2], [2, 3]]
+# count = 0
+
+# for i in range(r,n+1):
+    
+#     count +=1

@@ -1,20 +1,21 @@
+# https://www.rocketsend.io/
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service #for starting and stopping the chrome driver
-from selenium.webdriver.chrome.options import Options # to perform ops like opeing chrome in max mode, disabling extensions, disabling pupups etc
+# from selenium.webdriver.chrome.options import Options # to perform ops like opeing chrome in max mode, disabling extensions, disabling pupups etc
 from selenium.webdriver.common.action_chains import ActionChains # for pressing key on browser
 from selenium.webdriver.common.keys import Keys # for pressing key on browser
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.by import By # alt. is action_chains
 from webdriver_manager.chrome import ChromeDriverManager # **
 import time
 from urllib.parse import quote
 import os
 
-options = Options()
-options.add_experimental_option("excludeSwitches", ["enable-logging"])
-options.add_argument("--profile-directory=Default")
-options.add_argument("--user-data-dir=C:\\Users\\Yash\\Documents\\chrome_user_data")
+# options = Options()
+# options.add_experimental_option("excludeSwitches", ["enable-logging"])
+# options.add_argument("--profile-directory=Default")
+# options.add_argument("--user-data-dir=C:\\Users\\Yash\\Documents\\chrome_user_data")
 
 os.system("")
 os.environ["WDM_LOG_LEVEL"] = "0"
@@ -29,18 +30,6 @@ class style():
     WHITE = '\033[37m'
     UNDERLINE = '\033[4m'
     RESET = '\033[0m'
-
-# print(style.BLUE)
-# print("**********************************************************")
-# print("**********************************************************")
-# print("*****                                               ******")
-# print("*****  THANK YOU FOR USING WHATSAPP BULK MESSENGER  ******")
-# print("*****      This tool was built by Anirudh Bagri     ******")
-# print("*****           www.github.com/anirudhbagri         ******")
-# print("*****                                               ******")
-# print("**********************************************************")
-# print("**********************************************************")
-# print(style.RESET)
 
 # f = open("message.txt", "r", encoding="utf8")
 with open("message.txt", 'r') as file:
