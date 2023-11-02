@@ -1,7 +1,9 @@
+// original _ apikey= 273fcc3ee5msh1d73973e653170fp1088fdjsnacaf4a62c866
+// zed api = f7fa15d8ebmsh6d9a0542db699a5p1abe20jsnbfa115578c89
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '273fcc3ee5msh1d73973e653170fp1088fdjsnacaf4a62c866',
+		'X-RapidAPI-Key': 'f7fa15d8ebmsh6d9a0542db699a5p1abe20jsnbfa115578c89',
 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };

