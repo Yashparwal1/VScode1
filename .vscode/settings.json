@@ -23,12 +23,13 @@
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cmake.clearOutputBeforeBuild": false,
-    "code-runner.clearPreviousOutput": false,
+    "code-runner.clearPreviousOutput": true,
     "liveServer.settings.multiRootWorkspaceName": "VScode",
     "python.formatting.provider": "none",
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "code-runner.saveAllFilesBeforeRun": true
 }

