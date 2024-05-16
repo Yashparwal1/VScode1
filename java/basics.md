@@ -19,8 +19,8 @@
 ## What is this byte code?
  
 - A low-level representation of code that is designed to be executed by a virtual machine. 
-- used in languages like Java and some other languages to achieve platform-independence and runtime portability.
-- concept of "write once, run anywhere"
+- used in languages like Java and some other to achieve platform-independence and runtime portability.
+- concept of "write once, run anywhere" (WORA)
 - C# also uses bytecode with CLR (Common Language Runtime)
 
 ## what does it look like if i open the bytecode file?
@@ -43,3 +43,4 @@
 
 --- M/C - low level ins.
 --- B/C - typically higher level ins. than machine code 
+

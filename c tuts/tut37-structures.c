@@ -1,6 +1,6 @@
 /* What is Structures in C?
 
-* Strectures are user defined data types in C.
+* Structures are user defined data types in C.
 * Using Structures allows us to combine different data types together.
 * It is used to create complex data types which contains diverse information.
 * They are very similar to arrays but structures can store data of any types, which is practically more useful.
