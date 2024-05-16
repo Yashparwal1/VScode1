@@ -1,10 +1,5 @@
-# from cProfile import label
-# from cgitb import text
-# from email import message
-# import secrets
-# from click import secho
 from pydoc import plain
-from tkinter import *
+from tkinter import * # type: ignore
 from tkinter import filedialog,messagebox
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -20,7 +15,7 @@ from cryptography.hazmat.backends import default_backend
 
 
 root = Tk()
-root.title("Stego tool")
+root.title("StegShielg")
 root.geometry("700x600")
 root.resizable(False,False)
 root.configure(bg="#000000")
@@ -32,7 +27,7 @@ def openImg():
     img = Image.open(filename) #open dialog
     img = ImageTk.PhotoImage(img) #select image
     lbl.configure(image=img,width=250,height=250) #and show in lable in app
-    lbl.image=img
+    lbl.image=img # type: ignore
 
 def enc_msg(public_key, message):
     cipher_text = public_key.encrypt(
@@ -45,6 +40,7 @@ def enc_msg(public_key, message):
     )
     print("****CIPHER TEXT****\n",cipher_text)
     return cipher_text
+
 def dec_msg(output, private_key):
     plain_text = private_key.decrypt(
             output,
@@ -56,7 +52,6 @@ def dec_msg(output, private_key):
     )
     print("****PLAIN TEXT****\n",plain)
     return plain_text
-
 
 def hideData():
     global hide_message
@@ -83,7 +78,7 @@ def saveImg():
     hide_message.save("hidden.png")
     messagebox.showinfo("Success","Image Saved with the name \"Hidden.png\"")
     lbl.config(image='',width=0,height=0)
-    lbl.image=None
+    lbl.image=None # type: ignore
 
 def showData():
     Key = key.get()
@@ -108,7 +103,7 @@ root.iconphoto(False,image_icon)
 # logo and heading
 logo=PhotoImage(file="logo.png")
 Label(root,image=logo,bg="#000000").place(x=10,y=0)
-Label(root,text="CYBER K3TON", bg="#000000", fg="white",font="arial 25 bold").place(x=100,y=20)
+Label(root,text="StegShield", bg="#000000", fg="white",font="arial 25 bold").place(x=100,y=20)
 
 # first frame (image area)
 f1 = Frame(root,bd=3,bg="#000000", width=330,height=295,relief=GROOVE)

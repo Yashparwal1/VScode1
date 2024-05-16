@@ -1,5 +1,11 @@
 package clg;
 
+// class Main{
+//     public static void main(String[] args){
+//         System.out.println("Hello world");
+//     }
+// }
+
 // abstract class Shape {
 //     private double wd;
 //     private double ht;
