@@ -31,5 +31,8 @@
     },
     "python.analysis.autoImportCompletions": true,
     "python.analysis.typeCheckingMode": "basic",
-    "code-runner.saveAllFilesBeforeRun": true
+    "code-runner.saveAllFilesBeforeRun": true,
+    "java.project.sourcePaths": [
+        "java"
+    ]
 }

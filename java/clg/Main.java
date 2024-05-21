@@ -1,11 +1,10 @@
 package clg;
 
-// class Main{
-//     public static void main(String[] args){
-//         System.out.println("Hello world");
-//     }
-// }
-
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+    }
+}
 // abstract class Shape {
 //     private double wd;
 //     private double ht;
@@ -285,7 +284,7 @@ package clg;
 //                 System.out.println("Unique values: " + uniqueNumbers); 
 //             } 
 //             else { 
-//                 System.out.println("Duplicate number. Not added to the set."); i--; // Decrement i to re‐enter the current number 
+//                 System.out.println("Duplicate number. Not added to the set."); i--; // Decrement i to re-enter the current number 
 //             } 
 //         }
 //         System.out.println("Final set of unique values: "+uniqueNumbers);

@@ -21,7 +21,7 @@ def start():
         r.pause_threshold = 1
         audio = r.listen(source)
     try:
-        query = r.recognize_google(audio, language='en-in')
+        query = r.recognize_google(audio, language='en-in') # type: ignore
         return query
     except:
         return "None"
@@ -35,7 +35,7 @@ def takeCommand():
 
     try:
         print("Recognizing...")
-        query = r.recognize_google(audio, language='en-in')
+        query = r.recognize_google(audio, language='en-in') # type: ignore
         # print(f"User said: {query}\n")
         #speak(f": {query}\n")
         return query

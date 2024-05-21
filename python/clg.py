@@ -1465,3 +1465,61 @@ for i in range(len(shoppingList)):
 # print("Your product list")
 # print(f"{}")
  """
+
+from pprint import pformat
+
+from cycler import V
+
+
+a = 21
+b = 290
+c = 3
+d = 100
+
+# a>b? (a>c? (a>d? a:d) : (a>d? c:(d>c? d:c))) : (b>c? (b>d? b:d) : (b>d? c:(d>c? d:c)))
+
+# if a>b and a>c and a>d:
+#     print(a)
+# elif a>b and a>d:
+#     print(c)
+# elif a>b and d>c:
+#     print(d)
+# elif b>c and b>d:
+#     print(b)
+# elif b>d:
+#     print(c)
+# elif d>c:
+#     print(d)
+# else:
+#     print(d)
+
+# a,b,c,d
+
+# if a>b: #--------bacd 
+#     if a>c: #--------bcad 
+#         if a>d: #--------bcda
+#             print('a: ',a)
+#         else: #--------bcad
+#             print('d: ',d)
+#     else: #--------bacd
+#         if a>d: #--------bdac
+#             print('c: ',c)
+#         else: #--------bacd
+#             if d>c: #--------bacd
+#                 print('d: ',d)
+#             else: #--------badc
+#                 print('c: ',c)
+# else: #--------abcd
+#     if b>c: #--------acbd
+#         if b>d: #--------acdb
+#             print('b: ',b)
+#         else: #--------acbd
+#             print('d: ',d)
+#     else: #--------abcd
+#         if b>d: #--------adbc
+#             print('c: ',c)
+#         else: #--------abcd
+#             if d>c: #--------abcd
+#                 print('d: ',d)
+#             else: #--------abdc
+#                 print('c: ',c)
