@@ -17,7 +17,7 @@ from cryptography.hazmat.backends import default_backend
 
 class StegoTool:
     def __init__(self, root):
-        # super().__init__()
+        super().__init__()
         self.root = root
         self.root.title("Stego tool")
         self.root.geometry("700x600")
@@ -25,9 +25,11 @@ class StegoTool:
         self.root.configure(bg="#000000")
 
         # Load logo and favicon
-        self.logo = PhotoImage(file="logo.png")
-        self.favicon = PhotoImage(file="favicon.jpg")
-        self.root.iconphoto(False, self.favicon)
+        self.root.favicon = PhotoImage(file="favicon.jpg")
+        self.root.iconphoto(False, self.root.favicon)
+        self.root.logo = PhotoImage(file="logo.png")
+        Label(root,image=self.root.logo,bg="#000000").place(x=10,y=0)
+        Label(root,text="StegShield", bg="#000000", fg="white",font="arial 25 bold").place(x=100,y=20)
 
         self.create_widgets()
 
@@ -151,6 +153,18 @@ class StegoTool:
     
 
 if __name__ == "__main__":
-  root = Tk()
-  app = StegoTool(root)
-  root.mainloop()
+    root = Tk()
+    app = StegoTool(root)
+    # root.title("StegShielg")
+    # root.geometry("700x600")
+    # root.resizable(False,False)
+    # root.configure(bg="#000000")
+
+    # image_icon = PhotoImage(file="favicon.jpg")
+    # root.iconphoto(False,image_icon)
+
+    # logo=PhotoImage(file="logo.png")
+    # Label(root,image=logo,bg="#000000").place(x=10,y=0)
+    # Label(root,text="StegShield", bg="#000000", fg="white",font="arial 25 bold").place(x=100,y=20)
+
+    root.mainloop()

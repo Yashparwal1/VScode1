@@ -64,12 +64,13 @@ public class Solution {
             sc.nextLine();   
             bikes[i] = new Bike(id, quantity, name, price); 
         } 
+           
         String searchName = sc.nextLine();
         sc.close();
-        for (int i = 0; i < bikes.length; i++) {
-            System.out.println("here:"+bikes[i]);
-        }
-        System.out.println("till here");
+        // for (int i = 0; i < bikes.length; i++) {
+        //     System.out.println("here:"+bikes[i]);
+        // }
+        // System.out.println("till here");
         Bike maxPriceBike = findMaxPriceOfBike(bikes);
         if (maxPriceBike != null){
             System.out.println(maxPriceBike);
