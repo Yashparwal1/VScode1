@@ -1,5 +1,3 @@
-from logging import root
-from pydoc import plain
 from tkinter import * # type: ignore
 from tkinter import filedialog,messagebox
 import tkinter as tk
