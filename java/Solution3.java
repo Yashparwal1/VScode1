@@ -669,7 +669,29 @@ public class Solution3 {
 
 // =============================================================================================================
 
+/* 
+Sample Input 1
+4
+5678
+6
+MarutiAlto
+600000
+9843
+9
+SwiftDzire
+900000
+3244
+3
+ToyotoLiva
+670000
+3333
+7
+Bolero
+1100000
+Bolero
+*/
 
+/* 
 class Car{
     int carNumber;
     int carQuantity;
@@ -709,6 +731,8 @@ public class Solution3 {
         String searchModel = sc.nextLine();
         Car result = findMinOnRoadPrice(cars);
         System.out.println(result!=null?result:"No Car found with mentioned attribute");
+        // **** we can print object directly BUT toString method should be there in class ****
+
         Car[] result2 = searchCarModel(cars, searchModel);
         if (result2!=null) {
             for (Car car : result2) {
@@ -750,7 +774,95 @@ public class Solution3 {
         return result;
     }
 }
+*/
 
+// ==========================================================================================================
+
+/*
+4
+111
+Biryani
+NonVeg
+400
+112
+Shawarma
+NonVeg
+100
+113
+Poha
+Veg
+40
+114
+Upma
+Veg
+50
+Veg
+*/
+
+class Food{
+    private int FoodId;
+    private String FoodName;
+    private String FoodCategory;
+    private int FoodCost;
+
+    Food(int id, String name, String cat, int cost){
+        this.FoodId = id;
+        this.FoodName = name;
+        this.FoodCategory = cat;
+        this.FoodCost = cost;
+    }
+    public String getCat(){
+        return this.FoodCategory;
+    }
+    public int getCost(){
+        return this.FoodCost;
+    }
+    @Override
+    public String toString(){
+        return FoodId+"\n"+FoodName+"\n"+FoodCategory+"\n"+FoodCost;
+    }
+}
+
+class Solution3{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int noOfFood = sc.nextInt();
+        Food[] food = new Food[noOfFood];
+        for (int i = 0; i < 4; i++) {
+            int id = sc.nextInt();
+            sc.nextLine();
+            String name = sc.nextLine();
+            String cat = sc.nextLine();
+            int cost = sc.nextInt();
+            sc.nextLine();
+            food[i] = new Food(id, name, cat, cost);
+        }
+        String category = sc.nextLine();
+        int result = countFoodByGivenCategory(food, category); 
+        System.out.println(result!=0?result:"No Food with the given category are found");
+        Food result2 = getFoodWithMinCost(food);
+        System.out.println(result2!=null?result2:"No food found");
+    }
+
+    public static int countFoodByGivenCategory(Food[] food, String category){
+        int count=0;
+        for (Food f : food) {
+            if (f.getCat().equals(category)){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static Food getFoodWithMinCost(Food[] food){
+        Food temp = food[0];
+        for (Food f : food) {
+            if (f.getCost()<temp.getCost()) {
+                temp = f;
+            }
+        }
+        return temp;
+    }
+}
 
 
 
