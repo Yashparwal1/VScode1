@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Customer Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Login</h1>
+        <form id="loginForm">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId" minlength="5" maxlength="20">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="30">
+            <div class="btn">
+                <button type="submit">Login</button>
+                <button type="reset">Signup</button>
+            </div>
+        </form>
+        <div class="login-error-message" id="loginErrorMessage" style="display: none; color: red; font-size: 14px; text-align: center; margin-top: 5px; font-weight: bold;">
+            Invalid User ID or Password. Please try again.
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+
+    <script>
+        // When the form is submitted, generate the Customer ID
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const userId = document.getElementById('userId').value;
+            const password = document.getElementById('password').value;
+            
+            // hardcoding sample id:pass
+            if (userId === "yashp" && password === "yash") {
+                alert("Login Successful!");
+                // Redirect to home/dashboard page after successful login
+                // window.location.href = "home.html";
+            } else {
+                document.getElementById('loginErrorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

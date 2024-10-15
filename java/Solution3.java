@@ -352,133 +352,136 @@ HP
 windows
 */
 
-// class Laptop {
-//     private int laptopId;
-//     private String brand;
-//     private String osType;
-//     private double price;
-//     private int rating;
+class Laptop {
+    private int laptopId;
+    private String brand;
+    private String osType;
+    private double price;
+    private int rating;
 
-//     Laptop(int id, String brand, String os, double price, int rating) {
-//         this.laptopId = id;
-//         this.brand = brand;
-//         this.osType = os;
-//         this.price = price;
-//         this.rating = rating;
-//     }
+    Laptop(int id, String brand, String os, double price, int rating) {
+        this.laptopId = id;
+        this.brand = brand;
+        this.osType = os;
+        this.price = price;
+        this.rating = rating;
+    }
 
-//     public int getId() {
-//         return this.laptopId;
-//     }
+    public int getId() {
+        return this.laptopId;
+    }
 
-//     public String getBrand() {
-//         return this.brand;
-//     }
-//     public String getOs(){
-//         return this.osType;
-//     }
-//     public int getRating() {
-//         return this.rating;
-//     }
-//     @Override
-//     public String toString() {
-//         return this.laptopId + "\n" + this.rating;
-//     }
+    public String getBrand() {
+        return this.brand;
+    }
+    public String getOs(){
+        return this.osType;
+    }
+    public int getRating() {
+        return this.rating;
+    }
+    @Override
+    public String toString() {
+        return this.laptopId + "\n" + this.rating;
+    }
 
-// }
+}
 
-// class Solution3 {
-//     public static void main(String[] args) {
-//         System.out.println("hello world");
-//         Scanner sc = new Scanner(System.in);
-//         Laptop[] laptops = new Laptop[4];
-//         for (int i = 0; i < laptops.length; i++) {
-//             int id = sc.nextInt();
-//             sc.nextLine();
-//             String brand = sc.nextLine();
-//             String os = sc.nextLine();
-//             double price = sc.nextDouble();
-//             int rating = sc.nextInt();
-//             sc.nextLine();
-//             laptops[i] = new Laptop(id, brand, os, price, rating);
-//         }
+class Solution3 {
+    public static void main(String[] args) {
+        System.out.println("hello world");
+        Scanner sc = new Scanner(System.in);
+        Laptop[] laptops = new Laptop[4];
+        for (int i = 0; i < laptops.length; i++) {
+            int id = sc.nextInt();
+            sc.nextLine();
+            String brand = sc.nextLine();
+            String os = sc.nextLine();
+            double price = sc.nextDouble();
+            int rating = sc.nextInt();
+            sc.nextLine();
+            laptops[i] = new Laptop(id, brand, os, price, rating);
+        }
 
-//         String searchBrand = sc.nextLine();
-//         String searchOs = sc.nextLine();
+        String searchBrand = sc.nextLine();
+        String searchOs = sc.nextLine();
 
-//         // for (Laptop laptop : laptops) {
-//         // System.out.println("Laptop ID: " + laptop.getId() + ", Brand: " +
-//         // laptop.getBrand() + ", Rating: " + laptop.getRating());
-//         // }
+        // for (Laptop laptop : laptops) {
+        // System.out.println("Laptop ID: " + laptop.getId() + ", Brand: " +
+        // laptop.getBrand() + ", Rating: " + laptop.getRating());
+        // }
+        System.out.println("--------");
+        int result = countOfLaptopByBrand(laptops, searchBrand);
+        System.out.println(result == 0 ? 0 : result);
+        Laptop[] result2 = searchLaptopByOsType(laptops, searchOs);
+        if(result2 != null){
+            for(Laptop laptop:result2){
+              System.out.println(laptop);
+            }
+        }
+        else{
+              System.out.println("This given os is not available");
+        }
+    }
 
-//         int result = countOfLaptopByBrand(laptops, searchBrand);
-//         System.out.println(result == 0 ? 0 : result);
-//         Laptop[] result2 = searchLaptopByOsType(laptops, searchOs);
-//         if(result2 != null){
-//             for(Laptop laptop:result2){
-//               System.out.println(laptop);
-//             }
-//         }
-//         else{
-//               System.out.println("This given os is not available");
-//         }
-//     }
+    public static int countOfLaptopByBrand(Laptop[] laptops, String searchBrand) {
+        int count = 0;
+        for (Laptop laptop : laptops) {
+            if (laptop.getBrand().equals(searchBrand) && laptop.getRating() > 3) {
+                count++;
+            }
+        }
+        return count;
+    }
 
-//     public static int countOfLaptopByBrand(Laptop[] laptops, String searchBrand) {
-//         int count = 0;
-//         for (Laptop laptop : laptops) {
-//             if (laptop.getBrand().equals(searchBrand) && laptop.getRating() > 3) {
-//                 count++;
-//             }
-//         }
-//         return count;
-//     }
+    public static Laptop[] searchLaptopByOsType(Laptop[] laptops, String searchOs) {
 
-//     public static Laptop[] searchLaptopByOsType(Laptop[] laptops, String searchOs) {
+        int count = 0;
+        for (Laptop l : laptops) {
+            if (l.getOs().equalsIgnoreCase(searchOs)) {
+                count++;
+            }
+        }
+        if (count == 0) {
+            return null;
+        }
 
-//         /* int count = 0;
-//         for (Laptop l : laptops) {
-//             if (l.getOs().equalsIgnoreCase(searchOs)) {
-//                 count++;
-//             }
-//         }
-//         if (count == 0) {
-//             return null;
-//         }
+        Laptop[] filteredLaptops = new Laptop[count];
+        int index = 0;
+        for (Laptop laptop : laptops) {
+            if (laptop.getOs().equalsIgnoreCase(searchOs)) {
+                filteredLaptops[index++] = laptop;
+            }
+        }
+        Laptop temp = null;
+        for (int i = 0; i < filteredLaptops.length; i++) {
+            for (int j = i + 1; j < filteredLaptops.length; j++) {
+                if (filteredLaptops[i].getId()<filteredLaptops[j].getId()){
+                    temp = filteredLaptops[i];
+                    filteredLaptops[i] = filteredLaptops[j];
+                    filteredLaptops[j] = temp;
+                }
+            }
+        }
+        return filteredLaptops;
+        
+        // Laptop[] filteredLaptops = Arrays.stream(laptops)
+        //                                  .filter(l -> l.getOs().equalsIgnoreCase(searchOs))
+        //                                  .toArray(Laptop[]::new);
 
-//         Laptop[] filteredLaptops = new Laptop[count];
-//         int index = 0;
-//         for (Laptop laptop : laptops) {
-//             if (laptop.getOs().equalsIgnoreCase(searchOs)) {
-//                 filteredLaptops[index++] = laptop;
-//             }
-//         }
-//         Laptop temp = null;
-//         for (int i = 0; i < filteredLaptops.length; i++) {
-//             for (int j = i + 1; j < filteredLaptops.length; j++) {
-//                 if (filteredLaptops[i].getId()<filteredLaptops[j].getId()){
-//                     temp = filteredLaptops[i];
-//                     filteredLaptops[i] = filteredLaptops[j];
-//                     filteredLaptops[j] = temp;
-//                 }
-//             }
-//         }
-//         return filteredLaptops;
-//          */
-//         Laptop[] filteredLaptops = Arrays.stream(laptops)
-//                                          .filter(l -> l.getOs().equalsIgnoreCase(searchOs))
-//                                          .toArray(Laptop[]::new);
+        // if (filteredLaptops.length == 0) {
+        //     return null;
+        // }
 
-//         if (filteredLaptops.length == 0) {
-//             return null;
-//         }
+        // // Sort the filtered laptops in descending order of laptopId
+        // Arrays.sort(filteredLaptops, (l1, l2) -> Integer.compare(l2.getId(), l1.getId()));
 
-//         // Sort the filtered laptops in descending order of laptopId
-//         Arrays.sort(filteredLaptops, (l1, l2) -> Integer.compare(l2.getId(), l1.getId()));
+        // return filteredLaptops;
+    }
+}
 
-//         return filteredLaptops;
-//     }
-// }
+// ============================================================================================
+
 
 // ================================================================================================
 
@@ -799,70 +802,75 @@ Veg
 Veg
 */
 
-class Food{
-    private int FoodId;
-    private String FoodName;
-    private String FoodCategory;
-    private int FoodCost;
+// class Food{
+//     private int FoodId;
+//     private String FoodName;
+//     private String FoodCategory;
+//     private int FoodCost;
 
-    Food(int id, String name, String cat, int cost){
-        this.FoodId = id;
-        this.FoodName = name;
-        this.FoodCategory = cat;
-        this.FoodCost = cost;
-    }
-    public String getCat(){
-        return this.FoodCategory;
-    }
-    public int getCost(){
-        return this.FoodCost;
-    }
-    @Override
-    public String toString(){
-        return FoodId+"\n"+FoodName+"\n"+FoodCategory+"\n"+FoodCost;
-    }
-}
+//     Food(int id, String name, String cat, int cost){
+//         this.FoodId = id;
+//         this.FoodName = name;
+//         this.FoodCategory = cat;
+//         this.FoodCost = cost;
+//     }
+//     public String getCat(){
+//         return this.FoodCategory;
+//     }
+//     public int getCost(){
+//         return this.FoodCost;
+//     }
+//     @Override
+//     public String toString(){
+//         return FoodId+"\n"+FoodName+"\n"+FoodCategory+"\n"+FoodCost;
+//     }
+// }
 
-class Solution3{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int noOfFood = sc.nextInt();
-        Food[] food = new Food[noOfFood];
-        for (int i = 0; i < 4; i++) {
-            int id = sc.nextInt();
-            sc.nextLine();
-            String name = sc.nextLine();
-            String cat = sc.nextLine();
-            int cost = sc.nextInt();
-            sc.nextLine();
-            food[i] = new Food(id, name, cat, cost);
-        }
-        String category = sc.nextLine();
-        int result = countFoodByGivenCategory(food, category); 
-        System.out.println(result!=0?result:"No Food with the given category are found");
-        Food result2 = getFoodWithMinCost(food);
-        System.out.println(result2!=null?result2:"No food found");
-    }
+// class Solution3{
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int noOfFood = sc.nextInt();
+//         Food[] food = new Food[noOfFood];
+//         for (int i = 0; i < 4; i++) {
+//             int id = sc.nextInt();
+//             sc.nextLine();
+//             String name = sc.nextLine();
+//             String cat = sc.nextLine();
+//             int cost = sc.nextInt();
+//             sc.nextLine();
+//             food[i] = new Food(id, name, cat, cost);
+//         }
+//         String category = sc.nextLine();
+//         int result = countFoodByGivenCategory(food, category); 
+//         System.out.println(result!=0?result:"No Food with the given category are found");
+//         Food result2 = getFoodWithMinCost(food);
+//         System.out.println(result2!=null?result2:"No food found");
+//     }
 
-    public static int countFoodByGivenCategory(Food[] food, String category){
-        int count=0;
-        for (Food f : food) {
-            if (f.getCat().equals(category)){
-                count++;
-            }
-        }
-        return count;
-    }
-    public static Food getFoodWithMinCost(Food[] food){
-        Food temp = food[0];
-        for (Food f : food) {
-            if (f.getCost()<temp.getCost()) {
-                temp = f;
-            }
-        }
-        return temp;
-    }
-}
+//     public static int countFoodByGivenCategory(Food[] food, String category){
+//         int count=0;
+//         for (Food f : food) {
+//             if (f.getCat().equals(category)){
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
+//     public static Food getFoodWithMinCost(Food[] food){
+//         Food temp = food[0];
+//         for (Food f : food) {
+//             if (f.getCost()<temp.getCost()) {
+//                 temp = f;
+//             }
+//         }
+//         return temp;
+//     }
+
+//     // public static void Hello(){
+//     //     Food temp = new Food;
+//     // }
+// }
+
 
 
 

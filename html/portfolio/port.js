@@ -50,7 +50,7 @@ ScrollReveal().reveal('.home-content h1, .about-content h3', {origin: 'left'});
 
 // typed js
 const typed = new Typed('.multiple-texts', {
-  strings: ['H4CK3R', 'Programme  r', 'Security Analyst'],
+  strings: ['H4CK3R', 'Programmer', 'Security Analyst'],
   // strings: ['Security Analyst'],
   typeSpeed: 100,
   backSpeed: 100,

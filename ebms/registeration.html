@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css">
+    <!-- <link rel="stylesheet" href="css/intlTelInput.css"> -->
+    <title>Customer Registration</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Registration</h1>
+        <form id="registrationForm">
+            <label for="customerId">Consumer ID:</label>
+            <input type="text" id="customerId" readonly> <!-- Make it readonly -->
+
+            <label for="billNumber">Bill Number:</label>
+            <input type="text" id="billNumber" required maxlength="5">
+
+            <label for="title">Title:</label>
+            <select id="title" required>
+                <option value="Mr">Mr</option>
+                <option value="Ms">Ms</option>
+                <option value="Mrs">Mrs</option>
+            </select>
+
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" required maxlength="50">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input class="mobile" type="tel" id="mobileNumber" required maxlength="11">
+
+            <label style="margin-top: 15px;" for="userId">User ID:</label>
+            <input type="text" id="userId" required minlength="5" maxlength="20">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required maxlength="30">
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required maxlength="30">
+            <div class="btn">
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+    <!-- <script src="js/intlTelInput.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js"></script>
+
+    <script>
+        // Function to generate a random 13-digit Customer ID
+        function generateCustomerId() {
+            const min = 1000000000000; // Minimum 13-digit number
+            const max = 9999999999999; // Maximum 13-digit number
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // When the form is submitted, generate the Customer ID
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Generate and display the Customer ID
+            const customerId = generateCustomerId();
+            document.getElementById('customerId').value = customerId;
+
+            // Continue with form submission process
+            alert('Consumer Registration successful. Customer ID: ' + customerId);
+            // Here, you can add logic to display the acknowledgment screen or store data
+        });
+
+        // Generate the Customer ID on page load
+        window.onload = function() {
+            document.getElementById('customerId').value = generateCustomerId();
+        };
+
+        //phone no country code
+        const input = document.querySelector("#mobileNumber");
+        window.intlTelInput(input, {
+            initialCountry: "in",
+            strictMode: true,
+            loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/utils.js",
+        });
+    </script>
+</body>
+</html>
