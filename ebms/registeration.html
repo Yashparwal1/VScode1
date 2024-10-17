@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <!-- <link rel="stylesheet" href="css/intlTelInput.css"> -->
     <title>Customer Registration</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Customer Registration</h1>
@@ -29,26 +31,38 @@
             <input type="text" id="customerName" required maxlength="50">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" is-email required>
 
             <label for="mobileNumber">Mobile Number:</label>
-            <input class="mobile" type="tel" id="mobileNumber" required maxlength="11">
+            <input class="mobile" type="tel" id="mobileNumber" required minlength="10" maxlength="11">
 
             <label style="margin-top: 15px;" for="userId">User ID:</label>
             <input type="text" id="userId" required minlength="5" maxlength="20">
 
             <label for="password">Password:</label>
-            <input type="password" id="password" required maxlength="30">
+            <input type="password" id="password" required minlength="5" maxlength="30">
 
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" required maxlength="30">
+            <input type="password" id="confirmPassword" required minlength="5" maxlength="30">
             <div class="btn">
                 <button type="submit">Register</button>
                 <button type="reset">Reset</button>
             </div>
+            <div class="btn">
+                <button type="login" onclick="login_page()">Login</button>
+            </div>
         </form>
     </div>
-    <script src="js/script.js"></script>
+
+    <div class="success-message" id="acknowledgmentPage" style="display:none;">
+        <h2>Registration Successful!</h2>
+        <p>Customer ID: <span id="ack_cid"></span></p>
+        <p>Customer Name: <span id="displayCustomerName"></span></p>
+        <p>Email: <span id="displayEmail"></span></p>
+        <button type="login" onclick="login_page()">Login</button>
+    </div>
+
+    <!-- <script src="js/script.js"></script> -->
     <!-- <script src="js/intlTelInput.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js"></script>
 
@@ -61,7 +75,7 @@
         }
 
         // When the form is submitted, generate the Customer ID
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
 
             // Generate and display the Customer ID
@@ -69,15 +83,30 @@
             document.getElementById('customerId').value = customerId;
 
             // Continue with form submission process
-            alert('Consumer Registration successful. Customer ID: ' + customerId);
-            // Here, you can add logic to display the acknowledgment screen or store data
+            const cid = customerId;
+            const customerName = document.getElementById('customerName').value;
+            const email = document.getElementById('email').value;   
+            const userId = document.getElementById('userId').value;
+            const password = document.getElementById('password').value;
+            document.getElementById('registrationForm').style.display = 'none';
+            document.getElementById('acknowledgmentPage').style.display = 'block';
+            document.getElementById('ack_cid').innerText = cid;
+            document.getElementById('displayCustomerName').innerText = customerName;
+            document.getElementById('displayEmail').innerText = email;
+            // alert('Consumer Registration successful. Customer ID: ' + customerId);
+
+            // Save the values to localStorage
+            localStorage.setItem('customerId', customerId);
+            localStorage.setItem('customerName', customerName);
+            localStorage.setItem('email', email);
+            localStorage.setItem('userId', userId);
+            localStorage.setItem('password', password);
         });
 
         // Generate the Customer ID on page load
-        window.onload = function() {
+        window.onload = function () {
             document.getElementById('customerId').value = generateCustomerId();
         };
-
         //phone no country code
         const input = document.querySelector("#mobileNumber");
         window.intlTelInput(input, {
@@ -85,6 +114,11 @@
             strictMode: true,
             loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/utils.js",
         });
+
+        function login_page() {
+            window.location.href = "login.html";
+        }
     </script>
 </body>
+
 </html>

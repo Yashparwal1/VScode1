@@ -24,7 +24,7 @@
             Invalid User ID or Password. Please try again.
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
     <script>
         // When the form is submitted, generate the Customer ID
@@ -36,8 +36,8 @@
             // hardcoding sample id:pass
             if (userId === "yashp" && password === "yash") {
                 alert("Login Successful!");
-                // Redirect to home page
-                window.location.href = "home.html";
+                // Redirect to home/dashboard page after successful login
+                // window.location.href = "home.html";
             } else {
                 document.getElementById('loginErrorMessage').style.display = 'block';
             }

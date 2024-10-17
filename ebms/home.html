@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/home.css">
+    <title>Home - Electricity Bill Management System</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="#" onclick="showPayBill()">Pay Bill</a>
+                <a href="register_complaint.html">Register Complaint</a>
+                <a href="complaint_status.html">Complaint Status</a>
+            </div>
+            <div class="welcome-message">
+                Welcome, <span id="username"></span>
+                <button onclick="logout()">Logout</button>
+            </div>
+            <!-- <div>
+                yash parwal
+            </div> -->
+        </div>
+
+        <div class="content">
+            <h1>Welcome to the Electricity Bill Management System</h1>
+            <div id="payBillSection" style="display:none;">
+                <h2>Your Pending Bills</h2>
+                <form id="billForm">
+                    <div class="bill-item">
+                        <input type="checkbox" class="bill-checkbox" value="500" onchange="calculateTotal()"> Bill 1 - $500
+                    </div>
+                    <div class="bill-item">
+                        <input type="checkbox" class="bill-checkbox" value="300" onchange="calculateTotal()"> Bill 2 - $300
+                    </div>
+                    <div class="bill-item">
+                        <input type="checkbox" class="bill-checkbox" value="200" onchange="calculateTotal()"> Bill 3 - $200
+                    </div>
+                    <p>Total Amount: <span id="totalAmount">0</span></p>
+                    <button type="button" onclick="proceedToPayment()">Proceed to Pay</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+
+        const customerName = localStorage.getItem('customerName');
+        document.getElementById('username').innerText = customerName;
+
+        function showPayBill() {
+            document.getElementById('payBillSection').style.display = 'block';
+        }
+
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('.bill-checkbox');
+            let total = 0;
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    total += parseFloat(checkbox.value);
+                }
+            });
+
+            document.getElementById('totalAmount').innerText = total;
+        }
+
+        function proceedToPayment() {
+            alert('Redirecting to Payment screen');
+            window.location.href = "payment.html";
+        }
+    </script>
+</body>
+
+</html>
