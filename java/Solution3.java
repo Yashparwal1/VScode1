@@ -352,136 +352,135 @@ HP
 windows
 */
 
-class Laptop {
-    private int laptopId;
-    private String brand;
-    private String osType;
-    private double price;
-    private int rating;
+// class Laptop {
+//     private int laptopId;
+//     private String brand;
+//     private String osType;
+//     private double price;
+//     private int rating;
 
-    Laptop(int id, String brand, String os, double price, int rating) {
-        this.laptopId = id;
-        this.brand = brand;
-        this.osType = os;
-        this.price = price;
-        this.rating = rating;
-    }
+//     Laptop(int id, String brand, String os, double price, int rating) {
+//         this.laptopId = id;
+//         this.brand = brand;
+//         this.osType = os;
+//         this.price = price;
+//         this.rating = rating;
+//     }
 
-    public int getId() {
-        return this.laptopId;
-    }
+//     public int getId() {
+//         return this.laptopId;
+//     }
 
-    public String getBrand() {
-        return this.brand;
-    }
-    public String getOs(){
-        return this.osType;
-    }
-    public int getRating() {
-        return this.rating;
-    }
-    @Override
-    public String toString() {
-        return this.laptopId + "\n" + this.rating;
-    }
+//     public String getBrand() {
+//         return this.brand;
+//     }
+//     public String getOs(){
+//         return this.osType;
+//     }
+//     public int getRating() {
+//         return this.rating;
+//     }
+//     @Override
+//     public String toString() {
+//         return this.laptopId + "\n" + this.rating;
+//     }
 
-}
+// }
 
-class Solution3 {
-    public static void main(String[] args) {
-        System.out.println("hello world");
-        Scanner sc = new Scanner(System.in);
-        Laptop[] laptops = new Laptop[4];
-        for (int i = 0; i < laptops.length; i++) {
-            int id = sc.nextInt();
-            sc.nextLine();
-            String brand = sc.nextLine();
-            String os = sc.nextLine();
-            double price = sc.nextDouble();
-            int rating = sc.nextInt();
-            sc.nextLine();
-            laptops[i] = new Laptop(id, brand, os, price, rating);
-        }
+// class Solution3 {
+//     public static void main(String[] args) {
+//         System.out.println("hello world");
+//         Scanner sc = new Scanner(System.in);
+//         Laptop[] laptops = new Laptop[4];
+//         for (int i = 0; i < laptops.length; i++) {
+//             int id = sc.nextInt();
+//             sc.nextLine();
+//             String brand = sc.nextLine();
+//             String os = sc.nextLine();
+//             double price = sc.nextDouble();
+//             int rating = sc.nextInt();
+//             sc.nextLine();
+//             laptops[i] = new Laptop(id, brand, os, price, rating);
+//         }
 
-        String searchBrand = sc.nextLine();
-        String searchOs = sc.nextLine();
+//         String searchBrand = sc.nextLine();
+//         String searchOs = sc.nextLine();
 
-        // for (Laptop laptop : laptops) {
-        // System.out.println("Laptop ID: " + laptop.getId() + ", Brand: " +
-        // laptop.getBrand() + ", Rating: " + laptop.getRating());
-        // }
-        System.out.println("--------");
-        int result = countOfLaptopByBrand(laptops, searchBrand);
-        System.out.println(result == 0 ? 0 : result);
-        Laptop[] result2 = searchLaptopByOsType(laptops, searchOs);
-        if(result2 != null){
-            for(Laptop laptop:result2){
-              System.out.println(laptop);
-            }
-        }
-        else{
-              System.out.println("This given os is not available");
-        }
-    }
+//         // for (Laptop laptop : laptops) {
+//         // System.out.println("Laptop ID: " + laptop.getId() + ", Brand: " +
+//         // laptop.getBrand() + ", Rating: " + laptop.getRating());
+//         // }
+//         System.out.println("--------");
+//         int result = countOfLaptopByBrand(laptops, searchBrand);
+//         System.out.println(result == 0 ? 0 : result);
+//         Laptop[] result2 = searchLaptopByOsType(laptops, searchOs);
+//         if(result2 != null){
+//             for(Laptop laptop:result2){
+//               System.out.println(laptop);
+//             }
+//         }
+//         else{
+//               System.out.println("This given os is not available");
+//         }
+//     }
 
-    public static int countOfLaptopByBrand(Laptop[] laptops, String searchBrand) {
-        int count = 0;
-        for (Laptop laptop : laptops) {
-            if (laptop.getBrand().equals(searchBrand) && laptop.getRating() > 3) {
-                count++;
-            }
-        }
-        return count;
-    }
+//     public static int countOfLaptopByBrand(Laptop[] laptops, String searchBrand) {
+//         int count = 0;
+//         for (Laptop laptop : laptops) {
+//             if (laptop.getBrand().equals(searchBrand) && laptop.getRating() > 3) {
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
 
-    public static Laptop[] searchLaptopByOsType(Laptop[] laptops, String searchOs) {
+//     public static Laptop[] searchLaptopByOsType(Laptop[] laptops, String searchOs) {
 
-        int count = 0;
-        for (Laptop l : laptops) {
-            if (l.getOs().equalsIgnoreCase(searchOs)) {
-                count++;
-            }
-        }
-        if (count == 0) {
-            return null;
-        }
+//         int count = 0;
+//         for (Laptop l : laptops) {
+//             if (l.getOs().equalsIgnoreCase(searchOs)) {
+//                 count++;
+//             }
+//         }
+//         if (count == 0) {
+//             return null;
+//         }
 
-        Laptop[] filteredLaptops = new Laptop[count];
-        int index = 0;
-        for (Laptop laptop : laptops) {
-            if (laptop.getOs().equalsIgnoreCase(searchOs)) {
-                filteredLaptops[index++] = laptop;
-            }
-        }
-        Laptop temp = null;
-        for (int i = 0; i < filteredLaptops.length; i++) {
-            for (int j = i + 1; j < filteredLaptops.length; j++) {
-                if (filteredLaptops[i].getId()<filteredLaptops[j].getId()){
-                    temp = filteredLaptops[i];
-                    filteredLaptops[i] = filteredLaptops[j];
-                    filteredLaptops[j] = temp;
-                }
-            }
-        }
-        return filteredLaptops;
-        
-        // Laptop[] filteredLaptops = Arrays.stream(laptops)
-        //                                  .filter(l -> l.getOs().equalsIgnoreCase(searchOs))
-        //                                  .toArray(Laptop[]::new);
+//         Laptop[] filteredLaptops = new Laptop[count];
+//         int index = 0;
+//         for (Laptop laptop : laptops) {
+//             if (laptop.getOs().equalsIgnoreCase(searchOs)) {
+//                 filteredLaptops[index++] = laptop;
+//             }
+//         }
+//         Laptop temp = null;
+//         for (int i = 0; i < filteredLaptops.length; i++) {
+//             for (int j = i + 1; j < filteredLaptops.length; j++) {
+//                 if (filteredLaptops[i].getId()<filteredLaptops[j].getId()){
+//                     temp = filteredLaptops[i];
+//                     filteredLaptops[i] = filteredLaptops[j];
+//                     filteredLaptops[j] = temp;
+//                 }
+//             }
+//         }
+//         return filteredLaptops;
 
-        // if (filteredLaptops.length == 0) {
-        //     return null;
-        // }
+//         // Laptop[] filteredLaptops = Arrays.stream(laptops)
+//         //                                  .filter(l -> l.getOs().equalsIgnoreCase(searchOs))
+//         //                                  .toArray(Laptop[]::new);
 
-        // // Sort the filtered laptops in descending order of laptopId
-        // Arrays.sort(filteredLaptops, (l1, l2) -> Integer.compare(l2.getId(), l1.getId()));
+//         // if (filteredLaptops.length == 0) {
+//         //     return null;
+//         // }
 
-        // return filteredLaptops;
-    }
-}
+//         // // Sort the filtered laptops in descending order of laptopId
+//         // Arrays.sort(filteredLaptops, (l1, l2) -> Integer.compare(l2.getId(), l1.getId()));
+
+//         // return filteredLaptops;
+//     }
+// }
 
 // ============================================================================================
-
 
 // ================================================================================================
 
@@ -590,7 +589,7 @@ Yes
 //     String month = sc.nextLine();
 //     // System.out.println("wifi?: ");
 //     String wifiOption = sc.nextLine();
-    
+
 //     int result = noOfRoomsBookedInGivenMonth(hotels, month);
 //     System.out.println(result!=0?result:"No rooms booked in the given month");
 //     Hotel result2 = searchHotelByWifiOption(hotels, wifiOption);
@@ -871,10 +870,6 @@ Veg
 //     // }
 // }
 
-
-
-
-
 // =====================================My IPA Question==========================================================
 
 /* INPUTS
@@ -995,3 +990,150 @@ class Solution3{
         return tempP;  
     }
 } */
+
+// =========================================================================================
+
+class Employee {
+    int EmployeeId;
+    String EmployeeName;
+    String Department;
+    int Rating;
+    int Salary;
+
+    public void setEmployeeId(int id) {
+        this.EmployeeId = id;
+    }
+
+    public int getEmployeeId() {
+        return EmployeeId;
+    }
+
+    // -----------------------------------------------
+    public void setEmployeeName(String name) {
+        this.EmployeeName = name;
+    }
+
+    public String getEmployeeName() {
+        return EmployeeName;
+    }
+
+    // ---------------------------------------------
+    public void setDepartment(String department) {
+        this.Department = department;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    // ---------------------------------------------
+    public void setRating(int rating) {
+        this.Rating = rating;
+    }
+
+    public int getRating() {
+        return Rating;
+    }
+
+    // ---------------------------------------------
+    public void setSalary(int Salary) {
+        this.Salary = Salary;
+    }
+
+    public int getSalary() {
+        return Salary;
+    }
+
+}
+
+public class Solution3{
+    public static String function1(Employee[] arr, int sal, int n) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i].Salary == sal && arr[i].Rating >= 3) {
+                return arr[i].Department;
+            }
+        }
+        return null;
+    }
+
+    public static void highest(Employee[] arr, String Depart, int n) {
+        int[] sal = new int[n];
+        int j = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i].Department.equals(Depart)){
+                sal[j] = arr[i].getSalary();
+                j++;
+            }   
+        }
+        System.out.println("hello "+j);
+        if(j>=2){
+            Arrays.sort(sal);
+            System.out.println(sal[0]);
+            System.out.println(sal[1]);
+            System.out.println(sal[sal.length-1]);
+        }
+
+        // Employee[] ninjaEmployee = new Employee[n];
+        // int j = 0;
+        // for (int i = 0; i < n; i++) {
+        //     if (arr[i].Department.equals(Depart)) {
+        //         ninjaEmployee[j] = arr[i];
+        //         j++;
+        //     }
+        // }
+        // if(j>=2){
+        //     ninjaEmployee = Arrays.copyOf(ninjaEmployee, j);
+        //     Arrays.sort(ninjaEmployee, Comparator.comparingInt(Employee::getSalary).reversed());
+        //     System.out.println(ninjaEmployee[1].getEmployeeName()+" has second highest sal in "+Depart+" department.");
+        // }
+        // else if (j==0){
+        //     System.out.println("theres no employees in "+Depart+" department.");
+        // }
+        // else{
+        //     System.out.println("Theres only one employee in "+Depart+" department. So cant get 2nd highest salary");
+        // }
+    }
+
+    public static void main(String[] args) {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        Employee[] arr = new Employee[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = new Employee();
+
+            int id = sc.nextInt();
+            sc.nextLine();
+            String EmpName = sc.nextLine();
+            String Dep = sc.nextLine();
+            // int Rating = sc.nextInt();
+            int Salary = sc.nextInt();
+            arr[i].setEmployeeId(id);
+            arr[i].setEmployeeName(EmpName);
+            arr[i].setDepartment(Dep);
+            // arr[i].setRating(Rating);
+            arr[i].setSalary(Salary);
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i].EmployeeId);
+            System.out.println(arr[i].EmployeeName);
+            System.out.println(arr[i].Department);
+            // System.out.println(arr[i].Rating);
+            System.out.println(arr[i].Salary);
+        }
+        System.out.println("Enter the salary you want to find: ");
+        int sal = sc.nextInt();
+        String ans = function1(arr, sal, n);
+        System.out.println(ans);
+
+        System.out.println("Enter the department you want to find");
+        sc.nextLine();
+        String dept = sc.nextLine();
+        // int ans2 = highest(arr, dept, n);
+        highest(arr, dept, n);
+        // System.out.println(ans2);
+    }
+}

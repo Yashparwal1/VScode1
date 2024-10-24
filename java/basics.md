@@ -44,3 +44,43 @@
 --- M/C - low level ins.
 --- B/C - typically higher level ins. than machine code 
 
+
+## STRINGS
+
+String is a non primitive datatype, because it references a memory location where data is stored in the heap memory (or string constant pool).
+ -- It references a memory where an object is actually placed. Therefore var of non primitive datatype are also known as Object Reference Datatype (or reference datatype)
+ -- This ORD lives in the stack memory and the object to which it points always lives in heap memory.
+ -- the stack holds a pointer to the object on the heap.
+ -- THUS, all non-primitive datatypes are simply called objects which are created by instantiating a class.
+
+ -- STRING is the sequence(array) of characters  
+    eg. char[] c = {'y', 'a', 's', 'h'}
+        [String s = new String(c);] --- is same as --- [String s="yash";]
+        <<we have an interface in java to represent Sequence character called "CharSequence">>
+ -- String is a class (already defined) which hava many methods.
+    string class is defined like this --> 
+    public final class String extends Object implements CharSequence, Serializable, Comparable {___}
+        <why String class is final?>
+
+-- Since String is a class, so we can create its object too.
+    String s = new String();
+    This object 's' is immutable
+    when we write String s = "yash". ---> This also creates an object.
+    <<So whats the diff. here??>> ---> the concept of String Constant Pool (SCP) applied here
+
+
+-- To create String, 3 classes are there:
+    1. String   2. StringBuffer     3. StringBuilder
+    So total 4 ways to create String (3 with these and 1 directly)
+
+### immutablity
+    - always related to string objects not literals
+    - used for "String Object" i.e. String objects are immutable
+    - once it is created, its data or state cannot be changed but a new string object is created.
+    
+    String s = new String("yash") //"yash" object and literal are created in heap and SCP resp.
+    s.concat(" parwal")
+    sop(s) --> yash // because s is still pointing to "yash" object, though " parwal" literal is created in SCP and "yash parwal" object is created in heap.
+    s = s.concat(" java")
+    sop(s) --> yash java // now s is pointing to "yash java", and also " java" literal is created in scp
+
